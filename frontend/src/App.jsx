@@ -1,15 +1,20 @@
 import { useState } from "react";
-import SearchBar from "./components/SearchBar";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+
+import Header from "./components/Header";
+import MainPage from "./components/MainPage";
+import Book from "./components/Book";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      APP NAME
-      <SearchBar />
-    </>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/book/:id" element={<Book />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

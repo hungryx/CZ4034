@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "rainbow magic",
+    "comments": ["i hate that shit", "love it!"]
+  },
+  { "id": 2, "title": "hp", "comments": ["i love it!"] },
+  { "id": 3, "title": "hp1", "comments": ["i love it!"] },
+  { "id": 4, "title": "hp2", "comments": ["i love it!"] },
+  { "id": 5, "title": "hp3", "comments": ["i love it!"] },
+  { "id": 6, "title": "hp4", "comments": ["i love it!"] },
+  { "id": 7, "title": "hp5", "comments": ["i love it!"] },
+  {
+    "id": 8,
+    "title": "lovely bones",
+    "comments": ["hate the author", "lame only"]
+  }
+]
