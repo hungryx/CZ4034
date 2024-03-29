@@ -1,0 +1,14 @@
+#root {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.searchSection {
+  border: 2px solid blue;
+}
+.resultsDiv {
+  border: 2px solid red;
+  height: 300px;
+}
