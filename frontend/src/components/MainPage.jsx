@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import data from "../data.json";
 import ResultsSection from "./ResultsSection";
 
 const MainPage = () => {
+  const location = useLocation();
+
   const [searchInput, setSearchInput] = useState("");
   const [results, setResults] = useState([]);
 
@@ -12,10 +15,32 @@ const MainPage = () => {
     setSearchInput(e.target.value);
   };
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const title = params.get("title");
+    setSearchInput(title);
+    getResults(title);
+  }, []);
+
   const search = () => {
-    console.log(searchInput);
+    const params = new URLSearchParams(location.search);
+    params.set("title", searchInput);
+    window.history.replaceState(
+      {},
+      "",
+      `${window.location.pathname}?${params}`
+    );
+    getResults(searchInput);
+  };
+
+  const getResults = (input) => {
+    if (!input || input.length == 0) {
+      setResults([]);
+      return;
+    }
+
     const results = data.filter((item) =>
-      item.title.toLowerCase().match(searchInput.toLowerCase())
+      item.title.toLowerCase().match(`\\b${input.toLowerCase()}`)
     );
     setResults(results);
   };
