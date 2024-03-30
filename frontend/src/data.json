@@ -1,18 +1,42 @@
 [
   {
     "id": 1,
-    "title": "rainbow magic",
-    "comments": ["i hate that shit", "love it!"]
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "comments": [
+      { "comment": "Classic series!", "sentiment": 0.9 },
+      { "comment": "Magical world", "sentiment": 0.8 }
+    ]
   },
-  { "id": 2, "title": "hp", "comments": ["i love it!"] },
-  { "id": 3, "title": "hp1", "comments": ["i love it!"] },
-  { "id": 4, "title": "hp2", "comments": ["i love it!"] },
-  { "id": 5, "title": "hp3", "comments": ["i love it!"] },
-  { "id": 6, "title": "hp4", "comments": ["i love it!"] },
-  { "id": 7, "title": "hp5", "comments": ["i love it!"] },
   {
-    "id": 8,
-    "title": "lovely bones",
-    "comments": ["hate the author", "lame only"]
+    "id": 2,
+    "title": "Harry Potter and the Chamber of Secrets",
+    "comments": [
+      { "comment": "Better than the first!", "sentiment": 0.8 },
+      { "comment": "Couldn't stop reading", "sentiment": 0.9 }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "comments": [
+      { "comment": "The best in the series!", "sentiment": 0.9 },
+      { "comment": "Incredible story", "sentiment": 0.9 }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Harry Potter and the Goblet of Fire",
+    "comments": [
+      { "comment": "Epic!", "sentiment": 0.9 },
+      { "comment": "Loved the Triwizard Tournament", "sentiment": 0.8 }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Harry Potter and the Order of the Phoenix",
+    "comments": [
+      { "comment": "Intense read!", "sentiment": 0.8 },
+      { "comment": "Emotional rollercoaster", "sentiment": 0.7 }
+    ]
   }
 ]

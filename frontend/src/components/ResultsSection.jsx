@@ -5,7 +5,6 @@ const ResultsSection = (props) => {
   const navigate = useNavigate();
 
   const viewResult = (id) => {
-    console.log(id);
     navigate(`/book/${id}`);
   };
   return (
@@ -18,7 +17,7 @@ const ResultsSection = (props) => {
       <div className="resultsDiv">
         {props.results.map((result) => (
           <div className="resultcard" onClick={() => viewResult(result.id)}>
-            <p>title: {result.title}</p>
+            <p>{result.title}</p>
           </div>
         ))}
       </div>

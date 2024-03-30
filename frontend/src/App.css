@@ -42,3 +42,12 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+.commentsDiv {
+  border: 2px solid red;
+}
+.commentDiv {
+  border: 2px solid blue;
+  display: flex;
+  justify-content: space-evenly;
+}
