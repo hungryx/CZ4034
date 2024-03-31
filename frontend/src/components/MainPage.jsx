@@ -55,6 +55,7 @@ const MainPage = () => {
           onChange={handleChange}
           value={searchInput}
         />
+        <div className="filterSection">FILTER SECTION</div>
         <button onClick={search}>Search</button>
       </div>
 

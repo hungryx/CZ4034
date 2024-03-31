@@ -4,7 +4,20 @@
     "title": "Harry Potter and the Sorcerer's Stone",
     "comments": [
       { "comment": "Classic series!", "sentiment": 0.9 },
-      { "comment": "Magical world", "sentiment": 0.8 }
+      { "comment": "Magical world", "sentiment": 0.8 },
+      { "comment": "One of my childhood favorites", "sentiment": 0.85 },
+      { "comment": "Couldn't put it down", "sentiment": 0.9 },
+      { "comment": "Amazing characters", "sentiment": 0.9 },
+      { "comment": "Captivating plot", "sentiment": 0.85 },
+      { "comment": "I'm hooked!", "sentiment": 0.8 },
+      { "comment": "Absolutely enchanting", "sentiment": 0.95 },
+      { "comment": "Re-read multiple times", "sentiment": 0.9 },
+      { "comment": "Instant classic", "sentiment": 0.9 },
+      { "comment": "Disappointing ending", "sentiment": 0.3 },
+      { "comment": "Didn't live up to the hype", "sentiment": 0.4 },
+      { "comment": "Slow pacing", "sentiment": 0.2 },
+      { "comment": "Too predictable", "sentiment": 0.3 },
+      { "comment": "Boring characters", "sentiment": 0.2 }
     ]
   },
   {
@@ -12,7 +25,20 @@
     "title": "Harry Potter and the Chamber of Secrets",
     "comments": [
       { "comment": "Better than the first!", "sentiment": 0.8 },
-      { "comment": "Couldn't stop reading", "sentiment": 0.9 }
+      { "comment": "Couldn't stop reading", "sentiment": 0.9 },
+      { "comment": "Incredible sequel", "sentiment": 0.85 },
+      { "comment": "The mystery kept me guessing", "sentiment": 0.9 },
+      { "comment": "Even better than expected", "sentiment": 0.9 },
+      { "comment": "J.K. Rowling's magic continues", "sentiment": 0.9 },
+      { "comment": "Masterpiece!", "sentiment": 0.95 },
+      { "comment": "Couldn't wait to see what happens next", "sentiment": 0.9 },
+      { "comment": "Brilliant storytelling", "sentiment": 0.9 },
+      { "comment": "Highly recommend", "sentiment": 0.85 },
+      { "comment": "Disappointing compared to the first", "sentiment": 0.4 },
+      { "comment": "Too much filler", "sentiment": 0.3 },
+      { "comment": "Didn't engage me", "sentiment": 0.2 },
+      { "comment": "Plot holes", "sentiment": 0.3 },
+      { "comment": "Lacks originality", "sentiment": 0.4 }
     ]
   },
   {
@@ -20,7 +46,23 @@
     "title": "Harry Potter and the Prisoner of Azkaban",
     "comments": [
       { "comment": "The best in the series!", "sentiment": 0.9 },
-      { "comment": "Incredible story", "sentiment": 0.9 }
+      { "comment": "Incredible story", "sentiment": 0.9 },
+      { "comment": "Mind-blowing twists", "sentiment": 0.9 },
+      { "comment": "Spectacular!", "sentiment": 0.95 },
+      { "comment": "Favorite book of the series", "sentiment": 0.9 },
+      { "comment": "Unputdownable", "sentiment": 0.9 },
+      { "comment": "Riveting from start to finish", "sentiment": 0.9 },
+      { "comment": "A must-read for all ages", "sentiment": 0.9 },
+      { "comment": "Jaw-dropping revelations", "sentiment": 0.9 },
+      { "comment": "Deserves all the praise", "sentiment": 0.9 },
+      {
+        "comment": "Disappointing compared to previous books",
+        "sentiment": 0.4
+      },
+      { "comment": "Not as exciting as I hoped", "sentiment": 0.3 },
+      { "comment": "Lost interest halfway through", "sentiment": 0.2 },
+      { "comment": "Too many loose ends", "sentiment": 0.3 },
+      { "comment": "Ending fell flat", "sentiment": 0.4 }
     ]
   },
   {
@@ -28,7 +70,23 @@
     "title": "Harry Potter and the Goblet of Fire",
     "comments": [
       { "comment": "Epic!", "sentiment": 0.9 },
-      { "comment": "Loved the Triwizard Tournament", "sentiment": 0.8 }
+      { "comment": "Loved the Triwizard Tournament", "sentiment": 0.8 },
+      { "comment": "Action-packed adventure", "sentiment": 0.85 },
+      { "comment": "Kept me on the edge of my seat", "sentiment": 0.9 },
+      { "comment": "The stakes are higher than ever", "sentiment": 0.9 },
+      { "comment": "Couldn't stop reading", "sentiment": 0.9 },
+      { "comment": "Fantastic addition to the series", "sentiment": 0.9 },
+      { "comment": "Absolutely breathtaking", "sentiment": 0.95 },
+      { "comment": "Every page is a thrill", "sentiment": 0.9 },
+      { "comment": "A rollercoaster of emotions", "sentiment": 0.9 },
+      {
+        "comment": "Disappointing compared to previous books",
+        "sentiment": 0.4
+      },
+      { "comment": "Not as exciting as I hoped", "sentiment": 0.3 },
+      { "comment": "Lost interest halfway through", "sentiment": 0.2 },
+      { "comment": "Too many loose ends", "sentiment": 0.3 },
+      { "comment": "Ending fell flat", "sentiment": 0.4 }
     ]
   },
   {
@@ -36,7 +94,23 @@
     "title": "Harry Potter and the Order of the Phoenix",
     "comments": [
       { "comment": "Intense read!", "sentiment": 0.8 },
-      { "comment": "Emotional rollercoaster", "sentiment": 0.7 }
+      { "comment": "Emotional rollercoaster", "sentiment": 0.7 },
+      { "comment": "Jaw-dropping twists", "sentiment": 0.85 },
+      { "comment": "Couldn't believe what happened", "sentiment": 0.9 },
+      { "comment": "The characters feel so real", "sentiment": 0.9 },
+      { "comment": "Flew through the pages", "sentiment": 0.9 },
+      { "comment": "A book you won't forget", "sentiment": 0.9 },
+      { "comment": "Absolutely heartbreaking", "sentiment": 0.8 },
+      { "comment": "Leaves you wanting more", "sentiment": 0.9 },
+      { "comment": "J.K. Rowling is a genius", "sentiment": 0.9 },
+      {
+        "comment": "Disappointing compared to previous books",
+        "sentiment": 0.4
+      },
+      { "comment": "Not as exciting as I hoped", "sentiment": 0.3 },
+      { "comment": "Lost interest halfway through", "sentiment": 0.2 },
+      { "comment": "Too many loose ends", "sentiment": 0.3 },
+      { "comment": "Ending fell flat", "sentiment": 0.4 }
     ]
   }
 ]

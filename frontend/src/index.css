@@ -36,7 +36,6 @@ h1 {
 button {
   border-radius: 5px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
   font-size: 1em;
   font-family: inherit;
   letter-spacing: 2px;
@@ -51,12 +50,18 @@ button:active {
 }
 
 input {
-  width: 60%;
-  max-width: 1000px;
-  height: 40px;
-  padding: 0px 15px;
   font-size: 1.2em;
   font-family: inherit;
   border-radius: 5px;
   border: 1px solid transparent;
+}
+
+th {
+  text-align: left;
+  padding: 0px 10px;
+  font-size: 1.2em;
+}
+td {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 10px;
 }
