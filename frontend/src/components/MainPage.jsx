@@ -178,50 +178,52 @@ const MainPage = () => {
           value={searchInput}
         />
         <div className="filterSection">
-          <fieldset className="genreSelection">
+          <div className="genreSelection">
             <p>Genre:</p>
-            {genreList.map((genre) => (
-              <>
-                <input
-                  type="checkbox"
-                  name="genre"
-                  id={genre}
-                  value={genre}
-                  checked={selectedGenres.includes(genre)}
-                  onChange={() => handleCheckBox(genre)}
-                />
-                <label for={genre}>{genre}</label>
-              </>
-            ))}
-          </fieldset>
-          <fieldset className="dateSelection">
-            <p>Range of Publication:</p>
-
-            <label for="startYear">Start:</label>
-            <select
-              name="startYear"
-              id="startYear"
-              onChange={handleStartDate}
-              value={selectedMinYear}
-            >
-              {[...Array(maxYear - minYear).keys()].map((year) => (
-                <option value={minYear + (year + 1)}>
-                  {minYear + (year + 1)}
-                </option>
+            <div className="allGenres">
+              {genreList.map((genre) => (
+                <>
+                  <input
+                    type="checkbox"
+                    name="genre"
+                    id={genre}
+                    value={genre}
+                    checked={selectedGenres.includes(genre)}
+                    onChange={() => handleCheckBox(genre)}
+                  />
+                  <label for={genre}>{genre}</label>
+                </>
               ))}
-            </select>
-            <label for="endYear">End:</label>
-            <select
-              name="endYear"
-              id="endYear"
-              onChange={handleEndDate}
-              value={selectedMaxYear}
-            >
-              {[...Array(maxYear - selectedMinYear).keys()].map((year) => (
-                <option value={maxYear - year}>{maxYear - year}</option>
-              ))}
-            </select>
-          </fieldset>
+            </div>
+          </div>
+          <div className="dateSelection">
+            <p>Year Range of Publication:</p>
+            <div className="allDates">
+              <select
+                name="startYear"
+                id="startYear"
+                onChange={handleStartDate}
+                value={selectedMinYear}
+              >
+                {[...Array(maxYear - minYear).keys()].map((year) => (
+                  <option value={minYear + (year + 1)}>
+                    {minYear + (year + 1)}
+                  </option>
+                ))}
+              </select>
+              <p>to</p>
+              <select
+                name="endYear"
+                id="endYear"
+                onChange={handleEndDate}
+                value={selectedMaxYear}
+              >
+                {[...Array(maxYear - selectedMinYear).keys()].map((year) => (
+                  <option value={maxYear - year}>{maxYear - year}</option>
+                ))}
+              </select>
+            </div>
+          </div>
         </div>
         <button onClick={search}>Search</button>
       </div>

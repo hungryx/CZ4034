@@ -35,12 +35,37 @@
   padding: 0px 15px;
 }
 .filterSection {
-  /* width: 60%; */
-  /* margin: 20px 0px; */
+  /* border: 2px solid white; */
+  padding: 0px 10px;
+  margin-bottom: 15px;
 }
-.filterSection > * {
+.genreSelection {
   display: flex;
   align-items: center;
+}
+.allGenres {
+  margin-left: 20px;
+}
+.allGenres > label {
+  padding-right: 20px;
+}
+.dateSelection {
+  display: flex;
+  align-items: center;
+}
+.allDates {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+.allDates > select {
+  height: 30px;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  padding: 0px 10px;
 }
 
 /* results display section */
