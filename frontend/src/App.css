@@ -15,9 +15,8 @@
   border-bottom: 1px solid white;
 }
 .mainPage {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 /* search & filter section */
@@ -70,14 +69,16 @@
 
 /* results display section */
 .resultSection {
-  flex: 1;
+  /* minus 80px header and 250px search section */
+  height: calc(100vh - 80px - 250px);
+  display: flex;
+  flex-direction: column;
 }
 .resultsCount {
   text-align: left;
   padding-left: 20px;
 }
 .resultsDiv {
-  height: 45vh;
   overflow: auto;
 }
 .resultcard {

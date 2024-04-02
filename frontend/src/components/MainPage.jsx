@@ -43,14 +43,18 @@ import ResultsSection from "./ResultsSection";
           "id": "1",
           "title": "Harry Potter and the Sorcerer's Stone",
           "genre": "Fantasy",
-          "score": 10.5
-          // Additional fields...
+          "publication_date": "2003-06-21",
+          "avg_sentiment_score": 0.95,
+          "comments": [
+            { "comment": "Intense read!", "sentiment": 0.8 },
+            { "comment": "Emotional rollercoaster", "sentiment": 0.7 },
+            { "comment": "Jaw-dropping twists", "sentiment": 0.85 },
+            ...
+          ]
         },
         {
           "id": "2",
           "title": "Harry Potter and the Chamber of Secrets",
-          "genre": "Fantasy",
-          "score": 9.8
           // Additional fields...
         },
         // More documents...
