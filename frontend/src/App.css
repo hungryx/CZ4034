@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid white;
 }
 .mainPage {
   flex: 1;
@@ -34,10 +35,12 @@
   padding: 0px 15px;
 }
 .filterSection {
-  border: 2px solid yellow;
-  width: 60%;
-  height: 70px;
-  margin: 20px 0px;
+  /* width: 60%; */
+  /* margin: 20px 0px; */
+}
+.filterSection > * {
+  display: flex;
+  align-items: center;
 }
 
 /* results display section */
@@ -49,11 +52,13 @@
   padding-left: 20px;
 }
 .resultsDiv {
-  height: 55vh;
+  height: 45vh;
   overflow: auto;
 }
 .resultcard {
-  text-align: left;
+  /* text-align: left; */
+  display: flex;
+  justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.2);
   margin: 20px 20px;
   padding: 20px 20px;
@@ -70,18 +75,36 @@
   flex-direction: column;
   align-items: center;
   overflow: auto;
+  /* margin-bottom: 5px; */
 }
 .backBtn {
   position: absolute;
   left: 20px;
-  top: 0px;
+  top: 10px;
   padding: 0.2em 1em;
 }
 .bookTitle {
   font-size: 2em;
   font-weight: 600;
 }
-
+.bookInfo {
+  /* border: 1px solid white; */
+  width: 80%;
+  /* margin: 35px 0px; */
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.image {
+  width: 150px;
+  height: 150px;
+  border: 1px solid white;
+}
+.details {
+  /* border: 1px solid white; */
+  text-align: left;
+}
 .bookTable {
   width: 90%;
 }

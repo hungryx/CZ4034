@@ -2,6 +2,9 @@
   {
     "id": 1,
     "title": "Harry Potter and the Sorcerer's Stone",
+    "genre": "Fantasy",
+    "image": "https://example.com/sorcerers_stone.jpg",
+    "publication_date": "1997-06-26",
     "comments": [
       { "comment": "Classic series!", "sentiment": 0.9 },
       { "comment": "Magical world", "sentiment": 0.8 },
@@ -23,6 +26,9 @@
   {
     "id": 2,
     "title": "Harry Potter and the Chamber of Secrets",
+    "genre": "Fantasy",
+    "image": "https://example.com/chamber_of_secrets.jpg",
+    "publication_date": "1998-07-02",
     "comments": [
       { "comment": "Better than the first!", "sentiment": 0.8 },
       { "comment": "Couldn't stop reading", "sentiment": 0.9 },
@@ -44,6 +50,9 @@
   {
     "id": 3,
     "title": "Harry Potter and the Prisoner of Azkaban",
+    "genre": "Fantasy",
+    "image": "https://example.com/prisoner_of_azkaban.jpg",
+    "publication_date": "1999-07-08",
     "comments": [
       { "comment": "The best in the series!", "sentiment": 0.9 },
       { "comment": "Incredible story", "sentiment": 0.9 },
@@ -68,6 +77,9 @@
   {
     "id": 4,
     "title": "Harry Potter and the Goblet of Fire",
+    "genre": "Fantasy",
+    "image": "https://example.com/goblet_of_fire.jpg",
+    "publication_date": "2000-07-08",
     "comments": [
       { "comment": "Epic!", "sentiment": 0.9 },
       { "comment": "Loved the Triwizard Tournament", "sentiment": 0.8 },
@@ -92,6 +104,9 @@
   {
     "id": 5,
     "title": "Harry Potter and the Order of the Phoenix",
+    "genre": "Fantasy",
+    "image": "https://example.com/order_of_phoenix.jpg",
+    "publication_date": "2003-06-21",
     "comments": [
       { "comment": "Intense read!", "sentiment": 0.8 },
       { "comment": "Emotional rollercoaster", "sentiment": 0.7 },

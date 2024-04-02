@@ -18,6 +18,7 @@ const ResultsSection = (props) => {
         {props.results.map((result) => (
           <div className="resultcard" onClick={() => viewResult(result.id)}>
             <p>{result.title}</p>
+            <p>{result.genre}</p>
           </div>
         ))}
       </div>
