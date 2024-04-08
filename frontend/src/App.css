@@ -136,10 +136,47 @@
 }
 
 .comment {
-  width: 80%;
+  width: 70%;
   text-align: left;
 }
 .sentiment {
-  width: 20%;
-  font-weight: 700;
+  width: 30%;
+  font-weight: 500;
+}
+
+/* dropdown & filter in book page */
+.sentHead {
+  display: flex;
+  width: 100%;
+  border: none;
+  align-items: center;
+}
+.sentimentSort {
+  background: none;
+}
+.sentimentSort:hover {
+  outline: none;
+  color: rgb(135, 196, 225);
+}
+.sentimentDropdown {
+  /* position: relative; */
+  cursor: pointer;
+  padding-top: 10px;
+  /* margin-left: 50px; */
+}
+.sentimentCheckbox {
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #242424;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+}
+.sentimentSelect > label {
+  padding-left: 5px;
+  font-size: 0.8em;
+}
+.sentimentSelect > input[type="checkbox"] {
+  cursor: pointer;
 }
