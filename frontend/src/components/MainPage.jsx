@@ -111,6 +111,9 @@ const MainPage = () => {
   // (when returning from book page)
   useEffect(() => {
     const params = new URLSearchParams(location.search);
+    if (params.size === 0) {
+      return;
+    }
     const title = params.get("title");
     const genres = params.get("genres").split(",");
     const minYear = params.get("minYear");
@@ -122,9 +125,9 @@ const MainPage = () => {
     getResults(title, genres, minYear, maxYear);
   }, []);
 
-  useEffect(() => {
-    search();
-  }, [searchInput, selectedGenres, selectedMinYear, selectedMaxYear]);
+  // useEffect(() => {
+  //   search();
+  // }, [searchInput, selectedGenres, selectedMinYear, selectedMaxYear]);
 
   // search and display functions
   const search = () => {
@@ -233,7 +236,7 @@ const MainPage = () => {
             </div>
           </div>
         </div>
-        {/* <button onClick={search}>Search</button> */}
+        <button onClick={search}>Search</button>
       </div>
 
       <ResultsSection results={results} />

@@ -2,7 +2,9 @@
   {
     "id": 1,
     "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
     "genre": "Fantasy",
+    "avg_sentiment": 0.8,
     "image": "https://example.com/sorcerers_stone.jpg",
     "publication_date": "1997-06-26",
     "comments": [
@@ -11,11 +13,14 @@
       { "comment": "One of my childhood favorites", "sentiment": 0.85 },
       { "comment": "Couldn't put it down", "sentiment": 0.9 },
       { "comment": "Amazing characters", "sentiment": 0.9 },
-      { "comment": "Captivating plot", "sentiment": 0.85 },
+      {
+        "comment": "Explore some innovations for enhancing classification. If you introduce more than one, perform an ablation study to show the contribution of innovation. For example, if you perform word sense disambiguation (WSD) and named entity recognition (NER) to enhance sentiment analysis, show the increase in accuracy when adding only WSD, the increase in accuracy when adding only NER, and the increase in accuracy when adding both WSD and NER to your system. Explain why they are important to solve specific problems, illustrated with examples. Possible innovations include (but are not limited to) the following:",
+        "sentiment": 0.85
+      },
       { "comment": "I'm hooked!", "sentiment": 0.8 },
       { "comment": "Absolutely enchanting", "sentiment": 0.95 },
       { "comment": "Re-read multiple times", "sentiment": 0.9 },
-      { "comment": "Instant classic", "sentiment": 0.9 },
+      { "comment": "Instant classic", "sentiment": 0.5 },
       { "comment": "Disappointing ending", "sentiment": 0.3 },
       { "comment": "Didn't live up to the hype", "sentiment": 0.4 },
       { "comment": "Slow pacing", "sentiment": 0.2 },
@@ -26,7 +31,9 @@
   {
     "id": 2,
     "title": "Harry Potter and the Chamber of Secrets",
+    "author": "J.K. Rowling",
     "genre": "Fantasy",
+    "avg_sentiment": 0.8,
     "image": "https://example.com/chamber_of_secrets.jpg",
     "publication_date": "1998-07-02",
     "comments": [
@@ -50,7 +57,9 @@
   {
     "id": 3,
     "title": "Harry Potter and the Prisoner of Azkaban",
+    "author": "J.K. Rowling",
     "genre": "Fantasy",
+    "avg_sentiment": 0.8,
     "image": "https://example.com/prisoner_of_azkaban.jpg",
     "publication_date": "1999-07-08",
     "comments": [
@@ -77,7 +86,9 @@
   {
     "id": 4,
     "title": "Harry Potter and the Goblet of Fire",
+    "author": "J.K. Rowling",
     "genre": "Fantasy",
+    "avg_sentiment": 0.8,
     "image": "https://example.com/goblet_of_fire.jpg",
     "publication_date": "2000-07-08",
     "comments": [
@@ -104,7 +115,9 @@
   {
     "id": 5,
     "title": "Harry Potter and the Order of the Phoenix",
+    "author": "J.K. Rowling",
     "genre": "Fantasy",
+    "avg_sentiment": 0.8,
     "image": "https://example.com/order_of_phoenix.jpg",
     "publication_date": "2003-06-21",
     "comments": [
