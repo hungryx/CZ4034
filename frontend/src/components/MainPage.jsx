@@ -122,6 +122,10 @@ const MainPage = () => {
     getResults(title, genres, minYear, maxYear);
   }, []);
 
+  useEffect(() => {
+    search();
+  }, [searchInput, selectedGenres, selectedMinYear, selectedMaxYear]);
+
   // search and display functions
   const search = () => {
     const params = new URLSearchParams(location.search);
@@ -141,10 +145,10 @@ const MainPage = () => {
   const getResults = (input, genres, minYear, maxYear) => {
     // WILL BE REPLACED BY API CALL TO SOLR (rmb add async above)
 
-    if (!input || input.length == 0) {
-      setResults([]);
-      return;
-    }
+    // if (!input || input.length == 0) {
+    //   setResults([]);
+    //   return;
+    // }
 
     const results = data.filter((item) =>
       item.title.toLowerCase().match(`\\b${input.toLowerCase()}`)
@@ -229,7 +233,7 @@ const MainPage = () => {
             </div>
           </div>
         </div>
-        <button onClick={search}>Search</button>
+        {/* <button onClick={search}>Search</button> */}
       </div>
 
       <ResultsSection results={results} />
