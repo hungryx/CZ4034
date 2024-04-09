@@ -1,0 +1,1245 @@
+2024-04-09 16:09:25.997 INFO  (main) [] o.e.j.s.Server jetty-10.0.13; built: 2022-12-07T20:13:20.134Z; git: 1c2636ea05c0ca8de1ffd6ca7f3a98ac084c766d; jvm 22+36-2370
+2024-04-09 16:09:32.655 WARN  (main) [] o.e.j.u.DeprecationWarning Using @Deprecated Class org.eclipse.jetty.servlet.listener.ELContextCleaner
+2024-04-09 16:09:32.993 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2024-04-09 16:09:33.047 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.2.1
+2024-04-09 16:09:33.048 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2024-04-09 16:09:33.049 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1
+2024-04-09 16:09:33.050 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2024-04-09T16:09:33.050243Z
+2024-04-09 16:09:33.076 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr started with "-XX:+CrashOnOutOfMemoryError" that will crash on any OutOfMemoryError exception. The cause of the OOME will be logged in the crash file at the following path: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\logs\jvm_crash_16644.log
+2024-04-09 16:09:33.125 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1 (source: system property: solr.solr.home)
+2024-04-09 16:09:33.140 INFO  (main) [] o.a.s.c.SolrXmlConfig solr.xml not found in SOLR_HOME, using built-in default
+2024-04-09 16:09:33.141 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\solr.xml
+2024-04-09 16:09:33.854 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/lib]
+2024-04-09 16:09:33.860 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/lib]
+2024-04-09 16:09:43.506 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2024-04-09 16:09:43.508 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2024-04-09 16:10:03.405 WARN  (main) [] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.788 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:10:03.853 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 0 core definitions underneath C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1
+2024-04-09 16:10:04.340 INFO  (main) [] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-04-09 16:10:04.680 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@7bfc3126{solr-jetty-context.xml,/solr,file:///C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/server/solr-webapp/webapp/,AVAILABLE}{C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server/solr-webapp/webapp}
+2024-04-09 16:10:04.693 INFO  (main) [] o.e.j.s.RequestLogWriter Opened C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\logs\2024_04_09.request.log
+2024-04-09 16:10:04.702 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@64337702{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:8983}
+2024-04-09 16:10:04.704 INFO  (main) [] o.e.j.s.Server Started Server@532a02d9{STARTING}[10.0.13,sto=0] @50400ms
+2024-04-09 16:10:04.858 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=90
+2024-04-09 16:11:51.103 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679111040} status=0 QTime=2
+2024-04-09 16:11:51.175 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679111040} status=0 QTime=72
+2024-04-09 16:11:51.232 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679111040} status=0 QTime=44
+2024-04-09 16:11:53.266 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679111040} status=0 QTime=0
+2024-04-09 16:11:53.267 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679111040} status=0 QTime=0
+2024-04-09 16:11:53.324 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679111040} status=0 QTime=58
+2024-04-09 16:11:58.214 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679118191} status=0 QTime=0
+2024-04-09 16:11:58.214 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679118191} status=0 QTime=0
+2024-04-09 16:11:58.265 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679118191} status=0 QTime=50
+2024-04-09 16:11:58.805 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679118781} status=0 QTime=0
+2024-04-09 16:11:58.805 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679118781} status=0 QTime=0
+2024-04-09 16:11:58.859 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679118781} status=0 QTime=54
+2024-04-09 16:11:59.258 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679119237} status=0 QTime=0
+2024-04-09 16:11:59.258 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679119237} status=0 QTime=0
+2024-04-09 16:11:59.304 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679119237} status=0 QTime=46
+2024-04-09 16:11:59.667 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679119643} status=0 QTime=0
+2024-04-09 16:11:59.667 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679119643} status=0 QTime=0
+2024-04-09 16:11:59.718 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679119643} status=0 QTime=51
+2024-04-09 16:12:00.091 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679120069} status=0 QTime=0
+2024-04-09 16:12:00.091 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679120069} status=0 QTime=0
+2024-04-09 16:12:00.137 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679120069} status=0 QTime=45
+2024-04-09 16:12:00.456 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679120434} status=0 QTime=0
+2024-04-09 16:12:00.456 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679120434} status=0 QTime=0
+2024-04-09 16:12:00.504 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679120434} status=0 QTime=48
+2024-04-09 16:12:00.844 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679120823} status=0 QTime=0
+2024-04-09 16:12:00.844 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679120823} status=0 QTime=0
+2024-04-09 16:12:00.891 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679120823} status=0 QTime=46
+2024-04-09 16:12:01.263 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679121241} status=0 QTime=0
+2024-04-09 16:12:01.263 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679121241} status=0 QTime=0
+2024-04-09 16:12:01.311 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679121241} status=0 QTime=48
+2024-04-09 16:12:01.679 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679121654} status=0 QTime=0
+2024-04-09 16:12:01.679 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679121654} status=0 QTime=0
+2024-04-09 16:12:01.725 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679121654} status=0 QTime=46
+2024-04-09 16:12:02.073 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679122049} status=0 QTime=0
+2024-04-09 16:12:02.076 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679122049} status=0 QTime=0
+2024-04-09 16:12:02.125 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679122049} status=0 QTime=52
+2024-04-09 16:12:02.463 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679122439} status=0 QTime=0
+2024-04-09 16:12:02.463 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679122439} status=0 QTime=0
+2024-04-09 16:12:02.508 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679122439} status=0 QTime=44
+2024-04-09 16:12:02.792 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679122767} status=0 QTime=0
+2024-04-09 16:12:02.792 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679122767} status=0 QTime=0
+2024-04-09 16:12:02.840 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679122767} status=0 QTime=48
+2024-04-09 16:12:03.233 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679123208} status=0 QTime=0
+2024-04-09 16:12:03.233 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679123208} status=0 QTime=0
+2024-04-09 16:12:03.278 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679123208} status=0 QTime=45
+2024-04-09 16:12:03.602 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679123578} status=0 QTime=0
+2024-04-09 16:12:03.602 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679123578} status=0 QTime=0
+2024-04-09 16:12:03.649 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679123579} status=0 QTime=47
+2024-04-09 16:12:03.991 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679123969} status=0 QTime=0
+2024-04-09 16:12:03.991 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679123969} status=0 QTime=0
+2024-04-09 16:12:04.037 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679123969} status=0 QTime=45
+2024-04-09 16:12:53.295 INFO  (qtp801569151-39) [ x:new_core] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=new_core&action=CREATE&config=solrconfig.xml&instanceDir=server\solr\configsets\sample_techproducts_configs&wt=json&_=1712679123969
+2024-04-09 16:12:53.345 INFO  (qtp801569151-39) [ x:new_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-09 16:12:53.428 INFO  (qtp801569151-39) [ x:new_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.4.0
+2024-04-09 16:12:53.433 INFO  (qtp801569151-39) [ x:new_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-09 16:12:53.514 INFO  (qtp801569151-39) [ x:new_core] o.a.s.s.IndexSchema Schema name=example
+2024-04-09 16:12:53.919 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-09 16:12:53.920 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-09 16:12:53.920 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:12:53.920 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:12:53.937 INFO  (qtp801569151-39) [ x:new_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-09 16:12:53.963 INFO  (qtp801569151-39) [ x:new_core] o.a.s.c.CoreContainer Creating SolrCore 'new_core' using configuration from instancedir C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs, trusted=true
+2024-04-09 16:12:53.991 INFO  (qtp801569151-39) [ x:new_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-09 16:13:06.873 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679186845} status=0 QTime=0
+2024-04-09 16:13:06.874 INFO  (qtp801569151-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679186845} status=0 QTime=0
+2024-04-09 16:13:06.929 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679186845} status=0 QTime=56
+2024-04-09 16:13:14.134 WARN  (qtp801569151-39) [ x:new_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.793 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:13:14.321 INFO  (qtp801569151-39) [ x:new_core] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-04-09 16:13:14.335 INFO  (qtp801569151-39) [ x:new_core] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2024-04-09 16:13:14.335 INFO  (qtp801569151-39) [ x:new_core] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2024-04-09 16:13:14.346 INFO  (qtp801569151-39) [ x:new_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-09 16:13:14.347 INFO  (qtp801569151-39) [ x:new_core] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2024-04-09 16:13:14.408 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:13:14.410 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:13:14.410 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2024-04-09 16:13:14.412 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:13:14.412 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2024-04-09 16:13:14.412 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2024-04-09 16:13:14.412 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2024-04-09 16:13:14.413 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:13:14.413 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true, format=solr} for /schema/analysis/synonyms/english
+2024-04-09 16:13:14.414 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.s.a.ManagedSynonymGraphFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2024-04-09 16:13:14.416 INFO  (qtp801569151-39) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2024-04-09 16:13:14.434 INFO  (qtp801569151-39) [ x:new_core] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, name=default, field=text, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2024-04-09 16:13:14.440 INFO  (qtp801569151-39) [ x:new_core] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2024-04-09 16:13:14.442 INFO  (qtp801569151-39) [ x:new_core] o.a.s.s.s.SolrSuggester init: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:13:14.454 INFO  (qtp801569151-39) [ x:new_core] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:13:14.469 INFO  (qtp801569151-39) [ x:new_core] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-04-09 16:13:14.473 INFO  (qtp801569151-39) [ x:new_core] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1795874299023720448
+2024-04-09 16:13:14.477 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=new_core&action=CREATE&config=solrconfig.xml&instanceDir=server\solr\configsets\sample_techproducts_configs&wt=json&_=1712679123969} status=0 QTime=21183
+2024-04-09 16:13:14.512 INFO  (searcherExecutor-12-thread-1-processing-new_core) [ x:new_core] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=35
+2024-04-09 16:13:14.513 INFO  (searcherExecutor-12-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:13:14.513 INFO  (searcherExecutor-12-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-04-09 16:13:14.513 INFO  (searcherExecutor-12-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2024-04-09 16:13:14.521 INFO  (searcherExecutor-12-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:13:18.719 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679198693} status=0 QTime=0
+2024-04-09 16:13:18.725 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679198693} status=0 QTime=5
+2024-04-09 16:13:18.754 INFO  (qtp801569151-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679198693} status=0 QTime=0
+2024-04-09 16:13:18.757 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712679198693} status=0 QTime=3
+2024-04-09 16:13:18.781 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679198693} status=0 QTime=61
+2024-04-09 16:13:18.839 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679198693} status=0 QTime=48
+2024-04-09 16:13:20.332 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679198693} status=0 QTime=0
+2024-04-09 16:13:20.336 INFO  (qtp801569151-41) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1712679200326} status=0 QTime=3
+2024-04-09 16:13:20.340 INFO  (qtp801569151-34) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1712679200326} status=0 QTime=7
+2024-04-09 16:13:20.350 INFO  (qtp801569151-38) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1712679198693&ts=1712679198693} status=503 QTime=3
+2024-04-09 16:13:20.424 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679198693} status=0 QTime=92
+2024-04-09 16:13:20.435 INFO  (qtp801569151-37) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1712679200326} status=0 QTime=103
+2024-04-09 16:13:22.664 INFO  (qtp801569151-37) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679198693} status=0 QTime=0
+2024-04-09 16:13:22.669 INFO  (qtp801569151-36) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1712679200326} status=0 QTime=5
+2024-04-09 16:13:22.719 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679198693} status=0 QTime=55
+2024-04-09 16:13:26.030 INFO  (qtp801569151-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679198693} status=0 QTime=0
+2024-04-09 16:13:26.031 INFO  (qtp801569151-41) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1712679200326} status=0 QTime=1
+2024-04-09 16:13:26.034 INFO  (qtp801569151-43) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1712679206020} status=0 QTime=4
+2024-04-09 16:13:26.076 INFO  (qtp801569151-38) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1712679200326} status=0 QTime=0
+2024-04-09 16:13:26.097 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679198693} status=0 QTime=68
+2024-04-09 16:18:57.882 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:18:57.882 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:18:57.882 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:18:57.882 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:18:57.898 INFO  (qtp801569151-34) [ x:new_core] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf\managed-schema.xml
+2024-04-09 16:18:58.045 INFO  (qtp801569151-34) [ x:new_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-09 16:18:58.119 INFO  (qtp801569151-34) [ x:new_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.4.0
+2024-04-09 16:18:58.119 INFO  (qtp801569151-34) [ x:new_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-09 16:18:58.139 INFO  (qtp801569151-34) [ x:new_core] o.a.s.s.IndexSchema Schema name=example
+2024-04-09 16:18:58.196 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-09 16:18:58.196 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-09 16:18:58.196 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:18:58.196 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:18:58.199 INFO  (qtp801569151-34) [ x:new_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-09 16:18:58.211 INFO  (qtp801569151-34) [ x:new_core] o.a.s.c.CoreContainer Reloading SolrCore 'new_core' using configuration from instancedir C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs
+2024-04-09 16:18:58.268 INFO  (qtp801569151-34) [ x:new_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-09 16:19:11.460 INFO  (qtp801569151-70) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679551426} status=0 QTime=0
+2024-04-09 16:19:11.519 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679551427} status=0 QTime=52
+2024-04-09 16:19:11.529 INFO  (qtp801569151-70) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1712679551450} status=0 QTime=1
+2024-04-09 16:19:11.547 INFO  (qtp801569151-41) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1712679551450} status=0 QTime=0
+2024-04-09 16:19:11.558 INFO  (qtp801569151-70) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1712679551450} status=0 QTime=0
+2024-04-09 16:19:18.071 WARN  (qtp801569151-34) [ x:new_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.771 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:19:18.080 INFO  (qtp801569151-34) [ x:new_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-09 16:19:18.080 INFO  (qtp801569151-34) [ x:new_core] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2024-04-09 16:19:18.088 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:19:18.088 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:19:18.088 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2024-04-09 16:19:18.088 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:19:18.088 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2024-04-09 16:19:18.088 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2024-04-09 16:19:18.090 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2024-04-09 16:19:18.090 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:19:18.090 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true, format=solr} for /schema/analysis/synonyms/english
+2024-04-09 16:19:18.090 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.s.a.ManagedSynonymGraphFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2024-04-09 16:19:18.090 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2024-04-09 16:19:18.090 INFO  (qtp801569151-34) [ x:new_core] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, name=default, field=text, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2024-04-09 16:19:18.090 INFO  (qtp801569151-34) [ x:new_core] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2024-04-09 16:19:18.090 INFO  (qtp801569151-34) [ x:new_core] o.a.s.s.s.SolrSuggester init: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:19:18.091 INFO  (qtp801569151-34) [ x:new_core] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:19:18.094 INFO  (qtp801569151-34) [ x:new_core] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-04-09 16:19:18.095 INFO  (qtp801569151-34) [ x:new_core] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1795874680309022720
+2024-04-09 16:19:18.097 INFO  (searcherExecutor-18-thread-1-processing-new_core) [ x:new_core] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=0
+2024-04-09 16:19:18.097 INFO  (searcherExecutor-18-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:19:18.097 INFO  (searcherExecutor-18-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-04-09 16:19:18.097 INFO  (searcherExecutor-18-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2024-04-09 16:19:18.100 INFO  (qtp801569151-34) [ x:new_core] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2024-04-09 16:19:18.107 INFO  (searcherExecutor-18-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:19:18.112 INFO  (qtp801569151-34) [] o.a.s.c.S.Request webapp=/solr path=/schema params={wt=json&_=1712679206020} status=0 QTime=20279
+2024-04-09 16:19:18.112 INFO  (qtp801569151-34) [] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@27d11f22 new_core
+2024-04-09 16:19:18.112 INFO  (qtp801569151-34) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.new_core tag=SolrCore@27d11f22
+2024-04-09 16:19:18.124 INFO  (searcherExecutor-18-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:19:18.132 INFO  (searcherExecutor-18-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 12 ms
+2024-04-09 16:19:29.069 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:19:29.069 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:19:29.069 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:19:29.069 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:19:29.076 INFO  (qtp801569151-41) [ x:new_core] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf\managed-schema.xml
+2024-04-09 16:19:29.195 INFO  (qtp801569151-41) [ x:new_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-09 16:19:29.243 INFO  (qtp801569151-41) [ x:new_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.4.0
+2024-04-09 16:19:29.243 INFO  (qtp801569151-41) [ x:new_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-09 16:19:29.261 INFO  (qtp801569151-41) [ x:new_core] o.a.s.s.IndexSchema Schema name=example
+2024-04-09 16:19:29.306 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-09 16:19:29.306 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-09 16:19:29.306 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:19:29.306 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:19:29.309 INFO  (qtp801569151-41) [ x:new_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-09 16:19:29.319 INFO  (qtp801569151-41) [ x:new_core] o.a.s.c.CoreContainer Reloading SolrCore 'new_core' using configuration from instancedir C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs
+2024-04-09 16:19:29.363 INFO  (qtp801569151-41) [ x:new_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-09 16:19:40.435 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:19:40.437 INFO  (qtp801569151-61) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1712679580424} status=0 QTime=2
+2024-04-09 16:19:40.437 INFO  (qtp801569151-35) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1712679580424} status=0 QTime=0
+2024-04-09 16:19:40.487 INFO  (qtp801569151-73) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1712679580424} status=0 QTime=0
+2024-04-09 16:19:40.498 INFO  (qtp801569151-71) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=63
+2024-04-09 16:19:49.159 WARN  (qtp801569151-41) [ x:new_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.765 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:19:49.164 INFO  (qtp801569151-41) [ x:new_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-09 16:19:49.164 INFO  (qtp801569151-41) [ x:new_core] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2024-04-09 16:19:49.170 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:19:49.171 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:19:49.171 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2024-04-09 16:19:49.171 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:19:49.171 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2024-04-09 16:19:49.171 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2024-04-09 16:19:49.171 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2024-04-09 16:19:49.171 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:19:49.172 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true, format=solr} for /schema/analysis/synonyms/english
+2024-04-09 16:19:49.172 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.s.a.ManagedSynonymGraphFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2024-04-09 16:19:49.172 INFO  (qtp801569151-41) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2024-04-09 16:19:49.172 INFO  (qtp801569151-41) [ x:new_core] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, name=default, field=text, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2024-04-09 16:19:49.172 INFO  (qtp801569151-41) [ x:new_core] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2024-04-09 16:19:49.172 INFO  (qtp801569151-41) [ x:new_core] o.a.s.s.s.SolrSuggester init: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:19:49.172 INFO  (qtp801569151-41) [ x:new_core] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:19:49.176 INFO  (qtp801569151-41) [ x:new_core] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-04-09 16:19:49.176 INFO  (qtp801569151-41) [ x:new_core] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1795874712899813376
+2024-04-09 16:19:49.178 INFO  (searcherExecutor-23-thread-1-processing-new_core) [ x:new_core] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=0
+2024-04-09 16:19:49.179 INFO  (searcherExecutor-23-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:19:49.179 INFO  (searcherExecutor-23-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-04-09 16:19:49.179 INFO  (searcherExecutor-23-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2024-04-09 16:19:49.182 INFO  (qtp801569151-41) [ x:new_core] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2024-04-09 16:19:49.186 INFO  (searcherExecutor-23-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:19:49.189 INFO  (qtp801569151-41) [] o.a.s.c.S.Request webapp=/solr path=/schema params={wt=json&_=1712679551450} status=0 QTime=20158
+2024-04-09 16:19:49.189 INFO  (qtp801569151-41) [] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@23014128 new_core
+2024-04-09 16:19:49.189 INFO  (searcherExecutor-23-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:19:49.189 INFO  (qtp801569151-41) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.new_core tag=SolrCore@23014128
+2024-04-09 16:19:49.197 INFO  (searcherExecutor-23-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:19:58.445 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:19:58.445 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:19:58.445 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:19:58.445 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:19:58.451 INFO  (qtp801569151-43) [ x:new_core] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf\managed-schema.xml
+2024-04-09 16:19:58.571 INFO  (qtp801569151-43) [ x:new_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-09 16:19:58.619 INFO  (qtp801569151-43) [ x:new_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.4.0
+2024-04-09 16:19:58.620 INFO  (qtp801569151-43) [ x:new_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-09 16:19:58.637 INFO  (qtp801569151-43) [ x:new_core] o.a.s.s.IndexSchema Schema name=example
+2024-04-09 16:19:58.679 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-09 16:19:58.679 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-09 16:19:58.679 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:19:58.679 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:19:58.681 INFO  (qtp801569151-43) [ x:new_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-09 16:19:58.694 INFO  (qtp801569151-43) [ x:new_core] o.a.s.c.CoreContainer Reloading SolrCore 'new_core' using configuration from instancedir C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs
+2024-04-09 16:19:58.731 INFO  (qtp801569151-43) [ x:new_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-09 16:20:18.611 WARN  (qtp801569151-43) [ x:new_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.855 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:20:18.616 INFO  (qtp801569151-43) [ x:new_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-09 16:20:18.616 INFO  (qtp801569151-43) [ x:new_core] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2024-04-09 16:20:18.622 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:20:18.622 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:20:18.622 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2024-04-09 16:20:18.622 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:20:18.622 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2024-04-09 16:20:18.622 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2024-04-09 16:20:18.622 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2024-04-09 16:20:18.622 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:20:18.622 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true, format=solr} for /schema/analysis/synonyms/english
+2024-04-09 16:20:18.623 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.s.a.ManagedSynonymGraphFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2024-04-09 16:20:18.623 INFO  (qtp801569151-43) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2024-04-09 16:20:18.623 INFO  (qtp801569151-43) [ x:new_core] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, name=default, field=text, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2024-04-09 16:20:18.623 INFO  (qtp801569151-43) [ x:new_core] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2024-04-09 16:20:18.623 INFO  (qtp801569151-43) [ x:new_core] o.a.s.s.s.SolrSuggester init: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:20:18.623 INFO  (qtp801569151-43) [ x:new_core] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:20:18.626 INFO  (qtp801569151-43) [ x:new_core] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-04-09 16:20:18.627 INFO  (qtp801569151-43) [ x:new_core] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1795874743781425152
+2024-04-09 16:20:18.629 INFO  (searcherExecutor-28-thread-1-processing-new_core) [ x:new_core] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=1
+2024-04-09 16:20:18.629 INFO  (searcherExecutor-28-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:20:18.629 INFO  (searcherExecutor-28-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-04-09 16:20:18.629 INFO  (searcherExecutor-28-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2024-04-09 16:20:18.632 INFO  (qtp801569151-43) [ x:new_core] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2024-04-09 16:20:18.634 INFO  (searcherExecutor-28-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:20:18.636 INFO  (qtp801569151-43) [] o.a.s.c.S.Request webapp=/solr path=/schema params={wt=json&_=1712679580424} status=0 QTime=20237
+2024-04-09 16:20:18.636 INFO  (qtp801569151-43) [] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@5675de9e new_core
+2024-04-09 16:20:18.636 INFO  (qtp801569151-43) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.new_core tag=SolrCore@5675de9e
+2024-04-09 16:20:18.637 INFO  (searcherExecutor-28-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:20:18.639 INFO  (searcherExecutor-28-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:20:29.267 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:20:29.267 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:20:29.267 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:20:29.267 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:20:29.273 INFO  (qtp801569151-61) [ x:new_core] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf\managed-schema.xml
+2024-04-09 16:20:29.408 INFO  (qtp801569151-61) [ x:new_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-09 16:20:29.450 INFO  (qtp801569151-61) [ x:new_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.4.0
+2024-04-09 16:20:29.450 INFO  (qtp801569151-61) [ x:new_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-09 16:20:29.468 INFO  (qtp801569151-61) [ x:new_core] o.a.s.s.IndexSchema Schema name=example
+2024-04-09 16:20:29.518 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-09 16:20:29.518 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-09 16:20:29.518 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:20:29.518 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:20:29.521 INFO  (qtp801569151-61) [ x:new_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-09 16:20:29.530 INFO  (qtp801569151-61) [ x:new_core] o.a.s.c.CoreContainer Reloading SolrCore 'new_core' using configuration from instancedir C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs
+2024-04-09 16:20:29.565 INFO  (qtp801569151-61) [ x:new_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-09 16:20:49.412 WARN  (qtp801569151-61) [ x:new_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.818 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:20:49.418 INFO  (qtp801569151-61) [ x:new_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-09 16:20:49.418 INFO  (qtp801569151-61) [ x:new_core] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2024-04-09 16:20:49.424 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:20:49.424 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:20:49.424 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2024-04-09 16:20:49.424 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:20:49.424 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2024-04-09 16:20:49.424 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2024-04-09 16:20:49.424 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2024-04-09 16:20:49.425 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:20:49.425 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true, format=solr} for /schema/analysis/synonyms/english
+2024-04-09 16:20:49.425 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.s.a.ManagedSynonymGraphFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2024-04-09 16:20:49.425 INFO  (qtp801569151-61) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2024-04-09 16:20:49.425 INFO  (qtp801569151-61) [ x:new_core] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, name=default, field=text, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2024-04-09 16:20:49.425 INFO  (qtp801569151-61) [ x:new_core] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2024-04-09 16:20:49.425 INFO  (qtp801569151-61) [ x:new_core] o.a.s.s.s.SolrSuggester init: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:20:49.425 INFO  (qtp801569151-61) [ x:new_core] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:20:49.429 INFO  (qtp801569151-61) [ x:new_core] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-04-09 16:20:49.429 INFO  (qtp801569151-61) [ x:new_core] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1795874776079663104
+2024-04-09 16:20:49.431 INFO  (searcherExecutor-33-thread-1-processing-new_core) [ x:new_core] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=1
+2024-04-09 16:20:49.431 INFO  (searcherExecutor-33-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:20:49.431 INFO  (searcherExecutor-33-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-04-09 16:20:49.431 INFO  (searcherExecutor-33-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2024-04-09 16:20:49.434 INFO  (qtp801569151-61) [ x:new_core] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2024-04-09 16:20:49.435 INFO  (searcherExecutor-33-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:20:49.438 INFO  (qtp801569151-61) [] o.a.s.c.S.Request webapp=/solr path=/schema params={wt=json&_=1712679580424} status=0 QTime=20202
+2024-04-09 16:20:49.438 INFO  (qtp801569151-61) [] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@192abc6f new_core
+2024-04-09 16:20:49.438 INFO  (qtp801569151-61) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.new_core tag=SolrCore@192abc6f
+2024-04-09 16:20:49.438 INFO  (searcherExecutor-33-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:20:49.441 INFO  (searcherExecutor-33-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:20:54.969 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:20:54.969 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:20:54.969 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:20:54.969 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:20:54.973 INFO  (qtp801569151-75) [ x:new_core] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf\managed-schema.xml
+2024-04-09 16:20:55.077 INFO  (qtp801569151-75) [ x:new_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-09 16:20:55.118 INFO  (qtp801569151-75) [ x:new_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.4.0
+2024-04-09 16:20:55.118 INFO  (qtp801569151-75) [ x:new_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-09 16:20:55.136 INFO  (qtp801569151-75) [ x:new_core] o.a.s.s.IndexSchema Schema name=example
+2024-04-09 16:20:55.174 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-09 16:20:55.174 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-09 16:20:55.174 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:20:55.174 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:20:55.178 INFO  (qtp801569151-75) [ x:new_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-09 16:20:55.187 INFO  (qtp801569151-75) [ x:new_core] o.a.s.c.CoreContainer Reloading SolrCore 'new_core' using configuration from instancedir C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs
+2024-04-09 16:20:55.217 INFO  (qtp801569151-75) [ x:new_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-09 16:21:15.002 WARN  (qtp801569151-75) [ x:new_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.761 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:21:15.007 INFO  (qtp801569151-75) [ x:new_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-09 16:21:15.008 INFO  (qtp801569151-75) [ x:new_core] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2024-04-09 16:21:15.013 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:21:15.014 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:21:15.014 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2024-04-09 16:21:15.014 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:21:15.014 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2024-04-09 16:21:15.014 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2024-04-09 16:21:15.014 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2024-04-09 16:21:15.014 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:21:15.014 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true, format=solr} for /schema/analysis/synonyms/english
+2024-04-09 16:21:15.014 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.s.a.ManagedSynonymGraphFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2024-04-09 16:21:15.015 INFO  (qtp801569151-75) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2024-04-09 16:21:15.015 INFO  (qtp801569151-75) [ x:new_core] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, name=default, field=text, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2024-04-09 16:21:15.015 INFO  (qtp801569151-75) [ x:new_core] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2024-04-09 16:21:15.015 INFO  (qtp801569151-75) [ x:new_core] o.a.s.s.s.SolrSuggester init: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:21:15.015 INFO  (qtp801569151-75) [ x:new_core] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:21:15.019 INFO  (qtp801569151-75) [ x:new_core] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-04-09 16:21:15.019 INFO  (qtp801569151-75) [ x:new_core] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1795874802912722944
+2024-04-09 16:21:15.021 INFO  (searcherExecutor-38-thread-1-processing-new_core) [ x:new_core] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=0
+2024-04-09 16:21:15.021 INFO  (searcherExecutor-38-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:21:15.021 INFO  (searcherExecutor-38-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-04-09 16:21:15.021 INFO  (searcherExecutor-38-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2024-04-09 16:21:15.024 INFO  (qtp801569151-75) [ x:new_core] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2024-04-09 16:21:15.026 INFO  (searcherExecutor-38-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:21:15.028 INFO  (qtp801569151-75) [] o.a.s.c.S.Request webapp=/solr path=/schema params={wt=json&_=1712679580424} status=0 QTime=20089
+2024-04-09 16:21:15.029 INFO  (qtp801569151-75) [] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@148822b5 new_core
+2024-04-09 16:21:15.029 INFO  (searcherExecutor-38-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:21:15.029 INFO  (qtp801569151-75) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.new_core tag=SolrCore@148822b5
+2024-04-09 16:21:15.042 INFO  (searcherExecutor-38-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:21:18.041 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:21:18.041 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:21:18.041 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:21:18.041 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:21:18.045 INFO  (qtp801569151-36) [ x:new_core] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf\managed-schema.xml
+2024-04-09 16:21:18.147 INFO  (qtp801569151-36) [ x:new_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-09 16:21:18.189 INFO  (qtp801569151-36) [ x:new_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.4.0
+2024-04-09 16:21:18.189 INFO  (qtp801569151-36) [ x:new_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-09 16:21:18.206 INFO  (qtp801569151-36) [ x:new_core] o.a.s.s.IndexSchema Schema name=example
+2024-04-09 16:21:18.242 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-09 16:21:18.242 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-09 16:21:18.242 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:21:18.242 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:21:18.244 INFO  (qtp801569151-36) [ x:new_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-09 16:21:18.254 INFO  (qtp801569151-36) [ x:new_core] o.a.s.c.CoreContainer Reloading SolrCore 'new_core' using configuration from instancedir C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs
+2024-04-09 16:21:18.278 INFO  (qtp801569151-36) [ x:new_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-09 16:21:38.110 WARN  (qtp801569151-36) [ x:new_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.807 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:21:38.114 INFO  (qtp801569151-36) [ x:new_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-09 16:21:38.114 INFO  (qtp801569151-36) [ x:new_core] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2024-04-09 16:21:38.120 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:21:38.121 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:21:38.121 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2024-04-09 16:21:38.121 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:21:38.121 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2024-04-09 16:21:38.121 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2024-04-09 16:21:38.121 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2024-04-09 16:21:38.121 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:21:38.121 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true, format=solr} for /schema/analysis/synonyms/english
+2024-04-09 16:21:38.121 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.s.a.ManagedSynonymGraphFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2024-04-09 16:21:38.122 INFO  (qtp801569151-36) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2024-04-09 16:21:38.122 INFO  (qtp801569151-36) [ x:new_core] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, name=default, field=text, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2024-04-09 16:21:38.122 INFO  (qtp801569151-36) [ x:new_core] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2024-04-09 16:21:38.122 INFO  (qtp801569151-36) [ x:new_core] o.a.s.s.s.SolrSuggester init: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:21:38.122 INFO  (qtp801569151-36) [ x:new_core] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:21:38.125 INFO  (qtp801569151-36) [ x:new_core] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-04-09 16:21:38.125 INFO  (qtp801569151-36) [ x:new_core] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1795874827141120000
+2024-04-09 16:21:38.127 INFO  (searcherExecutor-43-thread-1-processing-new_core) [ x:new_core] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=1
+2024-04-09 16:21:38.127 INFO  (searcherExecutor-43-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:21:38.127 INFO  (searcherExecutor-43-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-04-09 16:21:38.127 INFO  (searcherExecutor-43-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2024-04-09 16:21:38.131 INFO  (searcherExecutor-43-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:21:38.131 INFO  (qtp801569151-36) [ x:new_core] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2024-04-09 16:21:38.133 INFO  (qtp801569151-36) [] o.a.s.c.S.Request webapp=/solr path=/schema params={wt=json&_=1712679580424} status=0 QTime=20122
+2024-04-09 16:21:38.133 INFO  (qtp801569151-36) [] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@5e4aa069 new_core
+2024-04-09 16:21:38.133 INFO  (qtp801569151-36) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.new_core tag=SolrCore@5e4aa069
+2024-04-09 16:21:38.133 INFO  (searcherExecutor-43-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:21:38.134 INFO  (searcherExecutor-43-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:21:48.354 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:21:48.354 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:21:48.354 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:21:48.354 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:21:48.359 INFO  (qtp801569151-37) [ x:new_core] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf\managed-schema.xml
+2024-04-09 16:21:48.465 INFO  (qtp801569151-37) [ x:new_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-09 16:21:48.509 INFO  (qtp801569151-37) [ x:new_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.4.0
+2024-04-09 16:21:48.510 INFO  (qtp801569151-37) [ x:new_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-09 16:21:48.528 INFO  (qtp801569151-37) [ x:new_core] o.a.s.s.IndexSchema Schema name=example
+2024-04-09 16:21:48.577 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-09 16:21:48.577 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-09 16:21:48.577 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:21:48.577 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:21:48.580 INFO  (qtp801569151-37) [ x:new_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-09 16:21:48.590 INFO  (qtp801569151-37) [ x:new_core] o.a.s.c.CoreContainer Reloading SolrCore 'new_core' using configuration from instancedir C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs
+2024-04-09 16:21:48.616 INFO  (qtp801569151-37) [ x:new_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-09 16:22:08.437 WARN  (qtp801569151-37) [ x:new_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.796 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:22:08.442 INFO  (qtp801569151-37) [ x:new_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-09 16:22:08.442 INFO  (qtp801569151-37) [ x:new_core] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2024-04-09 16:22:08.447 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:22:08.447 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:22:08.447 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2024-04-09 16:22:08.447 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:22:08.447 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2024-04-09 16:22:08.448 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2024-04-09 16:22:08.448 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2024-04-09 16:22:08.448 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:22:08.448 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true, format=solr} for /schema/analysis/synonyms/english
+2024-04-09 16:22:08.448 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.s.a.ManagedSynonymGraphFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2024-04-09 16:22:08.448 INFO  (qtp801569151-37) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2024-04-09 16:22:08.449 INFO  (qtp801569151-37) [ x:new_core] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, name=default, field=text, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2024-04-09 16:22:08.449 INFO  (qtp801569151-37) [ x:new_core] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2024-04-09 16:22:08.449 INFO  (qtp801569151-37) [ x:new_core] o.a.s.s.s.SolrSuggester init: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:22:08.449 INFO  (qtp801569151-37) [ x:new_core] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:22:08.452 INFO  (qtp801569151-37) [ x:new_core] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-04-09 16:22:08.453 INFO  (qtp801569151-37) [ x:new_core] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1795874858942332928
+2024-04-09 16:22:08.455 INFO  (searcherExecutor-48-thread-1-processing-new_core) [ x:new_core] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=0
+2024-04-09 16:22:08.455 INFO  (searcherExecutor-48-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:22:08.455 INFO  (searcherExecutor-48-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-04-09 16:22:08.455 INFO  (searcherExecutor-48-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2024-04-09 16:22:08.457 INFO  (searcherExecutor-48-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:22:08.458 INFO  (qtp801569151-37) [ x:new_core] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2024-04-09 16:22:08.460 INFO  (qtp801569151-37) [] o.a.s.c.S.Request webapp=/solr path=/schema params={wt=json&_=1712679580424} status=0 QTime=20136
+2024-04-09 16:22:08.460 INFO  (searcherExecutor-48-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:22:08.464 INFO  (searcherExecutor-48-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:22:08.494 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:22:08.494 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:22:08.494 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:22:08.494 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:22:08.498 INFO  (qtp801569151-70) [ x:new_core] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf\managed-schema.xml
+2024-04-09 16:22:08.500 INFO  (qtp801569151-70) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/schema params={wt=json&_=1712679580424} status=0 QTime=80
+2024-04-09 16:22:08.500 INFO  (qtp801569151-70) [ x:new_core] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@294a13b8 new_core
+2024-04-09 16:22:08.500 INFO  (qtp801569151-70) [ x:new_core] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.new_core tag=SolrCore@294a13b8
+2024-04-09 16:22:10.025 INFO  (qtp801569151-62) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1712679580424} status=0 QTime=1
+2024-04-09 16:22:10.045 INFO  (qtp801569151-70) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1712679580424} status=0 QTime=0
+2024-04-09 16:22:10.056 INFO  (qtp801569151-62) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1712679580424} status=0 QTime=0
+2024-04-09 16:23:05.411 INFO  (qtp801569151-70) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:23:05.411 INFO  (qtp801569151-41) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1712679580424} status=0 QTime=1
+2024-04-09 16:23:05.463 INFO  (qtp801569151-75) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=52
+2024-04-09 16:23:19.308 INFO  (qtp801569151-62) [ x:new_core] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&overwrite=true&wt=json}{} 0 81
+2024-04-09 16:23:19.308 ERROR (qtp801569151-62) [ x:new_core] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: ERROR: [doc=1b5u291_1] Error adding field 'created_utc'='3/3/2024 22:29' msg=Invalid Date String:'3/3/2024 22:29' => org.apache.solr.common.SolrException: ERROR: [doc=1b5u291_1] Error adding field 'created_utc'='3/3/2024 22:29' msg=Invalid Date String:'3/3/2024 22:29'
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:246)
+org.apache.solr.common.SolrException: ERROR: [doc=1b5u291_1] Error adding field 'created_utc'='3/3/2024 22:29' msg=Invalid Date String:'3/3/2024 22:29'
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:246) ~[?:?]
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:100) ~[?:?]
+	at org.apache.solr.update.AddUpdateCommand.lambda$makeLuceneDocs$0(AddUpdateCommand.java:233) ~[?:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212) ~[?:?]
+	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1686) ~[?:?]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:292) ~[?:?]
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206) ~[?:?]
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:161) ~[?:?]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:298) ~[?:?]
+	at java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681) ~[?:?]
+	at org.apache.lucene.index.DocumentsWriterPerThread.updateDocuments(DocumentsWriterPerThread.java:232) ~[?:?]
+	at org.apache.lucene.index.DocumentsWriter.updateDocuments(DocumentsWriter.java:432) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.updateDocuments(IndexWriter.java:1533) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.updateDocuments(IndexWriter.java:1522) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.updateDocOrDocValues(DirectUpdateHandler2.java:1050) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.doNormalUpdate(DirectUpdateHandler2.java:409) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.addDoc0(DirectUpdateHandler2.java:362) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.addDoc(DirectUpdateHandler2.java:299) ~[?:?]
+	at org.apache.solr.update.processor.RunUpdateProcessorFactory$RunUpdateProcessor.processAdd(RunUpdateProcessorFactory.java:76) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.doLocalAdd(DistributedUpdateProcessor.java:270) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.doVersionAdd(DistributedUpdateProcessor.java:545) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.lambda$versionAdd$0(DistributedUpdateProcessor.java:357) ~[?:?]
+	at org.apache.solr.update.VersionBucket.runWithLock(VersionBucket.java:51) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.versionAdd(DistributedUpdateProcessor.java:354) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.processAdd(DistributedUpdateProcessor.java:236) ~[?:?]
+	at org.apache.solr.update.processor.LogUpdateProcessorFactory$LogUpdateProcessor.processAdd(LogUpdateProcessorFactory.java:111) ~[?:?]
+	at org.apache.solr.handler.loader.CSVLoaderBase.doAdd(CSVLoaderBase.java:441) ~[?:?]
+	at org.apache.solr.handler.loader.SingleThreadedCSVLoader.addDoc(CSVLoader.java:47) ~[?:?]
+	at org.apache.solr.handler.loader.CSVLoaderBase.load(CSVLoaderBase.java:410) ~[?:?]
+	at org.apache.solr.handler.loader.CSVLoader.load(CSVLoader.java:34) ~[?:?]
+	at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:101) ~[?:?]
+	at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:84) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2890) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.executeCoreRequest(HttpSolrCall.java:872) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:252) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:220) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:215) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:197) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578) ~[jetty-security-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1383) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1305) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:934) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1078) ~[jetty-util-10.0.13.jar:10.0.13]
+	at java.lang.Thread.run(Thread.java:1570) [?:?]
+Caused by: org.apache.solr.common.SolrException: Invalid Date String:'3/3/2024 22:29'
+	at org.apache.solr.util.DateMathParser.parseMath(DateMathParser.java:233) ~[?:?]
+	at org.apache.solr.util.DateMathParser.parseMath(DateMathParser.java:211) ~[?:?]
+	at org.apache.solr.schema.DatePointField.createField(DatePointField.java:217) ~[?:?]
+	at org.apache.solr.schema.PointField.createFields(PointField.java:270) ~[?:?]
+	at org.apache.solr.update.DocumentBuilder.addField(DocumentBuilder.java:67) ~[?:?]
+	at org.apache.solr.update.DocumentBuilder.addOriginalField(DocumentBuilder.java:302) ~[?:?]
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:218) ~[?:?]
+	... 82 more
+2024-04-09 16:23:27.253 INFO  (qtp801569151-75) [ x:new_core] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&overwrite=true&wt=json}{} 0 52
+2024-04-09 16:23:27.253 ERROR (qtp801569151-75) [ x:new_core] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: ERROR: [doc=1b5u291] unknown field 'upvotes' => org.apache.solr.common.SolrException: ERROR: [doc=1b5u291] unknown field 'upvotes'
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:266)
+org.apache.solr.common.SolrException: ERROR: [doc=1b5u291] unknown field 'upvotes'
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:266) ~[?:?]
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:100) ~[?:?]
+	at org.apache.solr.update.AddUpdateCommand.lambda$makeLuceneDocs$0(AddUpdateCommand.java:233) ~[?:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212) ~[?:?]
+	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1686) ~[?:?]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:292) ~[?:?]
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206) ~[?:?]
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:161) ~[?:?]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:298) ~[?:?]
+	at java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681) ~[?:?]
+	at org.apache.lucene.index.DocumentsWriterPerThread.updateDocuments(DocumentsWriterPerThread.java:232) ~[?:?]
+	at org.apache.lucene.index.DocumentsWriter.updateDocuments(DocumentsWriter.java:432) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.updateDocuments(IndexWriter.java:1533) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.updateDocuments(IndexWriter.java:1522) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.updateDocOrDocValues(DirectUpdateHandler2.java:1050) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.doNormalUpdate(DirectUpdateHandler2.java:409) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.addDoc0(DirectUpdateHandler2.java:362) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.addDoc(DirectUpdateHandler2.java:299) ~[?:?]
+	at org.apache.solr.update.processor.RunUpdateProcessorFactory$RunUpdateProcessor.processAdd(RunUpdateProcessorFactory.java:76) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.doLocalAdd(DistributedUpdateProcessor.java:270) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.doVersionAdd(DistributedUpdateProcessor.java:545) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.lambda$versionAdd$0(DistributedUpdateProcessor.java:357) ~[?:?]
+	at org.apache.solr.update.VersionBucket.runWithLock(VersionBucket.java:51) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.versionAdd(DistributedUpdateProcessor.java:354) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.processAdd(DistributedUpdateProcessor.java:236) ~[?:?]
+	at org.apache.solr.update.processor.LogUpdateProcessorFactory$LogUpdateProcessor.processAdd(LogUpdateProcessorFactory.java:111) ~[?:?]
+	at org.apache.solr.handler.loader.CSVLoaderBase.doAdd(CSVLoaderBase.java:441) ~[?:?]
+	at org.apache.solr.handler.loader.SingleThreadedCSVLoader.addDoc(CSVLoader.java:47) ~[?:?]
+	at org.apache.solr.handler.loader.CSVLoaderBase.load(CSVLoaderBase.java:410) ~[?:?]
+	at org.apache.solr.handler.loader.CSVLoader.load(CSVLoader.java:34) ~[?:?]
+	at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:101) ~[?:?]
+	at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:84) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2890) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.executeCoreRequest(HttpSolrCall.java:872) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:252) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:220) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:215) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:197) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578) ~[jetty-security-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1383) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1305) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:934) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1078) ~[jetty-util-10.0.13.jar:10.0.13]
+	at java.lang.Thread.run(Thread.java:1570) [?:?]
+2024-04-09 16:23:32.195 INFO  (qtp801569151-37) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:23:32.195 INFO  (qtp801569151-75) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1712679812180} status=0 QTime=0
+2024-04-09 16:23:32.245 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=50
+2024-04-09 16:23:33.193 INFO  (qtp801569151-75) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:23:33.193 INFO  (qtp801569151-43) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1712679580424} status=0 QTime=0
+2024-04-09 16:23:33.194 INFO  (qtp801569151-70) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1712679580424} status=0 QTime=1
+2024-04-09 16:23:33.221 INFO  (qtp801569151-41) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1712679580424} status=0 QTime=0
+2024-04-09 16:23:33.249 INFO  (qtp801569151-37) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=56
+2024-04-09 16:23:43.041 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:23:43.041 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:23:43.041 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:23:43.041 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:23:43.046 INFO  (qtp801569151-34) [ x:new_core] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf\managed-schema.xml
+2024-04-09 16:23:43.153 INFO  (qtp801569151-34) [ x:new_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-09 16:23:43.196 INFO  (qtp801569151-34) [ x:new_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.4.0
+2024-04-09 16:23:43.197 INFO  (qtp801569151-34) [ x:new_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-09 16:23:43.214 INFO  (qtp801569151-34) [ x:new_core] o.a.s.s.IndexSchema Schema name=example
+2024-04-09 16:23:43.253 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-09 16:23:43.253 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-09 16:23:43.253 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:23:43.253 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:23:43.256 INFO  (qtp801569151-34) [ x:new_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-09 16:23:43.266 INFO  (qtp801569151-34) [ x:new_core] o.a.s.c.CoreContainer Reloading SolrCore 'new_core' using configuration from instancedir C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs
+2024-04-09 16:23:43.286 INFO  (qtp801569151-34) [ x:new_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-09 16:24:03.123 WARN  (qtp801569151-34) [ x:new_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.817 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:24:03.128 INFO  (qtp801569151-34) [ x:new_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-09 16:24:03.128 INFO  (qtp801569151-34) [ x:new_core] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2024-04-09 16:24:03.133 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:24:03.133 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:24:03.133 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2024-04-09 16:24:03.133 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:24:03.133 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2024-04-09 16:24:03.133 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2024-04-09 16:24:03.133 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2024-04-09 16:24:03.133 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:24:03.133 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true, format=solr} for /schema/analysis/synonyms/english
+2024-04-09 16:24:03.134 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.s.a.ManagedSynonymGraphFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2024-04-09 16:24:03.134 INFO  (qtp801569151-34) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2024-04-09 16:24:03.134 INFO  (qtp801569151-34) [ x:new_core] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, name=default, field=text, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2024-04-09 16:24:03.134 INFO  (qtp801569151-34) [ x:new_core] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2024-04-09 16:24:03.134 INFO  (qtp801569151-34) [ x:new_core] o.a.s.s.s.SolrSuggester init: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:24:03.134 INFO  (qtp801569151-34) [ x:new_core] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:24:03.138 INFO  (qtp801569151-34) [ x:new_core] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-04-09 16:24:03.138 INFO  (qtp801569151-34) [ x:new_core] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1795874979198271488
+2024-04-09 16:24:03.140 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=1
+2024-04-09 16:24:03.141 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:24:03.141 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-04-09 16:24:03.141 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2024-04-09 16:24:03.143 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:24:03.147 INFO  (qtp801569151-34) [ x:new_core] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2024-04-09 16:24:03.149 INFO  (qtp801569151-34) [] o.a.s.c.S.Request webapp=/solr path=/schema params={wt=json&_=1712679580424} status=0 QTime=20136
+2024-04-09 16:24:03.149 INFO  (qtp801569151-34) [] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@242a20bf new_core
+2024-04-09 16:24:03.149 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:24:03.149 INFO  (qtp801569151-34) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.new_core tag=SolrCore@242a20bf
+2024-04-09 16:24:03.150 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:24:39.473 INFO  (qtp801569151-70) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:24:39.478 INFO  (qtp801569151-42) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1712679580424} status=0 QTime=1
+2024-04-09 16:24:39.535 INFO  (qtp801569151-62) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=58
+2024-04-09 16:24:46.094 INFO  (qtp801569151-70) [ x:new_core] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&overwrite=true&wt=json}{add=[1b5u291 (1795875024203153408)]} 0 56
+2024-04-09 16:24:46.094 ERROR (qtp801569151-70) [ x:new_core] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: ERROR: [doc=14vrpiu] unknown field 'selftext' => org.apache.solr.common.SolrException: ERROR: [doc=14vrpiu] unknown field 'selftext'
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:266)
+org.apache.solr.common.SolrException: ERROR: [doc=14vrpiu] unknown field 'selftext'
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:266) ~[?:?]
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:100) ~[?:?]
+	at org.apache.solr.update.AddUpdateCommand.lambda$makeLuceneDocs$0(AddUpdateCommand.java:233) ~[?:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212) ~[?:?]
+	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1686) ~[?:?]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.lambda$initPartialTraversalState$0(StreamSpliterators.java:292) ~[?:?]
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer(StreamSpliterators.java:206) ~[?:?]
+	at java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance(StreamSpliterators.java:161) ~[?:?]
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.tryAdvance(StreamSpliterators.java:298) ~[?:?]
+	at java.util.Spliterators$1Adapter.hasNext(Spliterators.java:681) ~[?:?]
+	at org.apache.lucene.index.DocumentsWriterPerThread.updateDocuments(DocumentsWriterPerThread.java:232) ~[?:?]
+	at org.apache.lucene.index.DocumentsWriter.updateDocuments(DocumentsWriter.java:432) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.updateDocuments(IndexWriter.java:1533) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.updateDocuments(IndexWriter.java:1522) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.updateDocOrDocValues(DirectUpdateHandler2.java:1050) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.doNormalUpdate(DirectUpdateHandler2.java:409) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.addDoc0(DirectUpdateHandler2.java:362) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.addDoc(DirectUpdateHandler2.java:299) ~[?:?]
+	at org.apache.solr.update.processor.RunUpdateProcessorFactory$RunUpdateProcessor.processAdd(RunUpdateProcessorFactory.java:76) ~[?:?]
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.doLocalAdd(DistributedUpdateProcessor.java:270) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.doVersionAdd(DistributedUpdateProcessor.java:545) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.lambda$versionAdd$0(DistributedUpdateProcessor.java:357) ~[?:?]
+	at org.apache.solr.update.VersionBucket.runWithLock(VersionBucket.java:51) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.versionAdd(DistributedUpdateProcessor.java:354) ~[?:?]
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.processAdd(DistributedUpdateProcessor.java:236) ~[?:?]
+	at org.apache.solr.update.processor.LogUpdateProcessorFactory$LogUpdateProcessor.processAdd(LogUpdateProcessorFactory.java:111) ~[?:?]
+	at org.apache.solr.handler.loader.CSVLoaderBase.doAdd(CSVLoaderBase.java:441) ~[?:?]
+	at org.apache.solr.handler.loader.SingleThreadedCSVLoader.addDoc(CSVLoader.java:47) ~[?:?]
+	at org.apache.solr.handler.loader.CSVLoaderBase.load(CSVLoaderBase.java:410) ~[?:?]
+	at org.apache.solr.handler.loader.CSVLoader.load(CSVLoader.java:34) ~[?:?]
+	at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:101) ~[?:?]
+	at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:84) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2890) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.executeCoreRequest(HttpSolrCall.java:872) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:252) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:220) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:215) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:197) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578) ~[jetty-security-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1383) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1305) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:934) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1078) ~[jetty-util-10.0.13.jar:10.0.13]
+	at java.lang.Thread.run(Thread.java:1570) [?:?]
+2024-04-09 16:24:47.202 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:24:47.204 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:24:52.040 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:24:52.042 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:24:52.136 INFO  (qtp801569151-62) [ x:new_core] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&overwrite=true&wt=json}{add=[1b5u291_1 (1795875028959494144), 1b5u291_2 (1795875028967882752), 1b5u291_3 (1795875028969979904), 1b5u291_4 (1795875028972077056), 1b5u291_5 (1795875028975222784), 1b5u291_6 (1795875028976271360), 1b5u291_7 (1795875028977319936), 1b5u291_8 (1795875028981514240), 1b5u291_9 (1795875028982562816), 1b5u291_10 (1795875028983611392), ... (11541 adds)]} 0 1571
+2024-04-09 16:24:52.898 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:24:52.899 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:24:56.270 INFO  (qtp801569151-61) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1712679812180} status=0 QTime=0
+2024-04-09 16:24:56.270 INFO  (qtp801569151-70) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:24:56.320 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=49
+2024-04-09 16:24:57.895 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:24:57.896 INFO  (qtp801569151-62) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1712679580424} status=0 QTime=1
+2024-04-09 16:24:57.907 INFO  (qtp801569151-61) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1712679580424} status=0 QTime=0
+2024-04-09 16:24:57.937 INFO  (qtp801569151-41) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1712679580424} status=0 QTime=14
+2024-04-09 16:24:57.950 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=57
+2024-04-09 16:25:13.330 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:25:13.330 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:25:13.330 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:25:13.330 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:25:13.336 INFO  (qtp801569151-70) [ x:new_core] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf\managed-schema.xml
+2024-04-09 16:25:13.446 INFO  (qtp801569151-70) [ x:new_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-09 16:25:13.489 INFO  (qtp801569151-70) [ x:new_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.4.0
+2024-04-09 16:25:13.489 INFO  (qtp801569151-70) [ x:new_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-09 16:25:13.507 INFO  (qtp801569151-70) [ x:new_core] o.a.s.s.IndexSchema Schema name=example
+2024-04-09 16:25:13.546 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-09 16:25:13.546 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-09 16:25:13.546 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:25:13.546 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:25:13.549 INFO  (qtp801569151-70) [ x:new_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-09 16:25:13.562 INFO  (qtp801569151-70) [ x:new_core] o.a.s.c.CoreContainer Reloading SolrCore 'new_core' using configuration from instancedir C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs
+2024-04-09 16:25:13.592 INFO  (qtp801569151-70) [ x:new_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-09 16:25:24.511 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:25:24.513 INFO  (qtp801569151-62) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1712679580424} status=0 QTime=1
+2024-04-09 16:25:24.561 INFO  (qtp801569151-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=49
+2024-04-09 16:25:29.603 INFO  (qtp801569151-42) [ x:new_core] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={commitWithin=1000&overwrite=true&wt=json}{add=[1b5u291 (1795875069166092288), 14vrpiu (1795875069172383744), 1bde91c (1795875069172383745), 1620j2f (1795875069173432320), nhb8ky (1795875069173432321), zb5b6b (1795875069174480896), qiyjss (1795875069174480897), 138v9wm (1795875069174480898), 11brbmv (1795875069174480899), 13yej4v (1795875069174480900), ... (2589 adds)]} 0 688
+2024-04-09 16:25:30.553 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:25:30.556 INFO  (searcherExecutor-53-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:25:32.053 INFO  (qtp801569151-41) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1712679812180} status=0 QTime=0
+2024-04-09 16:25:32.053 INFO  (qtp801569151-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:25:32.104 INFO  (qtp801569151-75) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=51
+2024-04-09 16:25:33.415 WARN  (qtp801569151-70) [ x:new_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.797 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:25:33.419 INFO  (qtp801569151-70) [ x:new_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-09 16:25:33.419 INFO  (qtp801569151-70) [ x:new_core] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2024-04-09 16:25:33.425 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:25:33.426 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:25:33.426 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2024-04-09 16:25:33.426 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:25:33.426 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2024-04-09 16:25:33.426 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2024-04-09 16:25:33.426 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2024-04-09 16:25:33.426 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:25:33.426 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true, format=solr} for /schema/analysis/synonyms/english
+2024-04-09 16:25:33.426 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.s.a.ManagedSynonymGraphFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2024-04-09 16:25:33.426 INFO  (qtp801569151-70) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2024-04-09 16:25:33.426 INFO  (qtp801569151-70) [ x:new_core] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, name=default, field=text, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2024-04-09 16:25:33.427 INFO  (qtp801569151-70) [ x:new_core] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2024-04-09 16:25:33.427 INFO  (qtp801569151-70) [ x:new_core] o.a.s.s.s.SolrSuggester init: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:25:33.427 INFO  (qtp801569151-70) [ x:new_core] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:25:33.430 INFO  (qtp801569151-70) [ x:new_core] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-04-09 16:25:33.452 INFO  (searcherExecutor-58-thread-1-processing-new_core) [ x:new_core] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=374 status=0 QTime=12
+2024-04-09 16:25:33.462 INFO  (searcherExecutor-58-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:25:33.462 INFO  (searcherExecutor-58-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-04-09 16:25:33.462 INFO  (searcherExecutor-58-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2024-04-09 16:25:33.465 INFO  (searcherExecutor-58-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:25:33.477 INFO  (qtp801569151-70) [ x:new_core] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2024-04-09 16:25:33.495 INFO  (qtp801569151-70) [] o.a.s.c.S.Request webapp=/solr path=/schema params={wt=json&_=1712679580424} status=0 QTime=20196
+2024-04-09 16:25:33.495 INFO  (searcherExecutor-58-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:25:33.495 INFO  (qtp801569151-70) [] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@3b0326e3 new_core
+2024-04-09 16:25:33.495 INFO  (qtp801569151-70) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.new_core tag=SolrCore@3b0326e3
+2024-04-09 16:25:33.496 INFO  (searcherExecutor-58-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-04-09 16:25:34.414 INFO  (qtp801569151-62) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:25:34.417 INFO  (qtp801569151-42) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1712679812180} hits=13973 status=0 QTime=3
+2024-04-09 16:25:34.425 INFO  (qtp801569151-41) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1712679812180} status=0 QTime=0
+2024-04-09 16:25:34.469 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=55
+2024-04-09 16:26:02.778 INFO  (qtp801569151-43) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1712679812180} status=0 QTime=0
+2024-04-09 16:26:02.779 INFO  (qtp801569151-75) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:26:02.781 INFO  (qtp801569151-36) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/select params={q=TYPE:POST&indent=true&q.op=OR&useParams=&_=1712679812180} hits=2540 status=0 QTime=2
+2024-04-09 16:26:02.826 INFO  (qtp801569151-62) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=48
+2024-04-09 16:26:15.080 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:26:15.082 INFO  (qtp801569151-67) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1712679812180} status=0 QTime=0
+2024-04-09 16:26:15.083 ERROR (qtp801569151-61) [ x:new_core] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'TYPE:POST;title:Pride': Encountered " ":" ": "" at line 1, column 15.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+     => org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'TYPE:POST;title:Pride': Encountered " ":" ": "" at line 1, column 15.
+Was expecting one of:
+org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'TYPE:POST;title:Pride': Encountered " ":" ": "" at line 1, column 15.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:217) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:389) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2890) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.executeCoreRequest(HttpSolrCall.java:872) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:252) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:220) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:215) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:197) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578) ~[jetty-security-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1383) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1305) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:934) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1078) ~[jetty-util-10.0.13.jar:10.0.13]
+	at java.lang.Thread.run(Thread.java:1570) [?:?]
+Caused by: org.apache.solr.search.SyntaxError: Cannot parse 'TYPE:POST;title:Pride': Encountered " ":" ": "" at line 1, column 15.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:277) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:51) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:171) ~[?:?]
+	... 51 more
+Caused by: org.apache.solr.parser.ParseException: Encountered " ":" ": "" at line 1, column 15.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    
+	at org.apache.solr.parser.QueryParser.generateParseException(QueryParser.java:966) ~[?:?]
+	at org.apache.solr.parser.QueryParser.jj_consume_token(QueryParser.java:829) ~[?:?]
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:144) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:274) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:51) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:171) ~[?:?]
+	... 51 more
+2024-04-09 16:26:15.083 INFO  (qtp801569151-61) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/select params={q=TYPE:POST;title:Pride&indent=true&q.op=OR&useParams=&_=1712679812180} status=400 QTime=1
+2024-04-09 16:26:15.130 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=49
+2024-04-09 16:26:19.415 INFO  (qtp801569151-62) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1712679812180} status=0 QTime=0
+2024-04-09 16:26:19.415 INFO  (qtp801569151-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:26:19.416 ERROR (qtp801569151-75) [ x:new_core] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'TYPE:POST,title:Pride': Encountered " ":" ": "" at line 1, column 15.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+     => org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'TYPE:POST,title:Pride': Encountered " ":" ": "" at line 1, column 15.
+Was expecting one of:
+org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'TYPE:POST,title:Pride': Encountered " ":" ": "" at line 1, column 15.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:217) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:389) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2890) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.executeCoreRequest(HttpSolrCall.java:872) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:252) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:220) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:215) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:197) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578) ~[jetty-security-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1383) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1305) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:934) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1078) ~[jetty-util-10.0.13.jar:10.0.13]
+	at java.lang.Thread.run(Thread.java:1570) [?:?]
+Caused by: org.apache.solr.search.SyntaxError: Cannot parse 'TYPE:POST,title:Pride': Encountered " ":" ": "" at line 1, column 15.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:277) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:51) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:171) ~[?:?]
+	... 51 more
+Caused by: org.apache.solr.parser.ParseException: Encountered " ":" ": "" at line 1, column 15.
+Was expecting one of:
+    <EOF> 
+    <AND> ...
+    <OR> ...
+    <NOT> ...
+    "+" ...
+    "-" ...
+    <BAREOPER> ...
+    "(" ...
+    "*" ...
+    "^" ...
+    <QUOTED> ...
+    <TERM> ...
+    <FUZZY_SLOP> ...
+    <PREFIXTERM> ...
+    <WILDTERM> ...
+    <REGEXPTERM> ...
+    "[" ...
+    "{" ...
+    <LPARAMS> ...
+    "filter(" ...
+    <NUMBER> ...
+    
+	at org.apache.solr.parser.QueryParser.generateParseException(QueryParser.java:966) ~[?:?]
+	at org.apache.solr.parser.QueryParser.jj_consume_token(QueryParser.java:829) ~[?:?]
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:144) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:274) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:51) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:171) ~[?:?]
+	... 51 more
+2024-04-09 16:26:19.416 INFO  (qtp801569151-75) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/select params={q=TYPE:POST,title:Pride&indent=true&q.op=OR&useParams=&_=1712679812180} status=400 QTime=0
+2024-04-09 16:26:19.468 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=51
+2024-04-09 16:27:07.435 INFO  (qtp801569151-61) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1712679812180} status=0 QTime=0
+2024-04-09 16:27:07.435 INFO  (qtp801569151-67) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:27:07.454 INFO  (qtp801569151-42) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/select params={q=TYPE:POST+AND+title:Pride&indent=true&q.op=OR&useParams=&_=1712679812180} hits=195 status=0 QTime=19
+2024-04-09 16:27:07.489 INFO  (qtp801569151-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=54
+2024-04-09 16:27:19.286 INFO  (qtp801569151-75) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1712679812180} status=0 QTime=0
+2024-04-09 16:27:19.286 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712679580400} status=0 QTime=0
+2024-04-09 16:27:19.289 INFO  (qtp801569151-62) [ x:new_core] o.a.s.c.S.Request webapp=/solr path=/select params={q=TYPE:POST+AND+title:Harry&indent=true&q.op=OR&useParams=&_=1712679812180} hits=243 status=0 QTime=1
+2024-04-09 16:27:19.337 INFO  (qtp801569151-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712679580400} status=0 QTime=50
+2024-04-09 16:29:13.132 INFO  (ShutdownMonitor) [] o.e.j.s.Server Stopped Server@532a02d9{STOPPING}[10.0.13,sto=0]
+2024-04-09 16:29:13.136 INFO  (ShutdownMonitor) [] o.e.j.s.AbstractConnector Stopped ServerConnector@64337702{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:8983}
+2024-04-09 16:29:13.140 INFO  (ShutdownMonitor) [] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1617920437
+2024-04-09 16:29:13.142 INFO  (coreCloseExecutor-63-thread-1) [ x:new_core] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@4efb07a9 new_core
+2024-04-09 16:29:13.142 INFO  (coreCloseExecutor-63-thread-1) [ x:new_core] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.new_core tag=SolrCore@4efb07a9
+2024-04-09 16:29:13.150 INFO  (coreCloseExecutor-63-thread-1) [ x:new_core] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close() .
+2024-04-09 16:29:13.172 INFO  (ShutdownMonitor) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2024-04-09 16:29:13.178 INFO  (ShutdownMonitor) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2024-04-09 16:29:13.183 INFO  (ShutdownMonitor) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2024-04-09 16:29:13.192 INFO  (ShutdownMonitor) [] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@7bfc3126{solr-jetty-context.xml,/solr,null,STOPPED}{C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server/solr-webapp/webapp}
