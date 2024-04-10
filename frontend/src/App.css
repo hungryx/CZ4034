@@ -157,15 +157,15 @@
   text-align: left;
 }
 .bookTable {
-  width: 90%;
+  /* width: 90%; */
 }
 
 .comment {
-  width: 70%;
+  /* width: 70%; */
   text-align: left;
 }
 .sentiment {
-  width: 30%;
+  /* width: 30%; */
   font-weight: 500;
 }
 
@@ -176,10 +176,10 @@
   border: none;
   align-items: center;
 }
-.sentimentSort {
+.sortArrow {
   background: none;
 }
-.sentimentSort:hover {
+.sortArrow:hover {
   outline: none;
   color: rgb(135, 196, 225);
 }

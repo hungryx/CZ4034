@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 import data from "../data.json";
 import filterIcon from "../assets/filterIcon.svg";
@@ -11,6 +12,8 @@ const Book = () => {
   const [bookInfo, setBookInfo] = useState([]);
   const [comments, setComments] = useState([]);
   const [sentimentInfo, setSentimentInfo] = useState([]);
+
+  const [solrComments, setSolrComments] = useState([]);
 
   const [sortBy, setSortBy] = useState("");
   const [selectedSentiments, setSelectedSentiments] = useState(sentimentList);
@@ -90,8 +93,33 @@ const Book = () => {
     }
   });
 
+  const sortedData = solrComments.sort((a, b) => {
+    const dateA = new Date(a.created_utc);
+    const dateB = new Date(b.created_utc);
+
+    if (sortBy === "asc") {
+      return dateA - dateB;
+    } else if (sortBy === "desc") {
+      return dateB - dateA;
+    } else {
+      return 0; // no sorting
+    }
+  });
+
   useEffect(() => {
-    const book = data.filter((item) => item.id == id)[0];
+    const test = async () => {
+      const solrUrl = `http://localhost:9893/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=10000`;
+
+      const res = await axios.get(solrUrl);
+      const documents = res.data.response.docs;
+      console.log(documents);
+      setSolrComments(documents);
+    };
+
+    test();
+
+    // const book = data.filter((item) => item.id == id)[0];
+    const book = data.filter((item) => item.id == 1)[0];
     setBookInfo(book);
 
     let comments = [];
@@ -118,28 +146,34 @@ const Book = () => {
       <button className="backBtn" onClick={goBack}>
         back
       </button>
-      <h1 className="bookTitle">{bookInfo.title}</h1>
+      <h1 className="bookTitle">{id}</h1>
       <div className="bookInfo">
         <div className="image">IMAGE</div>
         <div className="details">
           <p>Description: </p>
-          <p>Genre: {bookInfo.genre}</p>
-          <p>Total Comments: {sentimentInfo.length}</p>
-          <p>
+          {/* <p>Genre: {bookInfo.genre}</p> */}
+          <p>Total Comments: {solrComments.length}</p>
+          {/* <p>
             Average Sentiment:{" "}
             <span style={sentimentDescStyle(sentimentInfo.average)}>
               {sentimentInfo.average}
             </span>
-          </p>
+          </p> */}
         </div>
       </div>
       <table className="bookTable">
         <thead>
           <tr>
             <th className="comment">Comment</th>
+            <th className="comment">
+              <span>Date</span>
+              <button className="sortArrow" onClick={handleSort}>
+                {sortBy === "asc" ? "▲" : "▼"}
+              </button>
+            </th>
             <th className="sentiment sentHead">
-              <p>Sentiment </p>
-              <button className="sentimentSort" onClick={handleSort}>
+              <span>Sentiment </span>
+              <button className="sortArrow" onClick={handleSort}>
                 {sortBy === "asc" ? "▲" : "▼"}
               </button>
               <div>
@@ -182,21 +216,107 @@ const Book = () => {
           </tr>
         </thead>
         <tbody>
-          {sortedComments.map((item, index) => (
+          {sortedData.map((item, index) => (
             <tr key={index}>
-              <td className="comment">{item.comment}</td>
-              <td
+              <td className="comment">{item.comment_text}</td>
+              <td className="comment">{item.created_utc.split("T")[0]}</td>
+              <td className="comment">{item.post_id}</td>
+              {/* <td
                 className="sentiment"
                 style={sentimentTableStyle(item.sentiment)}
               >
                 {item.sentiment}
-              </td>
+              </td> */}
             </tr>
           ))}
         </tbody>
       </table>
     </div>
   );
+  // return (
+  //   <div className="bookPage">
+  //     <button className="backBtn" onClick={goBack}>
+  //       back
+  //     </button>
+  //     <h1 className="bookTitle">{bookInfo.title}</h1>
+  //     <div className="bookInfo">
+  //       <div className="image">IMAGE</div>
+  //       <div className="details">
+  //         <p>Description: </p>
+  //         <p>Genre: {bookInfo.genre}</p>
+  //         <p>Total Comments: {sentimentInfo.length}</p>
+  //         <p>
+  //           Average Sentiment:{" "}
+  //           <span style={sentimentDescStyle(sentimentInfo.average)}>
+  //             {sentimentInfo.average}
+  //           </span>
+  //         </p>
+  //       </div>
+  //     </div>
+  //     <table className="bookTable">
+  //       <thead>
+  //         <tr>
+  //           <th className="comment">Comment</th>
+  //           <th className="sentiment sentHead">
+  //             <p>Sentiment </p>
+  //             <button className="sortArrow" onClick={handleSort}>
+  //               {sortBy === "asc" ? "▲" : "▼"}
+  //             </button>
+  //             <div>
+  //               <img
+  //                 src={filterIcon}
+  //                 alt="filterIcon"
+  //                 width="16"
+  //                 height="16"
+  //                 className="sentimentDropdown"
+  //                 onMouseEnter={toggleDropdown}
+  //               />
+
+  //               {isOpen && (
+  //                 <div
+  //                   className="sentimentCheckbox"
+  //                   onMouseLeave={toggleDropdown}
+  //                 >
+  //                   {sentimentList.map((sentiment) => (
+  //                     <div className="sentimentSelect">
+  //                       <input
+  //                         type="checkbox"
+  //                         name="sentiment"
+  //                         id={sentiment}
+  //                         value={sentiment}
+  //                         checked={selectedSentiments.includes(sentiment)}
+  //                         onChange={() => handleFilter(sentiment)}
+  //                       />
+  //                       <label
+  //                         for={sentiment}
+  //                         style={sentimentCheckboxStyle(sentiment)}
+  //                       >
+  //                         {sentiment}
+  //                       </label>
+  //                     </div>
+  //                   ))}
+  //                 </div>
+  //               )}
+  //             </div>
+  //           </th>
+  //         </tr>
+  //       </thead>
+  //       <tbody>
+  //         {sortedComments.map((item, index) => (
+  //           <tr key={index}>
+  //             <td className="comment">{item.comment}</td>
+  //             <td
+  //               className="sentiment"
+  //               style={sentimentTableStyle(item.sentiment)}
+  //             >
+  //               {item.sentiment}
+  //             </td>
+  //           </tr>
+  //         ))}
+  //       </tbody>
+  //     </table>
+  //   </div>
+  // );
 };
 
 export default Book;

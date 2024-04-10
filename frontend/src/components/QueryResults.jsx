@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const QueryResults = (props) => {
   const navigate = useNavigate();
@@ -15,8 +16,8 @@ const QueryResults = (props) => {
   };
 
   const viewResult = (id) => {
-    // navigate(`/book/${id}`);
     console.log(id);
+    navigate(`/book/${id}`);
   };
 
   return (
