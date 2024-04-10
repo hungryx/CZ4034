@@ -17,8 +17,8 @@ const Book = () => {
 
   // for fitering & sorting
   const sentimentList = ["Positive", "Neutral", "Negative"];
-  const [dateArrow, setDateArrow] = useState("");
-  const [sentimentArrow, setSentimentArrow] = useState("");
+  const [dateArrow, setDateArrow] = useState("desc");
+  const [sentimentArrow, setSentimentArrow] = useState("desc");
 
   const [selectedSentiments, setSelectedSentiments] = useState(sentimentList);
   const [isOpen, setIsOpen] = useState(false);
@@ -102,7 +102,7 @@ const Book = () => {
     setSentimentArrow(sentimentArrow === "asc" ? "desc" : "asc");
   };
   const handleSort = (field, sortBy) => {
-    const solrUrl = `http://localhost:9893/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&sort=${field}%20${sortBy}&indent=true&rows=100`;
+    const solrUrl = `http://localhost:9893/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&sort=${field}%20${sortBy}&indent=true&rows=10000`;
     getData(solrUrl);
   };
 
@@ -113,7 +113,7 @@ const Book = () => {
     setSolrComments(documents);
   };
   useEffect(() => {
-    const solrUrl = `http://localhost:9893/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=100`;
+    const solrUrl = `http://localhost:9893/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=10000`;
     getData(solrUrl);
 
     // const book = data.filter((item) => item.id == id)[0];
@@ -138,6 +138,16 @@ const Book = () => {
     history.back();
   };
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [rowsPerPage] = useState(10);
+  const indexOfLastRow = currentPage * rowsPerPage;
+  const indexOfFirstRow = indexOfLastRow - rowsPerPage;
+  const currentRows = solrComments.slice(indexOfFirstRow, indexOfLastRow);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const totalPages = Math.ceil(solrComments.length / rowsPerPage);
+  const pagesToShow = 5;
+  let startPage = Math.max(1, currentPage - Math.floor(pagesToShow / 2));
+
   return (
     <div className="bookPage">
       <button className="backBtn" onClick={goBack}>
@@ -151,6 +161,69 @@ const Book = () => {
           <p>Total Comments: {solrComments.length}</p>
         </div>
       </div>
+
+      <div>
+        {solrComments.length > rowsPerPage && (
+          <div className="pagination">
+            <button
+              onClick={() => paginate(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              Previous
+            </button>
+            <div className="pages">
+              <div
+                className="ecl"
+                style={
+                  currentPage > Math.ceil(pagesToShow / 2)
+                    ? {}
+                    : { color: "transparent" }
+                }
+              >
+                ...
+              </div>
+              {Array(pagesToShow)
+                .fill()
+                .map((_, i) => {
+                  const pageNumber = i + startPage;
+                  return (
+                    <button
+                      key={pageNumber}
+                      className="pageBtn"
+                      onClick={() => paginate(pageNumber)}
+                      style={
+                        pageNumber === currentPage
+                          ? { backgroundColor: "rgb(135, 196, 225)" }
+                          : {}
+                      }
+                    >
+                      {pageNumber}
+                    </button>
+                  );
+                })}
+              <div
+                className="ecl"
+                style={
+                  currentPage < totalPages - Math.ceil(pagesToShow / 2)
+                    ? {}
+                    : { color: "transparent" }
+                }
+              >
+                ...
+              </div>
+            </div>
+
+            <button
+              onClick={() => paginate(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              Next
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* table */}
       <table className="bookTable">
         <thead>
           <tr>
@@ -206,21 +279,19 @@ const Book = () => {
           </tr>
         </thead>
         <tbody>
-          {solrComments.map((item, index) => (
+          {currentRows.map((item, index) => (
             <tr key={index}>
+              {/* Table cells */}
               <td className="comment">{item.comment_text}</td>
               <td className="date">{item.created_utc.split("T")[0]}</td>
               <td className="sentiment">{item.post_id}</td>
-              {/* <td
-                className="sentiment"
-                style={sentimentTableStyle(item.sentiment)}
-              >
-                {item.sentiment}
-              </td> */}
             </tr>
           ))}
         </tbody>
       </table>
+      <p>
+        Showing results {indexOfFirstRow} to {indexOfLastRow}
+      </p>
     </div>
   );
 };

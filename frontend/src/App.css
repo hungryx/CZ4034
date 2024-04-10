@@ -83,10 +83,8 @@
   overflow: auto;
 }
 .resultcard {
-  /* text-align: left; */
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   background-color: rgba(255, 255, 255, 0.2);
   margin: 20px 20px;
   padding: 20px 20px;
@@ -95,8 +93,8 @@
 }
 .imagecard {
   border: 1px solid white;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   margin: 0px 10px;
 }
 .detailscard {
@@ -106,7 +104,7 @@
   text-align: left;
 }
 .titlecard {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .cardInfo {
   margin-right: 50px;
@@ -135,7 +133,7 @@
   padding: 0.2em 1em;
 }
 .bookTitle {
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 600;
 }
 .bookInfo {
@@ -161,7 +159,8 @@
 }
 
 .comment {
-  width: 700px;
+  /* width: 700px; */
+  width: 65vw;
 }
 .date {
   width: 100px;
@@ -200,4 +199,28 @@
 }
 .sentimentSelect > input[type="checkbox"] {
   cursor: pointer;
+}
+
+.pagination {
+  /* border: 1px solid white; */
+  display: flex;
+  width: 500px;
+  position: relative;
+  margin: 10px;
+}
+.pages {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  padding: 0px 10px;
+}
+.pageBtn {
+  width: 30px;
+  height: 27px;
+  text-align: center;
+  padding: 0;
+}
+.ecl {
+  width: 10px;
 }

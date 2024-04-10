@@ -9,7 +9,14 @@ import QueryResults from "./QueryResults";
 const MainPage = () => {
   const location = useLocation();
 
-  const genreList = ["Fantasy", "Mystery", "Action", "Comedy", "Horror"];
+  const genreList = [
+    "Romance",
+    "Fantasy",
+    "Mystery",
+    "Action",
+    "Comedy",
+    "Horror",
+  ];
 
   // assume min and max year can be retrieved
   const minYear = 1990;
