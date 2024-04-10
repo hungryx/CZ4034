@@ -571,3 +571,4 @@
 127.0.0.1 - - [09/Apr/2024:16:27:19 +0000] "GET /solr/admin/cores?_=1712679580400&indexInfo=false&wt=json HTTP/1.1" 200 556
 127.0.0.1 - - [09/Apr/2024:16:27:19 +0000] "GET /solr/new_core/select?_=1712679812180&indent=true&q=TYPE:POST+AND+title:Harry&q.op=OR&useParams= HTTP/1.1" 200 5896
 127.0.0.1 - - [09/Apr/2024:16:27:19 +0000] "GET /solr/admin/info/system?_=1712679580400&wt=json HTTP/1.1" 200 1471
+127.0.0.1 - - [09/Apr/2024:16:45:56 +0000] "GET /solr/admin/info/system?wt=json HTTP/1.1" 200 4201

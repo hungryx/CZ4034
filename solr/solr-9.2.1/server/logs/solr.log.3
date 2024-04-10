@@ -1,0 +1,62 @@
+2024-04-09 16:45:32.647 INFO  (main) [] o.e.j.s.Server jetty-10.0.13; built: 2022-12-07T20:13:20.134Z; git: 1c2636ea05c0ca8de1ffd6ca7f3a98ac084c766d; jvm 22+36-2370
+2024-04-09 16:45:33.382 WARN  (main) [] o.e.j.u.DeprecationWarning Using @Deprecated Class org.eclipse.jetty.servlet.listener.ELContextCleaner
+2024-04-09 16:45:33.414 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2024-04-09 16:45:33.421 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.2.1
+2024-04-09 16:45:33.421 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 9893
+2024-04-09 16:45:33.421 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1
+2024-04-09 16:45:33.421 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2024-04-09T16:45:33.421934600Z
+2024-04-09 16:45:33.424 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr started with "-XX:+CrashOnOutOfMemoryError" that will crash on any OutOfMemoryError exception. The cause of the OOME will be logged in the crash file at the following path: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\logs\jvm_crash_13180.log
+2024-04-09 16:45:33.429 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1 (source: system property: solr.solr.home)
+2024-04-09 16:45:33.432 INFO  (main) [] o.a.s.c.SolrXmlConfig solr.xml not found in SOLR_HOME, using built-in default
+2024-04-09 16:45:33.432 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\solr.xml
+2024-04-09 16:45:33.509 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/lib]
+2024-04-09 16:45:33.510 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/lib]
+2024-04-09 16:45:34.708 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2024-04-09 16:45:34.711 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2024-04-09 16:45:54.603 WARN  (main) [] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.770 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:45:55.048 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1
+2024-04-09 16:45:55.048 INFO  (main) [] o.a.s.c.CorePropertiesLocator Cores are: [new_core]
+2024-04-09 16:45:55.112 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-09 16:45:55.210 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.4.0
+2024-04-09 16:45:55.223 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-09 16:45:55.321 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.s.IndexSchema Schema name=example
+2024-04-09 16:45:55.748 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-09 16:45:55.749 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-09 16:45:55.750 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-09 16:45:55.750 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-09 16:45:55.760 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-09 16:45:55.784 INFO  (main) [] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-04-09 16:45:55.788 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.c.CoreContainer Creating SolrCore 'new_core' using configuration from instancedir C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs, trusted=true
+2024-04-09 16:45:55.851 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-09 16:45:56.198 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@7bfc3126{solr-jetty-context.xml,/solr,file:///C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/server/solr-webapp/webapp/,AVAILABLE}{C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server/solr-webapp/webapp}
+2024-04-09 16:45:56.208 INFO  (main) [] o.e.j.s.RequestLogWriter Opened C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\logs\2024_04_09.request.log
+2024-04-09 16:45:56.219 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@64337702{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:9893}
+2024-04-09 16:45:56.220 INFO  (main) [] o.e.j.s.Server Started Server@532a02d9{STARTING}[10.0.13,sto=0] @30154ms
+2024-04-09 16:45:56.365 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=63
+2024-04-09 16:46:16.006 WARN  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.832 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-09 16:46:16.162 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-04-09 16:46:16.178 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2024-04-09 16:46:16.178 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2024-04-09 16:46:16.203 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-09 16:46:16.204 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2024-04-09 16:46:16.413 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:46:16.416 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:46:16.416 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2024-04-09 16:46:16.418 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:46:16.418 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2024-04-09 16:46:16.418 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2024-04-09 16:46:16.418 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2024-04-09 16:46:16.419 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf
+2024-04-09 16:46:16.419 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true, format=solr} for /schema/analysis/synonyms/english
+2024-04-09 16:46:16.420 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.s.a.ManagedSynonymGraphFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2024-04-09 16:46:16.421 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2024-04-09 16:46:16.438 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.s.DirectSolrSpellChecker init: {name=default, field=text, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01}
+2024-04-09 16:46:16.445 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2024-04-09 16:46:16.447 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.s.s.SolrSuggester init: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:46:16.457 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=cat, weightField=price, suggestAnalyzerFieldType=string, buildOnStartup=false}
+2024-04-09 16:46:16.470 INFO  (coreLoadExecutor-10-thread-1) [ x:new_core] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-04-09 16:46:16.565 INFO  (searcherExecutor-12-thread-1-processing-new_core) [ x:new_core] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=374 status=0 QTime=77
+2024-04-09 16:46:16.582 INFO  (searcherExecutor-12-thread-1-processing-new_core) [ x:new_core] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-04-09 16:46:16.582 INFO  (searcherExecutor-12-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-04-09 16:46:16.582 INFO  (searcherExecutor-12-thread-1-processing-new_core) [ x:new_core] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2024-04-09 16:46:16.592 INFO  (searcherExecutor-12-thread-1-processing-new_core) [ x:new_core] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
