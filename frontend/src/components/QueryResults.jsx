@@ -23,25 +23,16 @@ const QueryResults = (props) => {
     <div className="resultSection">
       {props.results.length > 0 && (
         <p className="resultsCount">
-          Displaying {props.results.length} results
+          About {props.results.length} results ({props.speed} ms)
         </p>
       )}
       <div className="resultsDiv">
         {props.results.map((result) => (
-          <div className="resultcard" onClick={() => viewResult(result.id)}>
-            {/* <div className="imagecard">image</div> */}
+          <div className="resultcard" onClick={() => viewResult(result)}>
+            <div className="imagecard">image</div>
             <div className="detailscard">
-              <p className="titlecard">{result.title[0]}</p>
-              <p>
-                <span className="cardInfo">upvotes: {result.upvotes}</span>
-              </p>
+              <p className="titlecard">{result}</p>
             </div>
-            {/* <div className="sentimentscard">
-              <p>Average Sentiment </p>
-              <p style={sentimentDescStyle(result.avg_sentiment)}>
-                {result.avg_sentiment}
-              </p>
-            </div> */}
           </div>
         ))}
       </div>

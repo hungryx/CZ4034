@@ -21,7 +21,7 @@ const ResultsSection = (props) => {
     <div className="resultSection">
       {props.results.length > 0 && (
         <p className="resultsCount">
-          Displaying {props.results.length} results
+          About {props.results.length} results ({props.speed} ms)
         </p>
       )}
       <div className="resultsDiv">

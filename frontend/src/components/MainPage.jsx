@@ -19,8 +19,12 @@ const MainPage = () => {
 
   const [searchInput, setSearchInput] = useState("");
   const [selectedGenres, setSelectedGenres] = useState([]);
+
   const [results, setResults] = useState([]);
   const [solrResults, setSolrResults] = useState([]);
+  const [books, setBooks] = useState([]);
+
+  const [querySpeed, setQuerySpeed] = useState(0);
 
   // handling changes to input
   const handleText = (e) => {
@@ -88,13 +92,31 @@ const MainPage = () => {
   };
 
   const test = async (input) => {
-    console.log("here");
-    // construct Solr query URL
-    const solrUrl = `http://localhost:9893/solr/new_core/select?indent=true&rows=25&q.op=OR&q=title:${input}&useParams=`;
+    const words = input.split(" ");
+    const formattedWords = words.map(
+      (word) =>
+        `*${encodeURIComponent(
+          word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+        )}*`
+    );
+    const literal = formattedWords.join("%20AND%20");
 
-    const riri = await axios.get(solrUrl);
-    console.log(riri.data.response);
-    setSolrResults(riri.data.response.docs);
+    // construct Solr query URL
+    // const solrUrl = `http://localhost:9893/solr/new_core/select?q=book:%22${input}%22&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=50`;
+
+    const solrUrl = `http://localhost:9893/solr/new_core/select?q=book:(${literal})&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=10000`;
+
+    // console.log(solrUrl);
+
+    const res = await axios.get(solrUrl);
+    const documents = res.data.response.docs;
+    setSolrResults(documents);
+    // console.log(documents);
+
+    const uniqueBooks = new Set(documents.map((obj) => obj.book));
+    const distinctBooks = Array.from(uniqueBooks);
+    setBooks(distinctBooks);
+    console.log(distinctBooks);
   };
 
   const getResults = (input, genres, minYear, maxYear) => {
@@ -105,6 +127,8 @@ const MainPage = () => {
     //   return;
     // }
 
+    const startTime = performance.now();
+
     const results = data.filter((item) =>
       item.title.toLowerCase().match(`\\b${input.toLowerCase()}`)
     );
@@ -112,7 +136,7 @@ const MainPage = () => {
 
     // console.log("------ solr prep section ------");
     // // note: need to split the spaces and replace with "%20"
-    // const updatedInput = input.toLowerCase().replaceAll(" ", "%20");
+    const updatedInput = input.replaceAll(" ", "%20");
     // console.log(`q=title:${updatedInput}`);
     // genres.map((genre) => {
     //   console.log(`fq=genre:${genre}`);
@@ -120,7 +144,11 @@ const MainPage = () => {
     // console.log(`fq=year:[${minYear} TO ${maxYear}]`);
 
     test(input);
-    console.log(solrResults);
+    // console.log(solrResults);
+
+    const endTime = performance.now();
+    const speed = endTime - startTime; // query speed in milliseconds
+    setQuerySpeed(speed);
   };
 
   return (
@@ -185,8 +213,8 @@ const MainPage = () => {
         <button onClick={search}>Search</button>
       </div>
 
-      <QueryResults results={solrResults} />
-      {/* <ResultsSection results={results} /> */}
+      <QueryResults results={books} speed={querySpeed} />
+      {/* <ResultsSection results={results} speed={querySpeed} /> */}
     </div>
   );
 };
