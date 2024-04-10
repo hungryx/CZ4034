@@ -1,75 +1,16 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import axios from "axios";
 
 import data from "../data.json";
 import ResultsSection from "./ResultsSection";
-
-/*
-
-  %20 represents space
-
-  q: query
-  q=title:Harry%20Potter
-
-  fq: filtering
-  fq=genre:Fantasy
-  fq=year:[2006 TO 2023]
-  
-  start=0&rows=10 -> first 10 results
-  
-  eg. query: "Harry Potter", filter by genre & year
-  http://localhost:8983/solr/<collection>/select?q=title:Harry%20Potter&fq=genre:Fantasy&fq=year:[2006 TO 2023]&start=0&rows=10
-
-*/
-
-/* SAMPLE OUTPUT:
-    {
-    "responseHeader": {
-      "status": 0,
-      "QTime": 10,
-      "params": {
-        "q": "title:Harry Potter",
-        "fq": "genre:Fantasy",
-        "sort": "score desc",
-        "start": "0",
-        "rows": "10"
-      }
-    },
-    "response": {
-      "numFound": 100,
-      "start": 0,
-      "docs": [
-        {
-          "id": "1",
-          "title": "Harry Potter and the Sorcerer's Stone",
-          "genre": "Fantasy",
-          "publication_date": "2003-06-21",
-          "avg_sentiment_score": 0.95,
-          "comments": [
-            { "comment": "Intense read!", "sentiment": 0.8 },
-            { "comment": "Emotional rollercoaster", "sentiment": 0.7 },
-            { "comment": "Jaw-dropping twists", "sentiment": 0.85 },
-            ...
-          ]
-        },
-        {
-          "id": "2",
-          "title": "Harry Potter and the Chamber of Secrets",
-          // Additional fields...
-        },
-        // More documents...
-      ]
-    }
-  }
-
-  results.data.response.docs -> extracts that array of info [{},{},..]
-  reference data.json for reference
-  */
+import QueryResults from "./QueryResults";
 
 const MainPage = () => {
   const location = useLocation();
 
-  const genreList = ["Fantasy", "Romance", "Non-Fiction", "Horror"];
+  const genreList = ["Fantasy", "Mystery", "Action", "Comedy", "Horror"];
+
   // assume min and max year can be retrieved
   const minYear = 1990;
   const maxYear = 2022;
@@ -79,6 +20,7 @@ const MainPage = () => {
   const [searchInput, setSearchInput] = useState("");
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [results, setResults] = useState([]);
+  const [solrResults, setSolrResults] = useState([]);
 
   // handling changes to input
   const handleText = (e) => {
@@ -145,6 +87,16 @@ const MainPage = () => {
     getResults(searchInput, selectedGenres, selectedMinYear, selectedMaxYear);
   };
 
+  const test = async (input) => {
+    console.log("here");
+    // construct Solr query URL
+    const solrUrl = `http://localhost:9893/solr/new_core/select?indent=true&rows=25&q.op=OR&q=title:${input}&useParams=`;
+
+    const riri = await axios.get(solrUrl);
+    console.log(riri.data.response);
+    setSolrResults(riri.data.response.docs);
+  };
+
   const getResults = (input, genres, minYear, maxYear) => {
     // WILL BE REPLACED BY API CALL TO SOLR (rmb add async above)
 
@@ -158,24 +110,17 @@ const MainPage = () => {
     );
     setResults(results);
 
-    console.log("------ solr prep section ------");
-    const updatedInput = input.toLowerCase().replaceAll(" ", "%20");
-    console.log(`q=title:${updatedInput}`);
-    genres.map((genre) => {
-      console.log(`fq=genre:${genre}`);
-    });
-    console.log(`fq=year:[${minYear} TO ${maxYear}]`);
-
-    // // construct Solr query URL
-    // const solrUrl =
-    //   "http://localhost:8983/solr/<collection>/select?q=title:Harry%20Potter&fq=genre:Fantasy&fq=year:[2006 TO 2023]&start=0&rows=10";
+    // console.log("------ solr prep section ------");
     // // note: need to split the spaces and replace with "%20"
+    // const updatedInput = input.toLowerCase().replaceAll(" ", "%20");
+    // console.log(`q=title:${updatedInput}`);
+    // genres.map((genre) => {
+    //   console.log(`fq=genre:${genre}`);
+    // });
+    // console.log(`fq=year:[${minYear} TO ${maxYear}]`);
 
-    // // send GET request to Solr
-    // const results = await axios.get(solrUrl);
-
-    // // update state with search results
-    // console.log(results.data.response.docs);
+    test(input);
+    console.log(solrResults);
   };
 
   return (
@@ -183,6 +128,7 @@ const MainPage = () => {
       <div className="searchSection">
         <input
           className="searchbar"
+          id="searchbar"
           type="text"
           placeholder="Search for a book"
           onChange={handleText}
@@ -239,7 +185,8 @@ const MainPage = () => {
         <button onClick={search}>Search</button>
       </div>
 
-      <ResultsSection results={results} />
+      <QueryResults results={solrResults} />
+      {/* <ResultsSection results={results} /> */}
     </div>
   );
 };
