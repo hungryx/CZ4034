@@ -91,7 +91,7 @@ const MainPage = () => {
     getResults(searchInput, selectedGenres, selectedMinYear, selectedMaxYear);
   };
 
-  const test = async (input) => {
+  const getData = async (input) => {
     const words = input.split(" ");
     const formattedWords = words.map(
       (word) =>
@@ -143,7 +143,7 @@ const MainPage = () => {
     // });
     // console.log(`fq=year:[${minYear} TO ${maxYear}]`);
 
-    test(input);
+    getData(input);
     // console.log(solrResults);
 
     const endTime = performance.now();

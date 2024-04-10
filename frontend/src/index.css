@@ -61,16 +61,31 @@ th,
 td {
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 10px 10px;
+}
+table {
+  /* height: 700px; */
+  table-layout: fixed;
   border-collapse: collapse;
+}
+thead tr {
+  display: block;
+}
+tbody {
+  display: block;
+  overflow: auto;
+  overflow-y: visible;
+  height: 60vh;
 }
 th {
   text-align: left;
   font-size: 1.1em;
 }
 td {
+  text-align: left;
   font-size: 0.9em;
   font-weight: 300;
-  max-width: 60vw;
+  /* max-width: 60vw; */
+  word-wrap: break-word;
 }
 
 a {
