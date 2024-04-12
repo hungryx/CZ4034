@@ -16,11 +16,17 @@ const Book = () => {
   const [solrComments, setSolrComments] = useState([]);
 
   // for fitering & sorting
-  const sentimentList = ["Positive", "Neutral", "Negative"];
+  const sentimentList = [
+    { str: "Positive", val: 1 },
+    { str: "Neutral", val: 2 },
+    { str: "Negative", val: 0 },
+  ];
   const [dateArrow, setDateArrow] = useState("desc");
   const [sentimentArrow, setSentimentArrow] = useState("desc");
 
-  const [selectedSentiments, setSelectedSentiments] = useState(sentimentList);
+  const [selectedSentiments, setSelectedSentiments] = useState(
+    sentimentList.map((sentiment) => sentiment.val)
+  );
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -28,14 +34,24 @@ const Book = () => {
   };
 
   const sentimentTableStyle = (sentiment) => {
-    if (sentiment >= 0.8) {
-      return { backgroundColor: "rgb(117,145,22)" };
-    } else if (sentiment <= 0.4) {
+    if (sentiment === 0) {
       return { backgroundColor: "rgb(191,16,41)" };
-    } else {
+    } else if (sentiment === 1) {
+      return { backgroundColor: "rgb(117,145,22)" };
+    } else if (sentiment === 2) {
       return { backgroundColor: "rgb(255,178,52)" };
     }
   };
+  const sentimentCheckboxStyle = (sentiment) => {
+    if (sentiment === 0) {
+      return { color: "rgb(191,16,41)" };
+    } else if (sentiment === 1) {
+      return { color: "rgb(117,145,22)" };
+    } else if (sentiment === 2) {
+      return { color: "rgb(255,178,52)" };
+    }
+  };
+
   const sentimentDescStyle = (sentiment) => {
     if (sentiment >= 0.8) {
       return { color: "rgb(117,145,22)" };
@@ -43,29 +59,6 @@ const Book = () => {
       return { color: "rgb(191,16,41)" };
     } else {
       return { color: "rgb(255,178,52)" };
-    }
-  };
-  const sentimentCheckboxStyle = (sentiment) => {
-    if (sentiment === "Positive") {
-      return { color: "rgb(117,145,22)" };
-    } else if (sentiment === "Negative") {
-      return { color: "rgb(191,16,41)" };
-    } else {
-      return { color: "rgb(255,178,52)" };
-    }
-  };
-
-  const handleFilter = (sentiment) => {
-    const isSentimentSelected = selectedSentiments.includes(sentiment);
-
-    if (isSentimentSelected) {
-      const updatedSentiments = selectedSentiments.filter(
-        (selectedSentiment) => selectedSentiment !== sentiment
-      );
-      setSelectedSentiments(updatedSentiments);
-    } else {
-      const updatedSentiments = [...selectedSentiments, sentiment];
-      setSelectedSentiments(updatedSentiments);
     }
   };
 
@@ -93,16 +86,47 @@ const Book = () => {
   //   }
   // });
 
-  const sortDate = () => {
-    handleSort("created_utc", dateArrow);
+  const handleFilter = (sentiment) => {
+    const isSentimentSelected = selectedSentiments.includes(sentiment);
+    console.log(selectedSentiments);
+
+    let updatedSentiments;
+    if (isSentimentSelected) {
+      updatedSentiments = selectedSentiments.filter(
+        (selectedSentiment) => selectedSentiment !== sentiment
+      );
+      setSelectedSentiments(updatedSentiments);
+    } else {
+      updatedSentiments = [...selectedSentiments, sentiment];
+      setSelectedSentiments(updatedSentiments);
+    }
+    filterSentiment(updatedSentiments);
+  };
+  const handleSort = () => {
+    sortDate("created_utc", dateArrow);
     setDateArrow(dateArrow === "asc" ? "desc" : "asc");
   };
-  const sortSentiment = () => {
-    // handleSort("created_utc", dateArrow);
-    setSentimentArrow(sentimentArrow === "asc" ? "desc" : "asc");
-  };
-  const handleSort = (field, sortBy) => {
+  // const sortSentiment = () => {
+  //   handleSort("sentiment", sentimentArrow);
+  //   setSentimentArrow(sentimentArrow === "asc" ? "desc" : "asc");
+  // };
+  const sortDate = (field, sortBy) => {
     const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&sort=${field}%20${sortBy}&indent=true&rows=10000`;
+    getData(solrUrl);
+  };
+  const filterSentiment = (updatedSentiments) => {
+    // const formattedSentiments = updatedSentiments.map((sentiment) =>
+    //   encodeURIComponent(
+    //     sentiment.charAt(0).toUpperCase() + sentiment.slice(1).toLowerCase()
+    //   )
+    // );
+    const sentimentLiteral = updatedSentiments.join("%20|%20");
+    console.log(sentimentLiteral);
+    // construct Solr query URL
+    // const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=TYPE:COMMENT&indent=true&rows=10000`;
+    // console.log(solrUrl);
+
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&fq=sentiment:(${sentimentLiteral})&indent=true&rows=10000`;
     getData(solrUrl);
   };
 
@@ -235,9 +259,9 @@ const Book = () => {
             </th>
             <th className="sentiment">
               <span>Sentiment </span>
-              <button className="sortArrow" onClick={sortSentiment}>
+              {/* <button className="sortArrow" onClick={sortSentiment}>
                 {sentimentArrow === "asc" ? "▲" : "▼"}
-              </button>
+              </button> */}
               <span>
                 <img
                   src={filterIcon}
@@ -258,16 +282,16 @@ const Book = () => {
                         <input
                           type="checkbox"
                           name="sentiment"
-                          id={sentiment}
-                          value={sentiment}
-                          checked={selectedSentiments.includes(sentiment)}
-                          onChange={() => handleFilter(sentiment)}
+                          id={sentiment.str}
+                          value={sentiment.val}
+                          checked={selectedSentiments.includes(sentiment.val)}
+                          onChange={() => handleFilter(sentiment.val)}
                         />
                         <label
-                          for={sentiment}
-                          style={sentimentCheckboxStyle(sentiment)}
+                          for={sentiment.str}
+                          style={sentimentCheckboxStyle(sentiment.val)}
                         >
-                          {sentiment}
+                          {sentiment.str}
                         </label>
                       </div>
                     ))}
@@ -280,10 +304,25 @@ const Book = () => {
         <tbody>
           {currentRows.map((item, index) => (
             <tr key={index}>
-              {/* Table cells */}
               <td className="comment">{item.comment_text}</td>
               <td className="date">{item.created_utc.split("T")[0]}</td>
-              <td className="sentiment">{item.post_id}</td>
+              <td
+                className="sentiment"
+                style={sentimentTableStyle(item.sentiment)}
+              >
+                {(() => {
+                  switch (item.sentiment) {
+                    case 0:
+                      return "Negative";
+                    case 1:
+                      return "Positive";
+                    case 2:
+                      return "Neutral";
+                    default:
+                      return "Unknown";
+                  }
+                })()}
+              </td>
             </tr>
           ))}
         </tbody>
