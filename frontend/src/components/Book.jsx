@@ -3,12 +3,14 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 import filterIcon from "../assets/filterIcon.svg";
+import Graph from "./Graph";
 
 const Book = () => {
   const { id } = useParams();
 
   // data
   const [solrComments, setSolrComments] = useState([]);
+  const [book, setBook] = useState([]);
 
   // for fitering & sorting
   const sentimentList = [
@@ -106,10 +108,18 @@ const Book = () => {
     // console.log(documents);
     setSolrComments(documents);
   };
+  const getBookData = async (solrUrl) => {
+    const res = await axios.get(solrUrl);
+    const documents = res.data.response.docs;
+    setBook(documents[0]);
+  };
 
   useEffect(() => {
-    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:"${id}"&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=10000`;
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:"${id}"&q.op=OR&fq=TYPE:COMMENT&fq=sentiment:(-3)&indent=true&rows=10000`;
     getData(solrUrl);
+
+    const bookUrl = `http://localhost:8983/solr/new_core/select?q=book_title:"${id}"&q.op=OR&fq=table:books&indent=true&rows=10000`;
+    getBookData(bookUrl);
 
     // const book = data.filter((item) => item.id == id)[0];
     // setBookInfo(book);
@@ -148,12 +158,26 @@ const Book = () => {
       <button className="backBtn" onClick={goBack}>
         back
       </button>
-      <h1 className="bookTitle">{id}</h1>
       <div className="bookInfo">
-        <div className="image">IMAGE</div>
+        <img
+          src={"." + book.cover_path + ".jpg"}
+          alt="Book Image"
+          className="image"
+        />
         <div className="details">
-          <p>Description: </p>
+          <h1 className="bookTitle">{id}</h1>
+
+          <p>Category: {book.category}</p>
+          <p>Author: {book.book_author}</p>
+          <p>Publication Date: {book.publication_date}</p>
+          <p>
+            Description:<br></br>
+            {book.description}
+          </p>
+        </div>
+        <div>
           <p>Total Comments: {solrComments.length}</p>
+          <Graph data={solrComments} />
         </div>
       </div>
 
@@ -168,7 +192,6 @@ const Book = () => {
             </button>
             <div className="pages">
               <div
-                className="ecl"
                 style={
                   currentPage > Math.ceil(pagesToShow / 2)
                     ? {}
@@ -197,7 +220,6 @@ const Book = () => {
                   );
                 })}
               <div
-                className="ecl"
                 style={
                   currentPage < totalPages - Math.ceil(pagesToShow / 2)
                     ? {}
@@ -289,7 +311,6 @@ const Book = () => {
                     case 3:
                       return "Irrelevant";
                     default:
-                      console.log(item.sentiment);
                       return "Unknown";
                   }
                 })()}

@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 
-import data from "../data.json";
-import ResultsSection from "./ResultsSection";
 import QueryResults from "./QueryResults";
 
 const MainPage = () => {
@@ -28,6 +26,7 @@ const MainPage = () => {
   const [selectedGenres, setSelectedGenres] = useState([]);
 
   const [books, setBooks] = useState([]);
+
   const [querySpeed, setQuerySpeed] = useState(0);
 
   // handling changes to input
@@ -59,14 +58,21 @@ const MainPage = () => {
 
   const test = async () => {
     // const solrUrl =
-    //   "http://localhost:8983/solr/new_core/select?fq=TYPE%3ACOMMENT&indent=true&q.op=OR&q=category%3ARomance&useParams=&stats=true&stats.field=book";
-    const solrUrl =
-      "http://localhost:8983/solr/new_core/select?q=*:*&facet=true&facet.field=book";
+    // "http://localhost:8983/solr/new_core/select?fq=TYPE%3ACOMMENT&indent=true&q.op=OR&q=category%3ARomance&useParams=&stats=true&stats.field=book";
+
+    // const solrUrl =
+    //   "http://localhost:8983/solr/new_core/select?q=*:*&facet=true&facet.field=book";
+
+    // const solrUrl = `http://localhost:8983/solr/new_core/suggest?q=Harry%20Pstter&suggest=true&suggest.dictionary=my_suggester&suggest.count=5`;
+
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=*:*&q.op=OR&fq=table:books&indent=true&rows=10000`;
 
     const res = await axios.get(solrUrl);
+    // console.log(res);
     const documents = res.data.response.docs;
     // console.log(res.data.stats.stats_fields);
-    console.log(res.data.facet_counts.facet_fields);
+    // console.log(res.data.facet_counts.facet_fields);
+    console.log(documents);
 
     // const uniqueBooks = new Set(documents.map((obj) => obj.book));
     // const distinctBooks = Array.from(uniqueBooks);
@@ -80,7 +86,7 @@ const MainPage = () => {
     // testing area
     //
     //
-    // test();
+    test();
     //
     //
     const params = new URLSearchParams(location.search);
@@ -144,24 +150,30 @@ const MainPage = () => {
     const categoryLiteral = formattedGenres.join("%7C|%7C");
 
     // construct Solr query URL
-    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=TYPE:COMMENT&indent=true&rows=10000`;
+    // const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=TYPE:COMMENT&indent=true&rows=10000`;
+
+    // const solrUrl = `http://localhost:8983/solr/new_core/select?q=*:*&q.op=OR&fq=table:books&indent=true&rows=10000`;
+
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book_title:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=table:books&indent=true&rows=10000`;
+
     // console.log(solrUrl);
 
     const res = await axios.get(solrUrl);
     const documents = res.data.response.docs;
-    console.log(documents);
 
-    const uniqueBooks = Array.from(
-      documents
-        .reduce((map, obj) => {
-          const key = `${obj.book}-${obj.category}`;
-          map.set(key, { title: obj.book, category: obj.category });
-          return map;
-        }, new Map())
-        .values()
-    );
-    setBooks(uniqueBooks);
-    console.log(uniqueBooks);
+    console.log(documents);
+    setBooks(documents);
+
+    // const uniqueBooks = Array.from(
+    //   documents
+    //     .reduce((map, obj) => {
+    //       const key = `${obj.book}-${obj.category}`;
+    //       map.set(key, { title: obj.book, category: obj.category });
+    //       return map;
+    //     }, new Map())
+    //     .values()
+    // );
+    // setBooks(uniqueBooks);
   };
 
   const getResults = (title, genres, minYear, maxYear) => {
