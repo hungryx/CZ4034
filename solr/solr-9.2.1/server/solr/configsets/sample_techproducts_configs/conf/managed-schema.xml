@@ -477,6 +477,8 @@
   <field name="_version_" type="plong" indexed="false" stored="false"/>
   <field name="author" type="text_gen_sort" multiValued="false" indexed="true" stored="true"/>
   <field name="book" type="string" indexed="true" uninvertible="true" stored="true"/>
+  <field name="book_author" type="string" indexed="true" uninvertible="true" stored="true"/>
+  <field name="book_title" type="string" indexed="true" uninvertible="true" stored="true"/>
   <field name="cat" type="string" multiValued="true" indexed="true" stored="true"/>
   <field name="category" type="text_general" indexed="true" stored="true"/>
   <field name="comment_num" type="pint" indexed="true" uninvertible="true" stored="true"/>
@@ -484,6 +486,7 @@
   <field name="comments" type="text_general" indexed="true" stored="true"/>
   <field name="content" type="text_general" multiValued="true" indexed="false" stored="true"/>
   <field name="content_type" type="string" multiValued="true" indexed="true" stored="true"/>
+  <field name="cover_path" type="string" indexed="true" uninvertible="true" stored="true"/>
   <field name="created_utc" type="pdate" indexed="true" uninvertible="true" stored="true"/>
   <field name="description" type="text_general" indexed="true" stored="true"/>
   <field name="features" type="text_general" multiValued="true" indexed="true" stored="true"/>
@@ -503,6 +506,7 @@
   <field name="post_id" type="string" indexed="true" uninvertible="true" stored="true"/>
   <field name="pre" type="preanalyzed" indexed="true" stored="true"/>
   <field name="price" type="pfloat" indexed="true" stored="true"/>
+  <field name="publication_date" type="pdate" indexed="true" uninvertible="true" stored="true"/>
   <field name="resourcename" type="text_general" indexed="true" stored="true"/>
   <field name="selftext" type="text_general" indexed="true" uninvertible="true" stored="true"/>
   <field name="sentiment" type="pint" indexed="true" uninvertible="true" stored="true"/>
