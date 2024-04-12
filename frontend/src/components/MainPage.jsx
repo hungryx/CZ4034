@@ -10,12 +10,12 @@ const MainPage = () => {
   const location = useLocation();
 
   const genreList = [
-    "Romance",
-    "Fantasy",
-    "Mystery",
     "Action",
     "Comedy",
+    "Fantasy",
     "Horror",
+    "Mystery",
+    "Romance",
   ];
 
   // assume min and max year can be retrieved
@@ -27,10 +27,7 @@ const MainPage = () => {
   const [searchInput, setSearchInput] = useState("");
   const [selectedGenres, setSelectedGenres] = useState([]);
 
-  const [results, setResults] = useState([]);
-  const [solrResults, setSolrResults] = useState([]);
   const [books, setBooks] = useState([]);
-
   const [querySpeed, setQuerySpeed] = useState(0);
 
   // handling changes to input
@@ -60,98 +57,123 @@ const MainPage = () => {
     setSelectedMaxYear(e.target.value);
   };
 
+  const test = async () => {
+    // const solrUrl =
+    //   "http://localhost:8983/solr/new_core/select?fq=TYPE%3ACOMMENT&indent=true&q.op=OR&q=category%3ARomance&useParams=&stats=true&stats.field=book";
+    const solrUrl =
+      "http://localhost:8983/solr/new_core/select?q=*:*&facet=true&facet.field=book";
+
+    const res = await axios.get(solrUrl);
+    const documents = res.data.response.docs;
+    // console.log(res.data.stats.stats_fields);
+    console.log(res.data.facet_counts.facet_fields);
+
+    // const uniqueBooks = new Set(documents.map((obj) => obj.book));
+    // const distinctBooks = Array.from(uniqueBooks);
+    // setBooks(distinctBooks);
+    // console.log(distinctBooks);
+  };
+
   // for loading the page based on search params
   // (when returning from book page)
   useEffect(() => {
+    // testing area
+    //
+    //
+    // test();
+    //
+    //
     const params = new URLSearchParams(location.search);
     if (params.size === 0) {
       return;
     }
     const title = params.get("title");
     const genres = params.get("genres").split(",");
-    const minYear = params.get("minYear");
-    const maxYear = params.get("maxYear");
+    // const minYear = params.get("minYear");
+    // const maxYear = params.get("maxYear");
     setSearchInput(title);
     setSelectedGenres(genres);
-    setSelectedMinYear(minYear);
-    setSelectedMaxYear(maxYear);
+    // setSelectedMinYear(minYear);
+    // setSelectedMaxYear(maxYear);
     getResults(title, genres, minYear, maxYear);
   }, []);
-
-  // useEffect(() => {
-  //   search();
-  // }, [searchInput, selectedGenres, selectedMinYear, selectedMaxYear]);
 
   // search and display functions
   const search = () => {
     const params = new URLSearchParams(location.search);
     params.set("title", searchInput);
-    params.set("genres", selectedGenres);
-    params.set("minYear", selectedMinYear);
-    params.set("maxYear", selectedMaxYear);
+
+    let targetGenres;
+
+    if (selectedGenres.length === 0) {
+      targetGenres = genreList;
+      setSelectedGenres(genreList);
+    } else {
+      targetGenres = selectedGenres;
+    }
+    params.set("genres", targetGenres);
+
+    // params.set("minYear", selectedMinYear);
+    // params.set("maxYear", selectedMaxYear);
 
     window.history.replaceState(
       {},
       "",
       `${window.location.pathname}?${params}`
     );
-    getResults(searchInput, selectedGenres, selectedMinYear, selectedMaxYear);
+    getResults(searchInput, targetGenres, selectedMinYear, selectedMaxYear);
   };
 
-  const getData = async (input) => {
-    const words = input.split(" ");
+  const getData = async (title, genres) => {
+    // filter by title input
+    const words = title.split(" ");
     const formattedWords = words.map(
       (word) =>
         `*${encodeURIComponent(
           word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
         )}*`
     );
-    const literal = formattedWords.join("%20AND%20");
+    const titleLiteral = formattedWords.join("%20AND%20");
+
+    // filter by genre
+    const formattedGenres = genres.map((genre) =>
+      encodeURIComponent(
+        genre.charAt(0).toUpperCase() + genre.slice(1).toLowerCase()
+      )
+    );
+    const categoryLiteral = formattedGenres.join("%20|%20");
 
     // construct Solr query URL
-    // const solrUrl = `http://localhost:9893/solr/new_core/select?q=book:%22${input}%22&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=50`;
-
-    const solrUrl = `http://localhost:9893/solr/new_core/select?q=book:(${literal})&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=10000`;
-
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=TYPE:COMMENT&indent=true&rows=10000`;
     // console.log(solrUrl);
 
     const res = await axios.get(solrUrl);
     const documents = res.data.response.docs;
-    setSolrResults(documents);
-    // console.log(documents);
+    console.log(documents);
 
-    const uniqueBooks = new Set(documents.map((obj) => obj.book));
-    const distinctBooks = Array.from(uniqueBooks);
-    setBooks(distinctBooks);
-    console.log(distinctBooks);
+    const uniqueBooks = Array.from(
+      documents
+        .reduce((map, obj) => {
+          const key = `${obj.book}-${obj.category}`;
+          map.set(key, { title: obj.book, category: obj.category });
+          return map;
+        }, new Map())
+        .values()
+    );
+    setBooks(uniqueBooks);
+    console.log(uniqueBooks);
   };
 
-  const getResults = (input, genres, minYear, maxYear) => {
+  const getResults = (title, genres, minYear, maxYear) => {
     // WILL BE REPLACED BY API CALL TO SOLR (rmb add async above)
 
-    // if (!input || input.length == 0) {
+    // if (!title || title.length == 0) {
     //   setResults([]);
     //   return;
     // }
 
     const startTime = performance.now();
-
-    const results = data.filter((item) =>
-      item.title.toLowerCase().match(`\\b${input.toLowerCase()}`)
-    );
-    setResults(results);
-
-    // console.log("------ solr prep section ------");
-    // // note: need to split the spaces and replace with "%20"
-    const updatedInput = input.replaceAll(" ", "%20");
-    // console.log(`q=title:${updatedInput}`);
-    // genres.map((genre) => {
-    //   console.log(`fq=genre:${genre}`);
-    // });
-    // console.log(`fq=year:[${minYear} TO ${maxYear}]`);
-
-    getData(input);
-    // console.log(solrResults);
+    getData(title, genres);
 
     const endTime = performance.now();
     const speed = endTime - startTime; // query speed in milliseconds
@@ -188,7 +210,7 @@ const MainPage = () => {
               ))}
             </div>
           </div>
-          <div className="dateSelection">
+          {/* <div className="dateSelection">
             <p>Year Range of Publication:</p>
             <div className="allDates">
               <select
@@ -215,13 +237,12 @@ const MainPage = () => {
                 ))}
               </select>
             </div>
-          </div>
+          </div> */}
         </div>
         <button onClick={search}>Search</button>
       </div>
 
       <QueryResults results={books} speed={querySpeed} />
-      {/* <ResultsSection results={results} speed={querySpeed} /> */}
     </div>
   );
 };

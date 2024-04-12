@@ -29,10 +29,11 @@ const QueryResults = (props) => {
       )}
       <div className="resultsDiv">
         {props.results.map((result) => (
-          <div className="resultcard" onClick={() => viewResult(result)}>
+          <div className="resultcard" onClick={() => viewResult(result.title)}>
             <div className="imagecard">image</div>
             <div className="detailscard">
-              <p className="titlecard">{result}</p>
+              <p className="titlecard">{result.title}</p>
+              <p className="titlecard">Category: {result.category}</p>
             </div>
           </div>
         ))}
