@@ -7,7 +7,7 @@
       <tokenizer name="keyword"/>
       <filter name="lowercase"/>
       <filter name="trim"/>
-      <filter replacement="" name="patternReplace" replace="all" pattern="([^a-z])"/>
+      <filter name="patternReplace" replace="all" pattern="([^a-z])" replacement=""/>
     </analyzer>
   </fieldType>
   <fieldType name="ancestor_path" class="solr.TextField">
@@ -183,7 +183,7 @@
     <analyzer type="index">
       <tokenizer name="whitespace"/>
       <filter words="lang/stopwords_en.txt" ignoreCase="true" name="stop"/>
-      <filter splitOnCaseChange="1" name="wordDelimiterGraph" catenateAll="0" generateWordParts="1" generateNumberParts="1" catenateWords="1" catenateNumbers="1"/>
+      <filter name="wordDelimiterGraph" catenateAll="0" generateWordParts="1" generateNumberParts="1" catenateWords="1" catenateNumbers="1" splitOnCaseChange="1"/>
       <filter name="lowercase"/>
       <filter protected="protwords.txt" name="keywordMarker"/>
       <filter name="porterStem"/>
@@ -193,7 +193,7 @@
       <tokenizer name="whitespace"/>
       <filter name="synonymGraph" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
       <filter words="lang/stopwords_en.txt" ignoreCase="true" name="stop"/>
-      <filter splitOnCaseChange="1" name="wordDelimiterGraph" catenateAll="0" generateWordParts="1" generateNumberParts="1" catenateWords="0" catenateNumbers="0"/>
+      <filter name="wordDelimiterGraph" catenateAll="0" generateWordParts="1" generateNumberParts="1" catenateWords="0" catenateNumbers="0" splitOnCaseChange="1"/>
       <filter name="lowercase"/>
       <filter protected="protwords.txt" name="keywordMarker"/>
       <filter name="porterStem"/>
@@ -314,7 +314,7 @@
       <tokenizer name="standard"/>
       <filter words="stopwords.txt" ignoreCase="true" name="stop"/>
       <filter name="lowercase"/>
-      <filter withOriginal="true" maxPosQuestion="2" name="reversedWildcard" maxFractionAsterisk="0.33" maxPosAsterisk="3"/>
+      <filter maxPosQuestion="2" name="reversedWildcard" maxFractionAsterisk="0.33" maxPosAsterisk="3" withOriginal="true"/>
     </analyzer>
     <analyzer type="query">
       <tokenizer name="standard"/>
@@ -505,6 +505,7 @@
   <field name="price" type="pfloat" indexed="true" stored="true"/>
   <field name="resourcename" type="text_general" indexed="true" stored="true"/>
   <field name="selftext" type="text_general" indexed="true" uninvertible="true" stored="true"/>
+  <field name="sentiment" type="pint" indexed="true" uninvertible="true" stored="true"/>
   <field name="sku" type="text_en_splitting_tight" indexed="true" omitNorms="true" stored="true"/>
   <field name="store" type="location" indexed="true" stored="true"/>
   <field name="subject" type="text_gen_sort" multiValued="false" indexed="true" stored="true"/>

@@ -1,563 +1,112 @@
-2024-04-09 15:46:56.710 INFO  (main) [] o.e.j.s.Server jetty-10.0.13; built: 2022-12-07T20:13:20.134Z; git: 1c2636ea05c0ca8de1ffd6ca7f3a98ac084c766d; jvm 22+36-2370
-2024-04-09 15:46:57.426 WARN  (main) [] o.e.j.u.DeprecationWarning Using @Deprecated Class org.eclipse.jetty.servlet.listener.ELContextCleaner
-2024-04-09 15:46:57.469 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
-2024-04-09 15:46:57.477 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.2.1
-2024-04-09 15:46:57.478 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 9893
-2024-04-09 15:46:57.478 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1
-2024-04-09 15:46:57.478 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2024-04-09T15:46:57.478273700Z
-2024-04-09 15:46:57.482 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr started with "-XX:+CrashOnOutOfMemoryError" that will crash on any OutOfMemoryError exception. The cause of the OOME will be logged in the crash file at the following path: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\logs\jvm_crash_2684.log
-2024-04-09 15:46:57.490 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0 (source: system property: solr.solr.home)
-2024-04-09 15:46:57.493 INFO  (main) [] o.a.s.c.SolrXmlConfig solr.xml not found in SOLR_HOME, using built-in default
-2024-04-09 15:46:57.493 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\solr.xml
-2024-04-09 15:46:57.593 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/C:/Users/Dayou/Documents/ntu_documents/Coursework/CZ4034_Information_Retrieval/Project/solr-9.5.0/lib]
-2024-04-09 15:46:57.593 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/lib]
-2024-04-09 15:46:58.909 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
-2024-04-09 15:46:58.911 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
-2024-04-09 15:47:18.788 WARN  (main) [] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.766 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
-2024-04-09 15:47:19.348 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0
-2024-04-09 15:47:19.349 INFO  (main) [] o.a.s.c.CorePropertiesLocator Cores are: [tech_products]
-2024-04-09 15:47:19.405 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
-2024-04-09 15:47:19.500 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.9.0
-2024-04-09 15:47:19.508 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
-2024-04-09 15:47:19.591 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.s.IndexSchema Schema name=example
-2024-04-09 15:47:19.973 INFO  (main) [] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
-2024-04-09 15:47:20.073 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
-2024-04-09 15:47:20.074 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
-2024-04-09 15:47:20.074 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
-2024-04-09 15:47:20.074 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
-2024-04-09 15:47:20.095 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
-2024-04-09 15:47:20.140 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.c.CoreContainer Creating SolrCore 'tech_products' using configuration from instancedir C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs, trusted=true
-2024-04-09 15:47:20.186 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs\data\]
-2024-04-09 15:47:20.396 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@36dce7ed{solr-jetty-context.xml,/solr,file:///C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/server/solr-webapp/webapp/,AVAILABLE}{C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server/solr-webapp/webapp}
-2024-04-09 15:47:20.412 INFO  (main) [] o.e.j.s.RequestLogWriter Opened C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\logs\2024_04_09.request.log
-2024-04-09 15:47:20.423 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@89c10b7{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:9893}
-2024-04-09 15:47:20.424 INFO  (main) [] o.e.j.s.Server Started Server@29cfd92b{STARTING}[10.0.13,sto=0] @30469ms
-2024-04-09 15:47:20.574 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=58
-2024-04-09 15:47:40.337 WARN  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.786 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
-2024-04-09 15:47:40.507 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
-2024-04-09 15:47:40.521 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2024-04-09 15:47:40.521 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2024-04-09 15:47:40.546 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
-2024-04-09 15:47:40.546 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
-2024-04-09 15:47:40.617 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@4df11e02 tech_products
-2024-04-09 15:47:40.617 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.tech_products tag=SolrCore@4df11e02
-2024-04-09 15:47:40.639 INFO  (coreLoadExecutor-10-thread-1) [ x:tech_products] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
-2024-04-09 15:47:40.643 ERROR (coreContainerWorkExecutor-2-thread-1) [] o.a.s.c.CoreContainer Error waiting for SolrCore to be loaded on startup => java.util.concurrent.ExecutionException: org.apache.solr.common.SolrException: Unable to create core [tech_products]
-	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
-java.util.concurrent.ExecutionException: org.apache.solr.common.SolrException: Unable to create core [tech_products]
-	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:?]
-	at java.util.concurrent.FutureTask.get(FutureTask.java:191) ~[?:?]
-	at org.apache.solr.core.CoreContainer.lambda$load$13(CoreContainer.java:1044) ~[?:?]
-	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorService.java:212) ~[metrics-core-4.2.17.jar:4.2.17]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
-	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:289) ~[?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
-	at java.lang.Thread.run(Thread.java:1570) [?:?]
-Caused by: org.apache.solr.common.SolrException: Unable to create core [tech_products]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1689) ~[?:?]
-	at org.apache.solr.core.CoreContainer.lambda$load$12(CoreContainer.java:1015) ~[?:?]
-	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:234) ~[metrics-core-4.2.17.jar:4.2.17]
-	... 5 more
-Caused by: org.apache.solr.common.SolrException: Error opening new searcher
-	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1224) ~[?:?]
-	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1051) ~[?:?]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1666) ~[?:?]
-	at org.apache.solr.core.CoreContainer.lambda$load$12(CoreContainer.java:1015) ~[?:?]
-	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:234) ~[metrics-core-4.2.17.jar:4.2.17]
-	... 5 more
-Caused by: org.apache.solr.common.SolrException: Error opening new searcher
-	at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2450) ~[?:?]
-	at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2583) ~[?:?]
-	at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1283) ~[?:?]
-	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1168) ~[?:?]
-	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1051) ~[?:?]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1666) ~[?:?]
-	at org.apache.solr.core.CoreContainer.lambda$load$12(CoreContainer.java:1015) ~[?:?]
-	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:234) ~[metrics-core-4.2.17.jar:4.2.17]
-	... 5 more
-Caused by: java.lang.IllegalArgumentException: Could not load codec 'Lucene99'. Did you forget to add lucene-backward-codecs.jar?
-	at org.apache.lucene.index.SegmentInfos.readCodec(SegmentInfos.java:515) ~[?:?]
-	at org.apache.lucene.index.SegmentInfos.parseSegmentInfos(SegmentInfos.java:404) ~[?:?]
-	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:363) ~[?:?]
-	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:299) ~[?:?]
-	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:288) ~[?:?]
-	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1081) ~[?:?]
-	at org.apache.solr.update.SolrIndexWriter.<init>(SolrIndexWriter.java:145) ~[?:?]
-	at org.apache.solr.update.SolrIndexWriter.create(SolrIndexWriter.java:110) ~[?:?]
-	at org.apache.solr.update.DefaultSolrCoreState.createMainIndexWriter(DefaultSolrCoreState.java:258) ~[?:?]
-	at org.apache.solr.update.DefaultSolrCoreState.getIndexWriter(DefaultSolrCoreState.java:125) ~[?:?]
-	at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2401) ~[?:?]
-	at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2583) ~[?:?]
-	at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1283) ~[?:?]
-	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1168) ~[?:?]
-	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1051) ~[?:?]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1666) ~[?:?]
-	at org.apache.solr.core.CoreContainer.lambda$load$12(CoreContainer.java:1015) ~[?:?]
-	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:234) ~[metrics-core-4.2.17.jar:4.2.17]
-	... 5 more
-	Suppressed: org.apache.lucene.index.CorruptIndexException: checksum passed (fe93014e). possibly transient resource issue, or a Lucene or JVM bug (resource=BufferedChecksumIndexInput(ByteBufferIndexInput(path="C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs\data\index\segments_m")))
-		at org.apache.lucene.codecs.CodecUtil.checkFooter(CodecUtil.java:500) ~[?:?]
-		at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:370) ~[?:?]
-		at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:299) ~[?:?]
-		at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:288) ~[?:?]
-		at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1081) ~[?:?]
-		at org.apache.solr.update.SolrIndexWriter.<init>(SolrIndexWriter.java:145) ~[?:?]
-		at org.apache.solr.update.SolrIndexWriter.create(SolrIndexWriter.java:110) ~[?:?]
-		at org.apache.solr.update.DefaultSolrCoreState.createMainIndexWriter(DefaultSolrCoreState.java:258) ~[?:?]
-		at org.apache.solr.update.DefaultSolrCoreState.getIndexWriter(DefaultSolrCoreState.java:125) ~[?:?]
-		at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2401) ~[?:?]
-		at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2583) ~[?:?]
-		at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1283) ~[?:?]
-		at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1168) ~[?:?]
-		at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1051) ~[?:?]
-		at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1666) ~[?:?]
-		at org.apache.solr.core.CoreContainer.lambda$load$12(CoreContainer.java:1015) ~[?:?]
-		at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:234) ~[metrics-core-4.2.17.jar:4.2.17]
-		at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
-		at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:289) ~[?:?]
-		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
-		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
-		at java.lang.Thread.run(Thread.java:1570) [?:?]
-Caused by: java.lang.IllegalArgumentException: An SPI class of type org.apache.lucene.codecs.Codec with name 'Lucene99' does not exist.  You need to add the corresponding JAR file supporting this SPI to your classpath.  The current classpath supports the following names: [Lucene80, Lucene84, Lucene86, Lucene87, Lucene70, Lucene90, Lucene91, Lucene92, SimpleText, Lucene94]
-	at org.apache.lucene.util.NamedSPILoader.lookup(NamedSPILoader.java:113) ~[?:?]
-	at org.apache.lucene.codecs.Codec.forName(Codec.java:118) ~[?:?]
-	at org.apache.lucene.index.SegmentInfos.readCodec(SegmentInfos.java:511) ~[?:?]
-	at org.apache.lucene.index.SegmentInfos.parseSegmentInfos(SegmentInfos.java:404) ~[?:?]
-	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:363) ~[?:?]
-	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:299) ~[?:?]
-	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:288) ~[?:?]
-	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1081) ~[?:?]
-	at org.apache.solr.update.SolrIndexWriter.<init>(SolrIndexWriter.java:145) ~[?:?]
-	at org.apache.solr.update.SolrIndexWriter.create(SolrIndexWriter.java:110) ~[?:?]
-	at org.apache.solr.update.DefaultSolrCoreState.createMainIndexWriter(DefaultSolrCoreState.java:258) ~[?:?]
-	at org.apache.solr.update.DefaultSolrCoreState.getIndexWriter(DefaultSolrCoreState.java:125) ~[?:?]
-	at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2401) ~[?:?]
-	at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2583) ~[?:?]
-	at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1283) ~[?:?]
-	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1168) ~[?:?]
-	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1051) ~[?:?]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1666) ~[?:?]
-	at org.apache.solr.core.CoreContainer.lambda$load$12(CoreContainer.java:1015) ~[?:?]
-	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:234) ~[metrics-core-4.2.17.jar:4.2.17]
-	... 5 more
-2024-04-09 15:48:58.218 INFO  (qtp573487274-41) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712677738163} status=0 QTime=2
-2024-04-09 15:48:58.281 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677738164} status=0 QTime=64
-2024-04-09 15:48:58.334 INFO  (qtp573487274-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677738164} status=0 QTime=41
-2024-04-09 15:49:06.199 INFO  (qtp573487274-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712677746178} status=0 QTime=0
-2024-04-09 15:49:06.248 INFO  (qtp573487274-37) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677746178} status=0 QTime=49
-2024-04-09 15:49:06.300 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677746178} status=0 QTime=43
-2024-04-09 15:49:06.932 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712677746911} status=0 QTime=0
-2024-04-09 15:49:06.981 INFO  (qtp573487274-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677746911} status=0 QTime=48
-2024-04-09 15:49:07.031 INFO  (qtp573487274-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677746911} status=0 QTime=41
-2024-04-09 15:49:07.618 INFO  (qtp573487274-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712677747600} status=0 QTime=0
-2024-04-09 15:49:07.666 INFO  (qtp573487274-37) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677747600} status=0 QTime=47
-2024-04-09 15:49:07.714 INFO  (qtp573487274-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677747600} status=0 QTime=39
-2024-04-09 15:49:08.319 INFO  (qtp573487274-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712677748298} status=0 QTime=0
-2024-04-09 15:49:08.367 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677748298} status=0 QTime=48
-2024-04-09 15:49:08.418 INFO  (qtp573487274-37) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677748298} status=0 QTime=41
-2024-04-09 15:49:10.586 INFO  (qtp573487274-37) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712677750566} status=0 QTime=0
-2024-04-09 15:49:10.636 INFO  (qtp573487274-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677750566} status=0 QTime=50
-2024-04-09 15:49:10.688 INFO  (qtp573487274-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677750566} status=0 QTime=42
-2024-04-09 15:49:11.499 INFO  (qtp573487274-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712677751475} status=0 QTime=0
-2024-04-09 15:49:11.546 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677751476} status=0 QTime=48
-2024-04-09 15:49:11.596 INFO  (qtp573487274-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677751476} status=0 QTime=41
-2024-04-09 15:49:13.179 INFO  (qtp573487274-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712677751475} status=0 QTime=0
-2024-04-09 15:49:13.179 INFO  (qtp573487274-37) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712677751475} status=0 QTime=0
-2024-04-09 15:49:13.232 INFO  (qtp573487274-66) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712677751476} status=0 QTime=53
-2024-04-09 15:53:31.747 INFO  (qtp573487274-43) [ x:books] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=books&action=CREATE&config=solrconfig.xml&instanceDir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs&wt=json&_=1712677751475
-2024-04-09 15:53:31.777 ERROR (qtp573487274-43) [ x:books] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Path C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs must be relative to SOLR_HOME, SOLR_DATA_HOME coreRootDirectory. Set system property 'solr.allowPaths' to add other allowed paths. => org.apache.solr.common.SolrException: Path C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs must be relative to SOLR_HOME, SOLR_DATA_HOME coreRootDirectory. Set system property 'solr.allowPaths' to add other allowed paths.
-	at org.apache.solr.core.SolrPaths.assertPathAllowed(SolrPaths.java:77)
-org.apache.solr.common.SolrException: Path C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs must be relative to SOLR_HOME, SOLR_DATA_HOME coreRootDirectory. Set system property 'solr.allowPaths' to add other allowed paths.
-	at org.apache.solr.core.SolrPaths.assertPathAllowed(SolrPaths.java:77) ~[?:?]
-	at org.apache.solr.core.CoreContainer.assertPathAllowed(CoreContainer.java:1593) ~[?:?]
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1512) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:111) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:398) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:354) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:219) ~[?:?]
-	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
-	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:929) ~[?:?]
-	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:877) ~[?:?]
-	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:548) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:252) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:220) ~[?:?]
-	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
-	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:215) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:197) ~[?:?]
-	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578) ~[jetty-security-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1383) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1305) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:934) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1078) ~[jetty-util-10.0.13.jar:10.0.13]
-	at java.lang.Thread.run(Thread.java:1570) [?:?]
-2024-04-09 15:53:31.777 INFO  (qtp573487274-43) [ x:books] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=books&action=CREATE&config=solrconfig.xml&instanceDir=C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\configsets\sample_techproducts_configs&wt=json&_=1712677751475} status=400 QTime=31
-2024-04-09 15:53:52.049 INFO  (qtp573487274-38) [ x:books] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=books&action=CREATE&config=solrconfig.xml&instanceDir=solr-9.2.1\server\solr\configsets\sample_techproducts_configs&wt=json&_=1712677751475
-2024-04-09 15:53:52.056 ERROR (qtp573487274-38) [] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'books': Unable to create core [books] Caused by: Can't find resource 'solrconfig.xml' in classpath or 'C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\solr-9.2.1\server\solr\configsets\sample_techproducts_configs' => org.apache.solr.common.SolrException: Error CREATEing SolrCore 'books': Unable to create core [books] Caused by: Can't find resource 'solrconfig.xml' in classpath or 'C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\solr-9.2.1\server\solr\configsets\sample_techproducts_configs'
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1574)
-org.apache.solr.common.SolrException: Error CREATEing SolrCore 'books': Unable to create core [books] Caused by: Can't find resource 'solrconfig.xml' in classpath or 'C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\solr-9.2.1\server\solr\configsets\sample_techproducts_configs'
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1574) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:111) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:398) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:354) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:219) ~[?:?]
-	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
-	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:929) ~[?:?]
-	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:877) ~[?:?]
-	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:548) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:252) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:220) ~[?:?]
-	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
-	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:215) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:197) ~[?:?]
-	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578) ~[jetty-security-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1383) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1305) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:934) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1078) ~[jetty-util-10.0.13.jar:10.0.13]
-	at java.lang.Thread.run(Thread.java:1570) [?:?]
-Caused by: org.apache.solr.common.SolrException: Unable to create core [books]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1689) ~[?:?]
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
-	... 54 more
-Caused by: org.apache.solr.common.SolrException: Could not load conf for core books: Error loading solr config from C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf\solrconfig.xml
-	at org.apache.solr.core.ConfigSetService.loadConfigSet(ConfigSetService.java:263) ~[?:?]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1656) ~[?:?]
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
-	... 54 more
-Caused by: org.apache.solr.common.SolrException: Error loading solr config from C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\solr-9.2.1\server\solr\configsets\sample_techproducts_configs\conf\solrconfig.xml
-	at org.apache.solr.core.SolrConfig.readFromResourceLoader(SolrConfig.java:165) ~[?:?]
-	at org.apache.solr.core.ConfigSetService.createSolrConfig(ConfigSetService.java:294) ~[?:?]
-	at org.apache.solr.core.ConfigSetService.loadConfigSet(ConfigSetService.java:247) ~[?:?]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1656) ~[?:?]
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
-	... 54 more
-Caused by: org.apache.solr.common.SolrException: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'solrconfig.xml' in classpath or 'C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\solr-9.2.1\server\solr\configsets\sample_techproducts_configs'
-	at org.apache.solr.core.SolrConfig.readXml(SolrConfig.java:411) ~[?:?]
-	at org.apache.solr.core.SolrConfig.lambda$new$1(SolrConfig.java:229) ~[?:?]
-	at org.apache.solr.schema.IndexSchemaFactory.getFromCache(IndexSchemaFactory.java:190) ~[?:?]
-	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:222) ~[?:?]
-	at org.apache.solr.core.SolrConfig.readFromResourceLoader(SolrConfig.java:157) ~[?:?]
-	at org.apache.solr.core.ConfigSetService.createSolrConfig(ConfigSetService.java:294) ~[?:?]
-	at org.apache.solr.core.ConfigSetService.loadConfigSet(ConfigSetService.java:247) ~[?:?]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1656) ~[?:?]
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
-	... 54 more
-Caused by: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'solrconfig.xml' in classpath or 'C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\solr-9.2.1\server\solr\configsets\sample_techproducts_configs'
-	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:382) ~[?:?]
-	at org.apache.solr.core.SolrConfig.readXml(SolrConfig.java:404) ~[?:?]
-	at org.apache.solr.core.SolrConfig.lambda$new$1(SolrConfig.java:229) ~[?:?]
-	at org.apache.solr.schema.IndexSchemaFactory.getFromCache(IndexSchemaFactory.java:190) ~[?:?]
-	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:222) ~[?:?]
-	at org.apache.solr.core.SolrConfig.readFromResourceLoader(SolrConfig.java:157) ~[?:?]
-	at org.apache.solr.core.ConfigSetService.createSolrConfig(ConfigSetService.java:294) ~[?:?]
-	at org.apache.solr.core.ConfigSetService.loadConfigSet(ConfigSetService.java:247) ~[?:?]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1656) ~[?:?]
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
-	... 54 more
-2024-04-09 15:53:52.056 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=books&action=CREATE&config=solrconfig.xml&instanceDir=solr-9.2.1\server\solr\configsets\sample_techproducts_configs&wt=json&_=1712677751475} status=400 QTime=7
-2024-04-09 15:53:57.839 INFO  (qtp573487274-43) [ x:books] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=books&action=CREATE&config=solrconfig.xml&instanceDir=server\solr\configsets\sample_techproducts_configs&wt=json&_=1712677751475
-2024-04-09 15:53:57.840 ERROR (qtp573487274-43) [ x:books] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'books': Could not create a new core in C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs as another core is already defined there => org.apache.solr.common.SolrException: Error CREATEing SolrCore 'books': Could not create a new core in C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs as another core is already defined there
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1574)
-org.apache.solr.common.SolrException: Error CREATEing SolrCore 'books': Could not create a new core in C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs as another core is already defined there
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1574) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:111) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:398) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:354) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:219) ~[?:?]
-	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
-	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:929) ~[?:?]
-	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:877) ~[?:?]
-	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:548) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:252) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:220) ~[?:?]
-	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
-	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:215) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:197) ~[?:?]
-	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578) ~[jetty-security-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1383) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1305) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:934) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1078) ~[jetty-util-10.0.13.jar:10.0.13]
-	at java.lang.Thread.run(Thread.java:1570) [?:?]
-Caused by: org.apache.solr.common.SolrException: Could not create a new core in C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs as another core is already defined there
-	at org.apache.solr.core.CorePropertiesLocator.create(CorePropertiesLocator.java:67) ~[?:?]
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1527) ~[?:?]
-	... 54 more
-2024-04-09 15:53:57.840 INFO  (qtp573487274-43) [ x:books] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=books&action=CREATE&config=solrconfig.xml&instanceDir=server\solr\configsets\sample_techproducts_configs&wt=json&_=1712677751475} status=400 QTime=2
-2024-04-09 15:54:07.554 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678047529} status=0 QTime=0
-2024-04-09 15:54:07.565 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678047529} status=0 QTime=0
-2024-04-09 15:54:07.604 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678047529} status=0 QTime=50
-2024-04-09 15:54:08.548 INFO  (qtp573487274-66) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678048526} status=0 QTime=0
-2024-04-09 15:54:08.548 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678048526} status=0 QTime=0
-2024-04-09 15:54:08.598 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678048526} status=0 QTime=50
-2024-04-09 15:54:09.427 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678049402} status=0 QTime=0
-2024-04-09 15:54:09.427 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678049402} status=0 QTime=0
-2024-04-09 15:54:09.477 INFO  (qtp573487274-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678049402} status=0 QTime=50
-2024-04-09 15:54:10.185 INFO  (qtp573487274-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678050162} status=0 QTime=0
-2024-04-09 15:54:10.185 INFO  (qtp573487274-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678050162} status=0 QTime=0
-2024-04-09 15:54:10.232 INFO  (qtp573487274-66) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678050162} status=0 QTime=47
-2024-04-09 15:54:10.945 INFO  (qtp573487274-66) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678050923} status=0 QTime=0
-2024-04-09 15:54:10.945 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678050923} status=0 QTime=0
-2024-04-09 15:54:10.993 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678050923} status=0 QTime=48
-2024-04-09 15:54:11.720 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678051698} status=0 QTime=0
-2024-04-09 15:54:11.720 INFO  (qtp573487274-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678051698} status=0 QTime=0
-2024-04-09 15:54:11.769 INFO  (qtp573487274-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678051698} status=0 QTime=48
-2024-04-09 15:54:12.472 INFO  (qtp573487274-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678052449} status=0 QTime=0
-2024-04-09 15:54:12.472 INFO  (qtp573487274-66) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678052449} status=0 QTime=0
-2024-04-09 15:54:12.520 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678052450} status=0 QTime=48
-2024-04-09 15:54:13.094 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678053072} status=0 QTime=0
-2024-04-09 15:54:13.094 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678053072} status=0 QTime=0
-2024-04-09 15:54:13.144 INFO  (qtp573487274-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678053072} status=0 QTime=50
-2024-04-09 15:54:13.773 INFO  (qtp573487274-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678053751} status=0 QTime=0
-2024-04-09 15:54:13.773 INFO  (qtp573487274-66) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678053751} status=0 QTime=0
-2024-04-09 15:54:13.823 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678053752} status=0 QTime=49
-2024-04-09 15:54:14.348 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678054325} status=0 QTime=0
-2024-04-09 15:54:14.348 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678054325} status=0 QTime=0
-2024-04-09 15:54:14.403 INFO  (qtp573487274-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678054325} status=0 QTime=54
-2024-04-09 15:54:14.837 INFO  (qtp573487274-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678054814} status=0 QTime=0
-2024-04-09 15:54:14.837 INFO  (qtp573487274-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678054814} status=0 QTime=0
-2024-04-09 15:54:14.882 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678054814} status=0 QTime=46
-2024-04-09 15:54:15.322 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678055301} status=0 QTime=0
-2024-04-09 15:54:15.322 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678055301} status=0 QTime=0
-2024-04-09 15:54:15.372 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678055302} status=0 QTime=49
-2024-04-09 15:54:15.784 INFO  (qtp573487274-66) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678055762} status=0 QTime=0
-2024-04-09 15:54:15.784 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678055762} status=0 QTime=0
-2024-04-09 15:54:15.830 INFO  (qtp573487274-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678055763} status=0 QTime=46
-2024-04-09 15:54:16.253 INFO  (qtp573487274-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678056232} status=0 QTime=0
-2024-04-09 15:54:16.253 INFO  (qtp573487274-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678056232} status=0 QTime=0
-2024-04-09 15:54:16.302 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678056232} status=0 QTime=48
-2024-04-09 15:54:56.896 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678096869} status=0 QTime=0
-2024-04-09 15:54:56.897 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678096869} status=0 QTime=0
-2024-04-09 15:54:56.955 INFO  (qtp573487274-66) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678096869} status=0 QTime=59
-2024-04-09 15:55:09.512 INFO  (qtp573487274-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678096869} status=0 QTime=0
-2024-04-09 15:55:09.513 INFO  (qtp573487274-66) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/properties params={wt=json&_=1712678109509} status=0 QTime=0
-2024-04-09 15:55:09.561 INFO  (qtp573487274-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678096869} status=0 QTime=48
-2024-04-09 15:55:10.079 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678096869} status=0 QTime=0
-2024-04-09 15:55:10.080 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678096869} status=0 QTime=0
-2024-04-09 15:55:10.124 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678096869} status=0 QTime=44
-2024-04-09 15:55:12.704 INFO  (qtp573487274-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678112680} status=0 QTime=0
-2024-04-09 15:55:12.704 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678112680} status=0 QTime=0
-2024-04-09 15:55:12.754 INFO  (qtp573487274-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678112680} status=0 QTime=50
-2024-04-09 15:55:13.339 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678112680} status=0 QTime=0
-2024-04-09 15:55:13.384 INFO  (qtp573487274-66) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678112680} status=0 QTime=46
-2024-04-09 15:55:13.433 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678112680} status=0 QTime=39
-2024-04-09 15:55:14.219 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678114198} status=0 QTime=0
-2024-04-09 15:55:14.266 INFO  (qtp573487274-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678114198} status=0 QTime=46
-2024-04-09 15:55:14.315 INFO  (qtp573487274-66) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678114198} status=0 QTime=39
-2024-04-09 15:55:14.790 INFO  (qtp573487274-66) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678114767} status=0 QTime=0
-2024-04-09 15:55:14.840 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678114767} status=0 QTime=50
-2024-04-09 15:55:14.890 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678114767} status=0 QTime=38
-2024-04-09 15:55:32.729 INFO  (qtp573487274-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678114767} status=0 QTime=0
-2024-04-09 15:55:32.729 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678114767} status=0 QTime=0
-2024-04-09 15:55:32.774 INFO  (qtp573487274-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678114767} status=0 QTime=45
-2024-04-09 15:55:37.207 INFO  (qtp573487274-34) [ x:new_core] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=new_core&action=CREATE&config=solrconfig.xml&instanceDir=new_core&wt=json&_=1712678114767
-2024-04-09 15:55:37.211 ERROR (qtp573487274-34) [] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'new_core': Unable to create core [new_core] Caused by: Can't find resource 'solrconfig.xml' in classpath or 'C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\new_core' => org.apache.solr.common.SolrException: Error CREATEing SolrCore 'new_core': Unable to create core [new_core] Caused by: Can't find resource 'solrconfig.xml' in classpath or 'C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\new_core'
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1574)
-org.apache.solr.common.SolrException: Error CREATEing SolrCore 'new_core': Unable to create core [new_core] Caused by: Can't find resource 'solrconfig.xml' in classpath or 'C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\new_core'
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1574) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:111) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:398) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:354) ~[?:?]
-	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:219) ~[?:?]
-	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
-	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:929) ~[?:?]
-	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:877) ~[?:?]
-	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:548) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:252) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:220) ~[?:?]
-	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
-	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:215) ~[?:?]
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:197) ~[?:?]
-	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578) ~[jetty-security-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1383) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1305) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282) ~[jetty-server-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:934) ~[jetty-util-10.0.13.jar:10.0.13]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1078) ~[jetty-util-10.0.13.jar:10.0.13]
-	at java.lang.Thread.run(Thread.java:1570) [?:?]
-Caused by: org.apache.solr.common.SolrException: Unable to create core [new_core]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1689) ~[?:?]
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
-	... 54 more
-Caused by: org.apache.solr.common.SolrException: Could not load conf for core new_core: Error loading solr config from C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\new_core\conf\solrconfig.xml
-	at org.apache.solr.core.ConfigSetService.loadConfigSet(ConfigSetService.java:263) ~[?:?]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1656) ~[?:?]
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
-	... 54 more
-Caused by: org.apache.solr.common.SolrException: Error loading solr config from C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\new_core\conf\solrconfig.xml
-	at org.apache.solr.core.SolrConfig.readFromResourceLoader(SolrConfig.java:165) ~[?:?]
-	at org.apache.solr.core.ConfigSetService.createSolrConfig(ConfigSetService.java:294) ~[?:?]
-	at org.apache.solr.core.ConfigSetService.loadConfigSet(ConfigSetService.java:247) ~[?:?]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1656) ~[?:?]
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
-	... 54 more
-Caused by: org.apache.solr.common.SolrException: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'solrconfig.xml' in classpath or 'C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\new_core'
-	at org.apache.solr.core.SolrConfig.readXml(SolrConfig.java:411) ~[?:?]
-	at org.apache.solr.core.SolrConfig.lambda$new$1(SolrConfig.java:229) ~[?:?]
-	at org.apache.solr.schema.IndexSchemaFactory.getFromCache(IndexSchemaFactory.java:190) ~[?:?]
-	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:222) ~[?:?]
-	at org.apache.solr.core.SolrConfig.readFromResourceLoader(SolrConfig.java:157) ~[?:?]
-	at org.apache.solr.core.ConfigSetService.createSolrConfig(ConfigSetService.java:294) ~[?:?]
-	at org.apache.solr.core.ConfigSetService.loadConfigSet(ConfigSetService.java:247) ~[?:?]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1656) ~[?:?]
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
-	... 54 more
-Caused by: org.apache.solr.core.SolrResourceNotFoundException: Can't find resource 'solrconfig.xml' in classpath or 'C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\new_core'
-	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:382) ~[?:?]
-	at org.apache.solr.core.SolrConfig.readXml(SolrConfig.java:404) ~[?:?]
-	at org.apache.solr.core.SolrConfig.lambda$new$1(SolrConfig.java:229) ~[?:?]
-	at org.apache.solr.schema.IndexSchemaFactory.getFromCache(IndexSchemaFactory.java:190) ~[?:?]
-	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:222) ~[?:?]
-	at org.apache.solr.core.SolrConfig.readFromResourceLoader(SolrConfig.java:157) ~[?:?]
-	at org.apache.solr.core.ConfigSetService.createSolrConfig(ConfigSetService.java:294) ~[?:?]
-	at org.apache.solr.core.ConfigSetService.loadConfigSet(ConfigSetService.java:247) ~[?:?]
-	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1656) ~[?:?]
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
-	... 54 more
-2024-04-09 15:55:37.211 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=new_core&action=CREATE&config=solrconfig.xml&instanceDir=new_core&wt=json&_=1712678114767} status=400 QTime=4
-2024-04-09 15:56:05.756 INFO  (qtp573487274-43) [ x:new_core] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=new_core&action=CREATE&config=solrconfig.xml&instanceDir=\server\solr\configsets\sample_techproducts_configs&wt=json&_=1712678114767
-2024-04-09 15:56:05.757 ERROR (qtp573487274-43) [ x:new_core] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error handling 'CREATE' action => org.apache.solr.common.SolrException: Error handling 'CREATE' action
+2024-04-10 05:56:46.784 INFO  (main) [] o.e.j.s.Server jetty-10.0.13; built: 2022-12-07T20:13:20.134Z; git: 1c2636ea05c0ca8de1ffd6ca7f3a98ac084c766d; jvm 22+36-2370
+2024-04-10 05:56:47.567 WARN  (main) [] o.e.j.u.DeprecationWarning Using @Deprecated Class org.eclipse.jetty.servlet.listener.ELContextCleaner
+2024-04-10 05:56:47.605 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2024-04-10 05:56:47.616 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.2.1
+2024-04-10 05:56:47.616 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 9893
+2024-04-10 05:56:47.616 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1
+2024-04-10 05:56:47.616 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2024-04-10T05:56:47.616034400Z
+2024-04-10 05:56:47.620 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr started with "-XX:+CrashOnOutOfMemoryError" that will crash on any OutOfMemoryError exception. The cause of the OOME will be logged in the crash file at the following path: C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\logs\jvm_crash_27572.log
+2024-04-10 05:56:47.628 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0 (source: system property: solr.solr.home)
+2024-04-10 05:56:47.631 INFO  (main) [] o.a.s.c.SolrXmlConfig solr.xml not found in SOLR_HOME, using built-in default
+2024-04-10 05:56:47.631 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\solr\solr.xml
+2024-04-10 05:56:47.728 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/C:/Users/Dayou/Documents/ntu_documents/Coursework/CZ4034_Information_Retrieval/Project/solr-9.5.0/lib]
+2024-04-10 05:56:47.730 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/lib]
+2024-04-10 05:56:49.184 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2024-04-10 05:56:49.188 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2024-04-10 05:57:09.095 WARN  (main) [] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.798 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-10 05:57:09.782 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 0 core definitions underneath C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0
+2024-04-10 05:57:10.262 INFO  (main) [] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-04-10 05:57:10.630 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@7bfc3126{solr-jetty-context.xml,/solr,file:///C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/server/solr-webapp/webapp/,AVAILABLE}{C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server/solr-webapp/webapp}
+2024-04-10 05:57:10.641 INFO  (main) [] o.e.j.s.RequestLogWriter Opened C:\Users\Dayou\Documents\GitHub\CZ4034\solr\solr-9.2.1\server\logs\2024_04_10.request.log
+2024-04-10 05:57:10.651 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@64337702{HTTP/1.1, (http/1.1, h2c)}{127.0.0.1:9893}
+2024-04-10 05:57:10.652 INFO  (main) [] o.e.j.s.Server Started Server@532a02d9{STARTING}[10.0.13,sto=0] @32671ms
+2024-04-10 05:57:10.801 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=88
+2024-04-10 05:57:51.243 INFO  (qtp801569151-37) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728671194} status=0 QTime=3
+2024-04-10 05:57:51.314 INFO  (qtp801569151-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728671194} status=0 QTime=74
+2024-04-10 05:57:51.378 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728671194} status=0 QTime=52
+2024-04-10 05:58:14.347 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728694325} status=0 QTime=0
+2024-04-10 05:58:14.412 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728694325} status=0 QTime=64
+2024-04-10 05:58:14.487 INFO  (qtp801569151-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728694325} status=0 QTime=64
+2024-04-10 05:58:17.711 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728694325} status=0 QTime=0
+2024-04-10 05:58:17.713 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712728694325} status=0 QTime=0
+2024-04-10 05:58:17.775 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728694325} status=0 QTime=62
+2024-04-10 05:58:18.960 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728694325} status=0 QTime=0
+2024-04-10 05:58:19.016 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728694325} status=0 QTime=55
+2024-04-10 05:58:19.077 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728694325} status=0 QTime=49
+2024-04-10 05:58:20.467 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728700443} status=0 QTime=0
+2024-04-10 05:58:20.526 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728700443} status=0 QTime=59
+2024-04-10 05:58:20.591 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728700443} status=0 QTime=52
+2024-04-10 05:58:21.106 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728701080} status=0 QTime=0
+2024-04-10 05:58:21.166 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728701080} status=0 QTime=59
+2024-04-10 05:58:21.227 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728701080} status=0 QTime=52
+2024-04-10 05:58:21.763 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728701739} status=0 QTime=0
+2024-04-10 05:58:21.825 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728701739} status=0 QTime=62
+2024-04-10 05:58:21.888 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728701739} status=0 QTime=50
+2024-04-10 05:58:22.373 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728702350} status=0 QTime=0
+2024-04-10 05:58:22.434 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728702350} status=0 QTime=61
+2024-04-10 05:58:22.494 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728702350} status=0 QTime=51
+2024-04-10 05:58:22.985 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728702963} status=0 QTime=0
+2024-04-10 05:58:23.048 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728702963} status=0 QTime=63
+2024-04-10 05:58:23.124 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728702963} status=0 QTime=63
+2024-04-10 05:58:23.583 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728703561} status=0 QTime=0
+2024-04-10 05:58:23.643 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728703562} status=0 QTime=60
+2024-04-10 05:58:23.705 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728703562} status=0 QTime=52
+2024-04-10 05:58:24.203 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728704176} status=0 QTime=0
+2024-04-10 05:58:24.305 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728704176} status=0 QTime=101
+2024-04-10 05:58:24.394 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728704176} status=0 QTime=74
+2024-04-10 05:58:24.820 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728704799} status=0 QTime=0
+2024-04-10 05:58:24.881 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728704800} status=0 QTime=60
+2024-04-10 05:58:24.944 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728704800} status=0 QTime=53
+2024-04-10 05:58:25.420 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728705398} status=0 QTime=0
+2024-04-10 05:58:25.485 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728705399} status=0 QTime=65
+2024-04-10 05:58:25.551 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728705399} status=0 QTime=53
+2024-04-10 05:58:26.016 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728705994} status=0 QTime=0
+2024-04-10 05:58:26.080 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728705994} status=0 QTime=63
+2024-04-10 05:58:26.140 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728705994} status=0 QTime=52
+2024-04-10 05:58:26.559 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728706537} status=0 QTime=0
+2024-04-10 05:58:26.621 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728706537} status=0 QTime=61
+2024-04-10 05:58:26.686 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728706537} status=0 QTime=53
+2024-04-10 05:58:27.145 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728707122} status=0 QTime=0
+2024-04-10 05:58:27.212 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728707123} status=0 QTime=66
+2024-04-10 05:58:27.272 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728707123} status=0 QTime=51
+2024-04-10 05:58:27.764 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728707739} status=0 QTime=0
+2024-04-10 05:58:27.825 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728707740} status=0 QTime=62
+2024-04-10 05:58:27.889 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728707740} status=0 QTime=51
+2024-04-10 05:58:28.365 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728708344} status=0 QTime=0
+2024-04-10 05:58:28.430 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728708344} status=0 QTime=65
+2024-04-10 05:58:28.494 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728708344} status=0 QTime=54
+2024-04-10 05:58:28.906 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728708885} status=0 QTime=0
+2024-04-10 05:58:28.972 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728708885} status=0 QTime=66
+2024-04-10 05:58:29.035 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728708885} status=0 QTime=51
+2024-04-10 05:58:29.518 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728709496} status=0 QTime=0
+2024-04-10 05:58:29.582 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728709496} status=0 QTime=65
+2024-04-10 05:58:29.643 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728709496} status=0 QTime=51
+2024-04-10 05:58:30.117 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728710095} status=0 QTime=0
+2024-04-10 05:58:30.183 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728710095} status=0 QTime=65
+2024-04-10 05:58:30.248 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728710095} status=0 QTime=54
+2024-04-10 05:58:30.733 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728710711} status=0 QTime=0
+2024-04-10 05:58:30.798 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728710711} status=0 QTime=65
+2024-04-10 05:58:30.865 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728710711} status=0 QTime=55
+2024-04-10 05:58:32.675 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728712655} status=0 QTime=0
+2024-04-10 05:58:32.736 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728712655} status=0 QTime=60
+2024-04-10 05:58:32.798 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728712655} status=0 QTime=51
+2024-04-10 05:58:33.264 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728713241} status=0 QTime=0
+2024-04-10 05:58:33.325 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728713241} status=0 QTime=61
+2024-04-10 05:58:33.386 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728713241} status=0 QTime=51
+2024-04-10 05:58:33.796 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728713775} status=0 QTime=0
+2024-04-10 05:58:33.857 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728713775} status=0 QTime=60
+2024-04-10 05:58:33.922 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728713775} status=0 QTime=52
+2024-04-10 05:58:54.791 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728734765} status=0 QTime=0
+2024-04-10 05:58:54.845 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728734765} status=0 QTime=54
+2024-04-10 05:58:54.901 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728734765} status=0 QTime=46
+2024-04-10 06:00:37.180 INFO  (qtp801569151-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728837125} status=0 QTime=0
+2024-04-10 06:00:37.238 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728837125} status=0 QTime=55
+2024-04-10 06:00:37.295 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728837125} status=0 QTime=49
+2024-04-10 06:00:54.296 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712728837125} status=0 QTime=0
+2024-04-10 06:00:54.296 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728837125} status=0 QTime=0
+2024-04-10 06:00:54.353 INFO  (qtp801569151-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728837125} status=0 QTime=51
+2024-04-10 06:01:21.366 INFO  (qtp801569151-43) [ x:main_core] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=main_core&action=CREATE&config=solrconfig.xml&instanceDir=\server\solr\configsets\sample_techproducts_configs&wt=json&_=1712728837125
+2024-04-10 06:01:21.369 ERROR (qtp801569151-43) [ x:main_core] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error handling 'CREATE' action => org.apache.solr.common.SolrException: Error handling 'CREATE' action
 	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:404)
 org.apache.solr.common.SolrException: Error handling 'CREATE' action
 	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:404) ~[?:?]
@@ -628,8 +177,8 @@ Caused by: java.security.AccessControlException: access denied ("java.io.FilePer
 	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:111) ~[?:?]
 	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:398) ~[?:?]
 	... 52 more
-2024-04-09 15:56:05.757 INFO  (qtp573487274-43) [ x:new_core] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=new_core&action=CREATE&config=solrconfig.xml&instanceDir=\server\solr\configsets\sample_techproducts_configs&wt=json&_=1712678114767} status=500 QTime=1
-2024-04-09 15:56:05.758 ERROR (qtp573487274-43) [ x:new_core] o.a.s.s.HttpSolrCall org.apache.solr.common.SolrException: Error handling 'CREATE' action => org.apache.solr.common.SolrException: Error handling 'CREATE' action
+2024-04-10 06:01:21.370 INFO  (qtp801569151-43) [ x:main_core] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=main_core&action=CREATE&config=solrconfig.xml&instanceDir=\server\solr\configsets\sample_techproducts_configs&wt=json&_=1712728837125} status=500 QTime=4
+2024-04-10 06:01:21.370 ERROR (qtp801569151-43) [ x:main_core] o.a.s.s.HttpSolrCall org.apache.solr.common.SolrException: Error handling 'CREATE' action => org.apache.solr.common.SolrException: Error handling 'CREATE' action
 	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:404)
 org.apache.solr.common.SolrException: Error handling 'CREATE' action
 	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:404) ~[?:?]
@@ -700,33 +249,30 @@ Caused by: java.security.AccessControlException: access denied ("java.io.FilePer
 	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:111) ~[?:?]
 	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:398) ~[?:?]
 	... 52 more
-2024-04-09 15:56:09.887 INFO  (qtp573487274-34) [ x:new_core] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=new_core&action=CREATE&config=solrconfig.xml&instanceDir=server\solr\configsets\sample_techproducts_configs&wt=json&_=1712678114767
-2024-04-09 15:56:09.907 INFO  (qtp573487274-34) [ x:new_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
-2024-04-09 15:56:09.961 INFO  (qtp573487274-34) [ x:new_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.9.0
-2024-04-09 15:56:09.961 INFO  (qtp573487274-34) [ x:new_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
-2024-04-09 15:56:09.969 INFO  (qtp573487274-34) [ x:new_core] o.a.s.s.IndexSchema Schema name=example
-2024-04-09 15:56:10.019 INFO  (qtp573487274-34) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
-2024-04-09 15:56:10.019 INFO  (qtp573487274-34) [ x:new_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
-2024-04-09 15:56:10.019 INFO  (qtp573487274-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
-2024-04-09 15:56:10.019 INFO  (qtp573487274-34) [ x:new_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
-2024-04-09 15:56:10.023 INFO  (qtp573487274-34) [ x:new_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
-2024-04-09 15:56:10.036 INFO  (qtp573487274-34) [ x:new_core] o.a.s.c.CoreContainer Creating SolrCore 'new_core' using configuration from instancedir C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs, trusted=true
-2024-04-09 15:56:10.037 INFO  (qtp573487274-34) [ x:new_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs\data\]
-2024-04-09 15:56:23.359 INFO  (qtp573487274-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712678183332} status=0 QTime=0
-2024-04-09 15:56:23.369 INFO  (qtp573487274-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712678183332} status=0 QTime=0
-2024-04-09 15:56:23.408 INFO  (qtp573487274-37) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712678183332} status=0 QTime=49
-2024-04-09 15:56:29.853 WARN  (qtp573487274-34) [ x:new_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.787 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
-2024-04-09 15:56:29.888 INFO  (qtp573487274-34) [ x:new_core] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
-2024-04-09 15:56:29.892 INFO  (qtp573487274-34) [ x:new_core] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2024-04-09 15:56:29.893 INFO  (qtp573487274-34) [ x:new_core] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2024-04-09 15:56:29.896 INFO  (qtp573487274-34) [ x:new_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
-2024-04-09 15:56:29.896 INFO  (qtp573487274-34) [ x:new_core] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
-2024-04-09 15:56:29.902 INFO  (qtp573487274-34) [ x:new_core] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@72f9b06a new_core
-2024-04-09 15:56:29.902 INFO  (qtp573487274-34) [ x:new_core] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.new_core tag=SolrCore@72f9b06a
-2024-04-09 15:56:29.918 INFO  (qtp573487274-34) [ x:new_core] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
-2024-04-09 15:56:29.920 ERROR (qtp573487274-34) [] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'new_core': Unable to create core [new_core] Caused by: An SPI class of type org.apache.lucene.codecs.Codec with name 'Lucene99' does not exist.  You need to add the corresponding JAR file supporting this SPI to your classpath.  The current classpath supports the following names: [Lucene80, Lucene84, Lucene86, Lucene87, Lucene70, Lucene90, Lucene91, Lucene92, SimpleText, Lucene94] => org.apache.solr.common.SolrException: Error CREATEing SolrCore 'new_core': Unable to create core [new_core] Caused by: An SPI class of type org.apache.lucene.codecs.Codec with name 'Lucene99' does not exist.  You need to add the corresponding JAR file supporting this SPI to your classpath.  The current classpath supports the following names: [Lucene80, Lucene84, Lucene86, Lucene87, Lucene70, Lucene90, Lucene91, Lucene92, SimpleText, Lucene94]
+2024-04-10 06:01:24.760 INFO  (qtp801569151-35) [ x:main_core] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=main_core&action=CREATE&config=solrconfig.xml&instanceDir=server\solr\configsets\sample_techproducts_configs&wt=json&_=1712728837125
+2024-04-10 06:01:24.817 INFO  (qtp801569151-35) [ x:main_core] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-10 06:01:30.001 INFO  (qtp801569151-35) [ x:main_core] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.9.0
+2024-04-10 06:01:30.005 INFO  (qtp801569151-35) [ x:main_core] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-10 06:01:30.071 INFO  (qtp801569151-35) [ x:main_core] o.a.s.s.IndexSchema Schema name=example
+2024-04-10 06:01:30.493 INFO  (qtp801569151-35) [ x:main_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-10 06:01:30.495 INFO  (qtp801569151-35) [ x:main_core] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-10 06:01:30.495 INFO  (qtp801569151-35) [ x:main_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-10 06:01:30.495 INFO  (qtp801569151-35) [ x:main_core] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-10 06:01:30.513 INFO  (qtp801569151-35) [ x:main_core] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-10 06:01:30.556 INFO  (qtp801569151-35) [ x:main_core] o.a.s.c.CoreContainer Creating SolrCore 'main_core' using configuration from instancedir C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs, trusted=true
+2024-04-10 06:01:30.586 INFO  (qtp801569151-35) [ x:main_core] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-10 06:01:50.718 WARN  (qtp801569151-35) [ x:main_core] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.807 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-10 06:01:50.906 INFO  (qtp801569151-35) [ x:main_core] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-04-10 06:01:50.921 INFO  (qtp801569151-35) [ x:main_core] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2024-04-10 06:01:50.921 INFO  (qtp801569151-35) [ x:main_core] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2024-04-10 06:01:50.951 INFO  (qtp801569151-35) [ x:main_core] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-10 06:01:50.951 INFO  (qtp801569151-35) [ x:main_core] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
+2024-04-10 06:01:51.006 INFO  (qtp801569151-35) [ x:main_core] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@6f4eafaf main_core
+2024-04-10 06:01:51.006 INFO  (qtp801569151-35) [ x:main_core] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.main_core tag=SolrCore@6f4eafaf
+2024-04-10 06:01:51.033 INFO  (qtp801569151-35) [ x:main_core] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2024-04-10 06:01:51.036 ERROR (qtp801569151-35) [] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'main_core': Unable to create core [main_core] Caused by: An SPI class of type org.apache.lucene.codecs.Codec with name 'Lucene99' does not exist.  You need to add the corresponding JAR file supporting this SPI to your classpath.  The current classpath supports the following names: [Lucene80, Lucene84, Lucene86, Lucene87, Lucene70, Lucene90, Lucene91, Lucene92, SimpleText, Lucene94] => org.apache.solr.common.SolrException: Error CREATEing SolrCore 'main_core': Unable to create core [main_core] Caused by: An SPI class of type org.apache.lucene.codecs.Codec with name 'Lucene99' does not exist.  You need to add the corresponding JAR file supporting this SPI to your classpath.  The current classpath supports the following names: [Lucene80, Lucene84, Lucene86, Lucene87, Lucene70, Lucene90, Lucene91, Lucene92, SimpleText, Lucene94]
 	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1574)
-org.apache.solr.common.SolrException: Error CREATEing SolrCore 'new_core': Unable to create core [new_core] Caused by: An SPI class of type org.apache.lucene.codecs.Codec with name 'Lucene99' does not exist.  You need to add the corresponding JAR file supporting this SPI to your classpath.  The current classpath supports the following names: [Lucene80, Lucene84, Lucene86, Lucene87, Lucene70, Lucene90, Lucene91, Lucene92, SimpleText, Lucene94]
+org.apache.solr.common.SolrException: Error CREATEing SolrCore 'main_core': Unable to create core [main_core] Caused by: An SPI class of type org.apache.lucene.codecs.Codec with name 'Lucene99' does not exist.  You need to add the corresponding JAR file supporting this SPI to your classpath.  The current classpath supports the following names: [Lucene80, Lucene84, Lucene86, Lucene87, Lucene70, Lucene90, Lucene91, Lucene92, SimpleText, Lucene94]
 	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1574) ~[?:?]
 	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:111) ~[?:?]
 	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:398) ~[?:?]
@@ -782,7 +328,7 @@ org.apache.solr.common.SolrException: Error CREATEing SolrCore 'new_core': Unabl
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:934) ~[jetty-util-10.0.13.jar:10.0.13]
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1078) ~[jetty-util-10.0.13.jar:10.0.13]
 	at java.lang.Thread.run(Thread.java:1570) [?:?]
-Caused by: org.apache.solr.common.SolrException: Unable to create core [new_core]
+Caused by: org.apache.solr.common.SolrException: Unable to create core [main_core]
 	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1689) ~[?:?]
 	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
 	... 54 more
@@ -912,4 +458,262 @@ Caused by: java.lang.IllegalArgumentException: An SPI class of type org.apache.l
 	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1666) ~[?:?]
 	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
 	... 54 more
-2024-04-09 15:56:29.920 INFO  (qtp573487274-34) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=new_core&action=CREATE&config=solrconfig.xml&instanceDir=server\solr\configsets\sample_techproducts_configs&wt=json&_=1712678114767} status=400 QTime=20033
+2024-04-10 06:01:51.037 INFO  (qtp801569151-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=main_core&action=CREATE&config=solrconfig.xml&instanceDir=server\solr\configsets\sample_techproducts_configs&wt=json&_=1712728837125} status=400 QTime=26276
+2024-04-10 06:01:53.440 INFO  (qtp801569151-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728913414} status=0 QTime=0
+2024-04-10 06:01:53.456 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712728913414} status=0 QTime=0
+2024-04-10 06:01:53.501 INFO  (qtp801569151-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728913414} status=0 QTime=59
+2024-04-10 06:01:58.163 INFO  (qtp801569151-59) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728913414} status=0 QTime=0
+2024-04-10 06:01:58.216 INFO  (qtp801569151-35) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728913414} status=0 QTime=53
+2024-04-10 06:01:58.275 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728913414} status=0 QTime=45
+2024-04-10 06:05:49.581 INFO  (qtp801569151-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712728913414} status=0 QTime=0
+2024-04-10 06:05:49.581 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728913414} status=0 QTime=0
+2024-04-10 06:05:49.636 INFO  (qtp801569151-62) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728913414} status=0 QTime=54
+2024-04-10 06:06:29.071 INFO  (qtp801569151-63) [ x:test] o.a.s.h.a.CoreAdminOperation core create command schema=schema.xml&dataDir=data&name=test&action=CREATE&config=solrconfig.xml&instanceDir=server\solr\configsets\sample_techproducts_configs&wt=json&_=1712728913414
+2024-04-10 06:06:29.094 INFO  (qtp801569151-63) [ x:test] o.a.s.c.SolrResourceLoader Added 88 libs to classloader, from paths: [/C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/clustering/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/extraction/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/langid/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/ltr/lib, /C:/Users/Dayou/Documents/GitHub/CZ4034/solr/solr-9.2.1/modules/scripting/lib]
+2024-04-10 06:06:29.157 INFO  (qtp801569151-63) [ x:test] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.9.0
+2024-04-10 06:06:29.157 INFO  (qtp801569151-63) [ x:test] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2024-04-10 06:06:29.164 INFO  (qtp801569151-63) [ x:test] o.a.s.s.IndexSchema Schema name=example
+2024-04-10 06:06:29.216 INFO  (qtp801569151-63) [ x:test] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2024-04-10 06:06:29.216 INFO  (qtp801569151-63) [ x:test] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2024-04-10 06:06:29.216 INFO  (qtp801569151-63) [ x:test] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2024-04-10 06:06:29.216 INFO  (qtp801569151-63) [ x:test] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymGraphFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2024-04-10 06:06:29.221 INFO  (qtp801569151-63) [ x:test] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2024-04-10 06:06:29.238 INFO  (qtp801569151-63) [ x:test] o.a.s.c.CoreContainer Creating SolrCore 'test' using configuration from instancedir C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs, trusted=true
+2024-04-10 06:06:29.239 INFO  (qtp801569151-63) [ x:test] o.a.s.c.SolrCore Opening new SolrCore at [C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs], dataDir=[C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs\data\]
+2024-04-10 06:06:40.523 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712728913414} status=0 QTime=0
+2024-04-10 06:06:40.575 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728913414} status=0 QTime=53
+2024-04-10 06:06:40.633 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712728913414} status=0 QTime=46
+2024-04-10 06:06:42.990 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712729202966} status=0 QTime=0
+2024-04-10 06:06:43.041 INFO  (qtp801569151-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729202966} status=0 QTime=52
+2024-04-10 06:06:43.099 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729202966} status=0 QTime=47
+2024-04-10 06:06:44.109 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712729204087} status=0 QTime=0
+2024-04-10 06:06:44.166 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729204087} status=0 QTime=56
+2024-04-10 06:06:44.221 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729204087} status=0 QTime=46
+2024-04-10 06:06:44.981 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712729204960} status=0 QTime=0
+2024-04-10 06:06:45.036 INFO  (qtp801569151-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729204961} status=0 QTime=55
+2024-04-10 06:06:45.092 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729204961} status=0 QTime=45
+2024-04-10 06:06:45.871 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712729205850} status=0 QTime=0
+2024-04-10 06:06:45.924 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729205850} status=0 QTime=53
+2024-04-10 06:06:45.979 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729205850} status=0 QTime=45
+2024-04-10 06:06:46.622 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712729206601} status=0 QTime=0
+2024-04-10 06:06:46.676 INFO  (qtp801569151-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729206601} status=0 QTime=54
+2024-04-10 06:06:46.740 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729206601} status=0 QTime=54
+2024-04-10 06:06:47.414 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712729206601} status=0 QTime=0
+2024-04-10 06:06:47.474 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729206601} status=0 QTime=59
+2024-04-10 06:06:47.532 INFO  (qtp801569151-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729206601} status=0 QTime=48
+2024-04-10 06:06:47.546 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/cluster/security/authorization params={wt=json&_=1712729207404} status=0 QTime=1
+2024-04-10 06:06:48.178 INFO  (qtp801569151-36) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712729206601} status=0 QTime=0
+2024-04-10 06:06:48.178 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712729206601} status=0 QTime=0
+2024-04-10 06:06:48.229 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729206601} status=0 QTime=51
+2024-04-10 06:06:49.093 WARN  (qtp801569151-63) [ x:test] o.a.s.h.a.SystemInfoHandler Resolving canonical hostname for local host took 19.822 seconds, possible DNS misconfiguration. Set the 'solr.dns.prevent.reverse.lookup'  sysprop to true on startup to prevent future lookups if DNS can not be fixed.
+2024-04-10 06:06:49.107 INFO  (qtp801569151-63) [ x:test] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2024-04-10 06:06:49.107 INFO  (qtp801569151-63) [ x:test] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2024-04-10 06:06:49.110 INFO  (qtp801569151-63) [ x:test] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-04-10 06:06:49.110 INFO  (qtp801569151-63) [ x:test] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
+2024-04-10 06:06:49.115 INFO  (qtp801569151-63) [ x:test] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@10444a58 test
+2024-04-10 06:06:49.115 INFO  (qtp801569151-63) [ x:test] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.test tag=SolrCore@10444a58
+2024-04-10 06:06:49.130 INFO  (qtp801569151-63) [ x:test] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2024-04-10 06:06:49.132 ERROR (qtp801569151-63) [] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error CREATEing SolrCore 'test': Unable to create core [test] Caused by: An SPI class of type org.apache.lucene.codecs.Codec with name 'Lucene99' does not exist.  You need to add the corresponding JAR file supporting this SPI to your classpath.  The current classpath supports the following names: [Lucene80, Lucene84, Lucene86, Lucene87, Lucene70, Lucene90, Lucene91, Lucene92, SimpleText, Lucene94] => org.apache.solr.common.SolrException: Error CREATEing SolrCore 'test': Unable to create core [test] Caused by: An SPI class of type org.apache.lucene.codecs.Codec with name 'Lucene99' does not exist.  You need to add the corresponding JAR file supporting this SPI to your classpath.  The current classpath supports the following names: [Lucene80, Lucene84, Lucene86, Lucene87, Lucene70, Lucene90, Lucene91, Lucene92, SimpleText, Lucene94]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1574)
+org.apache.solr.common.SolrException: Error CREATEing SolrCore 'test': Unable to create core [test] Caused by: An SPI class of type org.apache.lucene.codecs.Codec with name 'Lucene99' does not exist.  You need to add the corresponding JAR file supporting this SPI to your classpath.  The current classpath supports the following names: [Lucene80, Lucene84, Lucene86, Lucene87, Lucene70, Lucene90, Lucene91, Lucene92, SimpleText, Lucene94]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1574) ~[?:?]
+	at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:111) ~[?:?]
+	at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:398) ~[?:?]
+	at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:354) ~[?:?]
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:219) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:929) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:877) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:548) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:252) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:220) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:215) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:197) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578) ~[jetty-security-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1383) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1305) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282) ~[jetty-server-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:934) ~[jetty-util-10.0.13.jar:10.0.13]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1078) ~[jetty-util-10.0.13.jar:10.0.13]
+	at java.lang.Thread.run(Thread.java:1570) [?:?]
+Caused by: org.apache.solr.common.SolrException: Unable to create core [test]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1689) ~[?:?]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
+	... 54 more
+Caused by: org.apache.solr.common.SolrException: Error opening new searcher
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1224) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1051) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1666) ~[?:?]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
+	... 54 more
+Caused by: org.apache.solr.common.SolrException: Error opening new searcher
+	at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2450) ~[?:?]
+	at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2583) ~[?:?]
+	at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1283) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1168) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1051) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1666) ~[?:?]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
+	... 54 more
+Caused by: java.lang.IllegalArgumentException: Could not load codec 'Lucene99'. Did you forget to add lucene-backward-codecs.jar?
+	at org.apache.lucene.index.SegmentInfos.readCodec(SegmentInfos.java:515) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.parseSegmentInfos(SegmentInfos.java:404) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:363) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:299) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:288) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1081) ~[?:?]
+	at org.apache.solr.update.SolrIndexWriter.<init>(SolrIndexWriter.java:145) ~[?:?]
+	at org.apache.solr.update.SolrIndexWriter.create(SolrIndexWriter.java:110) ~[?:?]
+	at org.apache.solr.update.DefaultSolrCoreState.createMainIndexWriter(DefaultSolrCoreState.java:258) ~[?:?]
+	at org.apache.solr.update.DefaultSolrCoreState.getIndexWriter(DefaultSolrCoreState.java:125) ~[?:?]
+	at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2401) ~[?:?]
+	at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2583) ~[?:?]
+	at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1283) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1168) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1051) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1666) ~[?:?]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
+	... 54 more
+	Suppressed: org.apache.lucene.index.CorruptIndexException: checksum passed (fe93014e). possibly transient resource issue, or a Lucene or JVM bug (resource=BufferedChecksumIndexInput(ByteBufferIndexInput(path="C:\Users\Dayou\Documents\ntu_documents\Coursework\CZ4034_Information_Retrieval\Project\solr-9.5.0\server\solr\configsets\sample_techproducts_configs\data\index\segments_m")))
+		at org.apache.lucene.codecs.CodecUtil.checkFooter(CodecUtil.java:500) ~[?:?]
+		at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:370) ~[?:?]
+		at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:299) ~[?:?]
+		at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:288) ~[?:?]
+		at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1081) ~[?:?]
+		at org.apache.solr.update.SolrIndexWriter.<init>(SolrIndexWriter.java:145) ~[?:?]
+		at org.apache.solr.update.SolrIndexWriter.create(SolrIndexWriter.java:110) ~[?:?]
+		at org.apache.solr.update.DefaultSolrCoreState.createMainIndexWriter(DefaultSolrCoreState.java:258) ~[?:?]
+		at org.apache.solr.update.DefaultSolrCoreState.getIndexWriter(DefaultSolrCoreState.java:125) ~[?:?]
+		at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2401) ~[?:?]
+		at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2583) ~[?:?]
+		at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1283) ~[?:?]
+		at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1168) ~[?:?]
+		at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1051) ~[?:?]
+		at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1666) ~[?:?]
+		at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
+		at org.apache.solr.handler.admin.CoreAdminOperation.lambda$static$0(CoreAdminOperation.java:111) ~[?:?]
+		at org.apache.solr.handler.admin.CoreAdminOperation.execute(CoreAdminOperation.java:398) ~[?:?]
+		at org.apache.solr.handler.admin.CoreAdminHandler$CallInfo.call(CoreAdminHandler.java:354) ~[?:?]
+		at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:219) ~[?:?]
+		at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+		at org.apache.solr.servlet.HttpSolrCall.handleAdmin(HttpSolrCall.java:929) ~[?:?]
+		at org.apache.solr.servlet.HttpSolrCall.handleAdminRequest(HttpSolrCall.java:877) ~[?:?]
+		at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:548) ~[?:?]
+		at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:252) ~[?:?]
+		at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:220) ~[?:?]
+		at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+		at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+		at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:215) ~[?:?]
+		at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:197) ~[?:?]
+		at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578) ~[jetty-security-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1383) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1305) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282) ~[jetty-server-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416) ~[jetty-util-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385) ~[jetty-util-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272) ~[jetty-util-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140) ~[jetty-util-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:934) ~[jetty-util-10.0.13.jar:10.0.13]
+		at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1078) ~[jetty-util-10.0.13.jar:10.0.13]
+		at java.lang.Thread.run(Thread.java:1570) [?:?]
+Caused by: java.lang.IllegalArgumentException: An SPI class of type org.apache.lucene.codecs.Codec with name 'Lucene99' does not exist.  You need to add the corresponding JAR file supporting this SPI to your classpath.  The current classpath supports the following names: [Lucene80, Lucene84, Lucene86, Lucene87, Lucene70, Lucene90, Lucene91, Lucene92, SimpleText, Lucene94]
+	at org.apache.lucene.util.NamedSPILoader.lookup(NamedSPILoader.java:113) ~[?:?]
+	at org.apache.lucene.codecs.Codec.forName(Codec.java:118) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCodec(SegmentInfos.java:511) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.parseSegmentInfos(SegmentInfos.java:404) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:363) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:299) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:288) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1081) ~[?:?]
+	at org.apache.solr.update.SolrIndexWriter.<init>(SolrIndexWriter.java:145) ~[?:?]
+	at org.apache.solr.update.SolrIndexWriter.create(SolrIndexWriter.java:110) ~[?:?]
+	at org.apache.solr.update.DefaultSolrCoreState.createMainIndexWriter(DefaultSolrCoreState.java:258) ~[?:?]
+	at org.apache.solr.update.DefaultSolrCoreState.getIndexWriter(DefaultSolrCoreState.java:125) ~[?:?]
+	at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2401) ~[?:?]
+	at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2583) ~[?:?]
+	at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1283) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1168) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1051) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1666) ~[?:?]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:1532) ~[?:?]
+	... 54 more
+2024-04-10 06:06:49.132 INFO  (qtp801569151-63) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={schema=schema.xml&dataDir=data&name=test&action=CREATE&config=solrconfig.xml&instanceDir=server\solr\configsets\sample_techproducts_configs&wt=json&_=1712728913414} status=400 QTime=20062
+2024-04-10 06:06:50.849 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712729206601} status=0 QTime=0
+2024-04-10 06:06:50.850 INFO  (qtp801569151-63) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/properties params={wt=json&_=1712729210845} status=0 QTime=0
+2024-04-10 06:06:50.900 INFO  (qtp801569151-39) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729206601} status=0 QTime=51
+2024-04-10 06:06:51.487 INFO  (qtp801569151-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712729206601} status=0 QTime=0
+2024-04-10 06:06:51.489 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1712729206601} status=0 QTime=0
+2024-04-10 06:06:51.542 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729206601} status=0 QTime=52
+2024-04-10 06:06:52.238 INFO  (qtp801569151-63) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712729206601} status=0 QTime=0
+2024-04-10 06:06:52.290 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729206601} status=0 QTime=51
+2024-04-10 06:06:52.346 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729206601} status=0 QTime=44
+2024-04-10 06:06:53.436 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712729213414} status=0 QTime=0
+2024-04-10 06:06:53.488 INFO  (qtp801569151-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729213414} status=0 QTime=52
+2024-04-10 06:06:53.547 INFO  (qtp801569151-63) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729213414} status=0 QTime=50
+2024-04-10 06:07:05.880 INFO  (qtp801569151-63) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1712729225858} status=0 QTime=0
+2024-04-10 06:07:05.935 INFO  (qtp801569151-38) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729225858} status=0 QTime=55
+2024-04-10 06:07:05.991 INFO  (qtp801569151-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1712729225858} status=0 QTime=46
