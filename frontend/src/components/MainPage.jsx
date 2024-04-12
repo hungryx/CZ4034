@@ -63,10 +63,13 @@ const MainPage = () => {
     const solrUrl =
       "http://localhost:8983/solr/new_core/select?q=*:*&facet=true&facet.field=book";
 
+    // const solrUrl = `http://localhost:8983/solr/new_core/suggest?q=Harry%20Pstter&suggest=true&suggest.dictionary=my_suggester&suggest.count=5`;
+
     const res = await axios.get(solrUrl);
+    console.log(res);
     const documents = res.data.response.docs;
     // console.log(res.data.stats.stats_fields);
-    console.log(res.data.facet_counts.facet_fields);
+    // console.log(res.data.facet_counts.facet_fields);
 
     // const uniqueBooks = new Set(documents.map((obj) => obj.book));
     // const distinctBooks = Array.from(uniqueBooks);
@@ -144,12 +147,16 @@ const MainPage = () => {
     const categoryLiteral = formattedGenres.join("%7C|%7C");
 
     // construct Solr query URL
+    // const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=TYPE:COMMENT&indent=true&rows=10000`;
+
     const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=TYPE:COMMENT&indent=true&rows=10000`;
+
     // console.log(solrUrl);
 
     const res = await axios.get(solrUrl);
     const documents = res.data.response.docs;
-    console.log(documents);
+
+    // console.log(documents);
 
     const uniqueBooks = Array.from(
       documents
@@ -161,7 +168,7 @@ const MainPage = () => {
         .values()
     );
     setBooks(uniqueBooks);
-    console.log(uniqueBooks);
+    // console.log(uniqueBooks);
   };
 
   const getResults = (title, genres, minYear, maxYear) => {

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 import filterIcon from "../assets/filterIcon.svg";
+import Graph from "./Graph";
 
 const Book = () => {
   const { id } = useParams();
@@ -103,12 +104,12 @@ const Book = () => {
   const getData = async (solrUrl) => {
     const res = await axios.get(solrUrl);
     const documents = res.data.response.docs;
-    // console.log(documents);
+    console.log(documents);
     setSolrComments(documents);
   };
 
   useEffect(() => {
-    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:"${id}"&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=10000`;
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:"${id}"&q.op=OR&fq=TYPE:COMMENT&fq=sentiment:(-3)&indent=true&rows=10000`;
     getData(solrUrl);
 
     // const book = data.filter((item) => item.id == id)[0];
@@ -153,7 +154,10 @@ const Book = () => {
         <div className="image">IMAGE</div>
         <div className="details">
           <p>Description: </p>
+        </div>
+        <div>
           <p>Total Comments: {solrComments.length}</p>
+          <Graph data={solrComments} />
         </div>
       </div>
 
@@ -168,7 +172,6 @@ const Book = () => {
             </button>
             <div className="pages">
               <div
-                className="ecl"
                 style={
                   currentPage > Math.ceil(pagesToShow / 2)
                     ? {}
@@ -197,7 +200,6 @@ const Book = () => {
                   );
                 })}
               <div
-                className="ecl"
                 style={
                   currentPage < totalPages - Math.ceil(pagesToShow / 2)
                     ? {}
