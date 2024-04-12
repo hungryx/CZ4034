@@ -102,7 +102,7 @@ const Book = () => {
     setSentimentArrow(sentimentArrow === "asc" ? "desc" : "asc");
   };
   const handleSort = (field, sortBy) => {
-    const solrUrl = `http://localhost:9893/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&sort=${field}%20${sortBy}&indent=true&rows=10000`;
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&sort=${field}%20${sortBy}&indent=true&rows=10000`;
     getData(solrUrl);
   };
 
@@ -113,7 +113,7 @@ const Book = () => {
     setSolrComments(documents);
   };
   useEffect(() => {
-    const solrUrl = `http://localhost:9893/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=10000`;
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=10000`;
     getData(solrUrl);
 
     // const book = data.filter((item) => item.id == id)[0];
@@ -223,7 +223,6 @@ const Book = () => {
         )}
       </div>
 
-      {/* table */}
       <table className="bookTable">
         <thead>
           <tr>
@@ -290,7 +289,7 @@ const Book = () => {
         </tbody>
       </table>
       <p>
-        Showing results {indexOfFirstRow} to {indexOfLastRow}
+        Showing results {indexOfFirstRow + 1} to {indexOfLastRow}
       </p>
     </div>
   );
