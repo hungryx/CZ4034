@@ -141,7 +141,7 @@ const MainPage = () => {
         genre.charAt(0).toUpperCase() + genre.slice(1).toLowerCase()
       )
     );
-    const categoryLiteral = formattedGenres.join("%20|%20");
+    const categoryLiteral = formattedGenres.join("%7C|%7C");
 
     // construct Solr query URL
     const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=TYPE:COMMENT&indent=true&rows=10000`;

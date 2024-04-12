@@ -2,17 +2,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-import data from "../data.json";
 import filterIcon from "../assets/filterIcon.svg";
 
 const Book = () => {
   const { id } = useParams();
 
   // data
-  const [bookInfo, setBookInfo] = useState([]);
-  const [comments, setComments] = useState([]);
-  const [sentimentInfo, setSentimentInfo] = useState([]);
-
   const [solrComments, setSolrComments] = useState([]);
 
   // for fitering & sorting
@@ -22,7 +17,6 @@ const Book = () => {
     { str: "Negative", val: 0 },
   ];
   const [dateArrow, setDateArrow] = useState("desc");
-  const [sentimentArrow, setSentimentArrow] = useState("desc");
 
   const [selectedSentiments, setSelectedSentiments] = useState(
     sentimentList.map((sentiment) => sentiment.val)
@@ -62,82 +56,59 @@ const Book = () => {
     }
   };
 
-  // const filteredComments = comments.filter((item) => {
-  //   let results = [];
-  //   selectedSentiments.forEach((sentiment) => {
-  //     if (sentiment === "Neutral") {
-  //       results.push(item.sentiment > 0.4 && item.sentiment < 0.8);
-  //     } else if (sentiment === "Positive") {
-  //       results.push(item.sentiment >= 0.8);
-  //     } else if (sentiment === "Negative") {
-  //       results.push(item.sentiment <= 0.4);
-  //     }
-  //   });
-  //   return results.some((result) => result);
-  // });
-
-  // const sortedComments = filteredComments.sort((a, b) => {
-  //   if (sortBy === "asc") {
-  //     return a.sentiment - b.sentiment;
-  //   } else if (sortBy === "desc") {
-  //     return b.sentiment - a.sentiment;
-  //   } else {
-  //     return 0; // no sorting
-  //   }
-  // });
-
   const handleFilter = (sentiment) => {
     const isSentimentSelected = selectedSentiments.includes(sentiment);
-    console.log(selectedSentiments);
 
     let updatedSentiments;
     if (isSentimentSelected) {
       updatedSentiments = selectedSentiments.filter(
         (selectedSentiment) => selectedSentiment !== sentiment
       );
-      setSelectedSentiments(updatedSentiments);
     } else {
       updatedSentiments = [...selectedSentiments, sentiment];
-      setSelectedSentiments(updatedSentiments);
     }
-    filterSentiment(updatedSentiments);
+    if (updatedSentiments.length === 0) {
+      updatedSentiments = sentimentList.map((sentiment) => sentiment.val);
+    }
+    setSelectedSentiments(updatedSentiments);
+
+    const sentimentLiteral = updatedSentiments.join("%20OR%20");
+
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:"${id}"&q.op=OR&fq=TYPE:COMMENT&fq=sentiment:(${sentimentLiteral})&indent=true&rows=10000`;
+    getData(solrUrl);
   };
   const handleSort = () => {
-    sortDate("created_utc", dateArrow);
     setDateArrow(dateArrow === "asc" ? "desc" : "asc");
-  };
-  // const sortSentiment = () => {
-  //   handleSort("sentiment", sentimentArrow);
-  //   setSentimentArrow(sentimentArrow === "asc" ? "desc" : "asc");
-  // };
-  const sortDate = (field, sortBy) => {
-    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&sort=${field}%20${sortBy}&indent=true&rows=10000`;
-    getData(solrUrl);
-  };
-  const filterSentiment = (updatedSentiments) => {
-    // const formattedSentiments = updatedSentiments.map((sentiment) =>
-    //   encodeURIComponent(
-    //     sentiment.charAt(0).toUpperCase() + sentiment.slice(1).toLowerCase()
-    //   )
-    // );
-    const sentimentLiteral = updatedSentiments.join("%20|%20");
-    console.log(sentimentLiteral);
-    // construct Solr query URL
-    // const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=TYPE:COMMENT&indent=true&rows=10000`;
-    // console.log(solrUrl);
 
-    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&fq=sentiment:(${sentimentLiteral})&indent=true&rows=10000`;
-    getData(solrUrl);
+    const sortedComments = solrComments.sort((a, b) => {
+      const dateA = new Date(a.created_utc);
+      const dateB = new Date(b.created_utc);
+      if (dateArrow === "desc") {
+        return dateA - dateB;
+      } else if (dateArrow === "asc") {
+        return dateB - dateA;
+      } else {
+        return 0;
+      }
+    });
+
+    setSolrComments(sortedComments);
   };
+
+  // const sortDate = (field, sortBy) => {
+  //   const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:"${id}"&q.op=OR&fq=TYPE:COMMENT&sort=${field}%20${sortBy}&indent=true&rows=10000`;
+  //   getData(solrUrl);
+  // };
 
   const getData = async (solrUrl) => {
     const res = await axios.get(solrUrl);
     const documents = res.data.response.docs;
-    console.log(documents);
+    // console.log(documents);
     setSolrComments(documents);
   };
+
   useEffect(() => {
-    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:${id}&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=10000`;
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:"${id}"&q.op=OR&fq=TYPE:COMMENT&indent=true&rows=10000`;
     getData(solrUrl);
 
     // const book = data.filter((item) => item.id == id)[0];
@@ -253,21 +224,18 @@ const Book = () => {
             <th className="comment">Comment</th>
             <th className="date">
               <span>Date</span>
-              <button className="sortArrow" onClick={sortDate}>
+              <button className="sortArrow" onClick={handleSort}>
                 {dateArrow === "asc" ? "▲" : "▼"}
               </button>
             </th>
             <th className="sentiment">
               <span>Sentiment </span>
-              {/* <button className="sortArrow" onClick={sortSentiment}>
-                {sentimentArrow === "asc" ? "▲" : "▼"}
-              </button> */}
               <span>
                 <img
                   src={filterIcon}
                   alt="filterIcon"
-                  width="16"
-                  height="16"
+                  width="13"
+                  height="13"
                   className="sentimentDropdown"
                   onMouseEnter={toggleDropdown}
                 />
@@ -318,7 +286,10 @@ const Book = () => {
                       return "Positive";
                     case 2:
                       return "Neutral";
+                    case 3:
+                      return "Irrelevant";
                     default:
+                      console.log(item.sentiment);
                       return "Unknown";
                   }
                 })()}
@@ -335,88 +306,3 @@ const Book = () => {
 };
 
 export default Book;
-
-// return (
-//   <div className="bookPage">
-//     <button className="backBtn" onClick={goBack}>
-//       back
-//     </button>
-//     <h1 className="bookTitle">{bookInfo.title}</h1>
-//     <div className="bookInfo">
-//       <div className="image">IMAGE</div>
-//       <div className="details">
-//         <p>Description: </p>
-//         <p>Genre: {bookInfo.genre}</p>
-//         <p>Total Comments: {sentimentInfo.length}</p>
-//         <p>
-//           Average Sentiment:{" "}
-//           <span style={sentimentDescStyle(sentimentInfo.average)}>
-//             {sentimentInfo.average}
-//           </span>
-//         </p>
-//       </div>
-//     </div>
-//     <table className="bookTable">
-//       <thead>
-//         <tr>
-//           <th className="comment">Comment</th>
-//           <th className="sentiment sentHead">
-//             <p>Sentiment </p>
-//             <button className="sortArrow" onClick={handleSort}>
-//               {sortBy === "asc" ? "▲" : "▼"}
-//             </button>
-//             <div>
-//               <img
-//                 src={filterIcon}
-//                 alt="filterIcon"
-//                 width="16"
-//                 height="16"
-//                 className="sentimentDropdown"
-//                 onMouseEnter={toggleDropdown}
-//               />
-
-//               {isOpen && (
-//                 <div
-//                   className="sentimentCheckbox"
-//                   onMouseLeave={toggleDropdown}
-//                 >
-//                   {sentimentList.map((sentiment) => (
-//                     <div className="sentimentSelect">
-//                       <input
-//                         type="checkbox"
-//                         name="sentiment"
-//                         id={sentiment}
-//                         value={sentiment}
-//                         checked={selectedSentiments.includes(sentiment)}
-//                         onChange={() => handleFilter(sentiment)}
-//                       />
-//                       <label
-//                         for={sentiment}
-//                         style={sentimentCheckboxStyle(sentiment)}
-//                       >
-//                         {sentiment}
-//                       </label>
-//                     </div>
-//                   ))}
-//                 </div>
-//               )}
-//             </div>
-//           </th>
-//         </tr>
-//       </thead>
-//       <tbody>
-//         {sortedComments.map((item, index) => (
-//           <tr key={index}>
-//             <td className="comment">{item.comment}</td>
-//             <td
-//               className="sentiment"
-//               style={sentimentTableStyle(item.sentiment)}
-//             >
-//               {item.sentiment}
-//             </td>
-//           </tr>
-//         ))}
-//       </tbody>
-//     </table>
-//   </div>
-// );
