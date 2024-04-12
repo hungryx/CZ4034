@@ -94,7 +94,7 @@
 .imagecard {
   border: 1px solid white;
   width: 75px;
-  height: 75px;
+  /* height: 75px; */
   margin: 0px 10px;
 }
 .detailscard {
@@ -105,6 +105,9 @@
 }
 .titlecard {
   font-size: 1.1em;
+}
+.othercard {
+  font-size: 0.9em;
 }
 .cardInfo {
   margin-right: 50px;
@@ -138,20 +141,21 @@
 }
 .bookInfo {
   /* border: 1px solid white; */
-  width: 80%;
-  /* margin: 35px 0px; */
+  width: 85%;
   margin-bottom: 35px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 .image {
-  width: 150px;
-  height: 150px;
-  border: 1px solid white;
+  width: 200px;
+  /* height: 150px; */
+  margin: 0px 20px;
+  /* border: 1px solid white; */
 }
 .details {
   /* border: 1px solid white; */
+  padding: 0px 50px;
   text-align: left;
 }
 
@@ -171,9 +175,7 @@
   width: 100px;
 }
 .sentiment {
-}
-.bookTable {
-  /* width: 90%; */
+  width: 100px;
 }
 
 .comment {
@@ -184,7 +186,7 @@
   width: 100px;
 }
 .sentiment {
-  width: 170px;
+  width: 130px;
 }
 
 /* dropdown & filter in book page */

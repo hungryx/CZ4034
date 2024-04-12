@@ -29,11 +29,23 @@ const QueryResults = (props) => {
       )}
       <div className="resultsDiv">
         {props.results.map((result) => (
-          <div className="resultcard" onClick={() => viewResult(result.title)}>
-            <div className="imagecard">image</div>
+          <div
+            className="resultcard"
+            onClick={() => viewResult(result.book_title)}
+          >
+            {/* <div className="imagecard">image</div> */}
+            <img
+              src={result.cover_path + ".jpg"}
+              alt="Book Image"
+              className="imagecard"
+            />
             <div className="detailscard">
-              <p className="titlecard">{result.title}</p>
-              <p className="titlecard">Category: {result.category}</p>
+              <p className="titlecard">{result.book_title}</p>
+              <p className="othercard">Category: {result.category}</p>
+              <p className="othercard">Author: {result.book_author}</p>
+              <p className="othercard">
+                Publication Date: {result.publication_date.split("T")[0]}
+              </p>
             </div>
           </div>
         ))}
