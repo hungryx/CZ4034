@@ -959,7 +959,7 @@
       <str name="name">mySuggester</str>
       <str name="lookupImpl">FuzzyLookupFactory</str>
       <str name="dictionaryImpl">DocumentDictionaryFactory</str>
-      <str name="field">book_title</str>
+      <str name="field">book</str>
       <!-- <str name="weightField">price</str> -->
       <str name="suggestAnalyzerFieldType">string</str>
       <str name="buildOnStartup">true</str>
