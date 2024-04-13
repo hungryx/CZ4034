@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 
@@ -17,22 +17,52 @@ const MainPage = () => {
   ];
 
   // assume min and max year can be retrieved
-  const minYear = 1990;
-  const maxYear = 2022;
+  const [minYear, setMinYear] = useState(0);
+  const [maxYear, setMaxYear] = useState(2024);
+
+  const [searchInput, setSearchInput] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const [selectedGenres, setSelectedGenres] = useState([]);
   const [selectedMinYear, setSelectedMinYear] = useState(minYear);
   const [selectedMaxYear, setSelectedMaxYear] = useState(maxYear);
 
-  const [searchInput, setSearchInput] = useState("");
-  const [selectedGenres, setSelectedGenres] = useState([]);
-
   const [books, setBooks] = useState([]);
-
   const [querySpeed, setQuerySpeed] = useState(0);
 
+  const [suggestions, setSuggestions] = useState([]);
+
   // handling changes to input
+  const toTitleCase = (str) => {
+    return str.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowDropdown(false);
+      }
+    };
+    window.addEventListener("click", handleClickOutside);
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+  const handleSuggestionClick = (suggestion) => {
+    setSearchInput(suggestion);
+    setShowDropdown(false);
+  };
+
   const handleText = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
+    setShowDropdown(true);
+
+    suggest(toTitleCase(e.target.value));
   };
   const handleCheckBox = (genre) => {
     const isGenreSelected = selectedGenres.includes(genre);
@@ -56,51 +86,52 @@ const MainPage = () => {
     setSelectedMaxYear(e.target.value);
   };
 
-  const test = async () => {
-    // const solrUrl =
-    // "http://localhost:8983/solr/new_core/select?fq=TYPE%3ACOMMENT&indent=true&q.op=OR&q=category%3ARomance&useParams=&stats=true&stats.field=book";
-
-    // const solrUrl =
-    //   "http://localhost:8983/solr/new_core/select?q=*:*&facet=true&facet.field=book";
-
-    // const solrUrl = `http://localhost:8983/solr/new_core/suggest?q=Harry%20Pstter&suggest=true&suggest.dictionary=my_suggester&suggest.count=5`;
-
-    const solrUrl = `http://localhost:8983/solr/new_core/select?q=*:*&q.op=OR&fq=table:books&indent=true&rows=10000`;
-
+  const suggest = async (title) => {
+    const solrUrl = `http://localhost:8983/solr/new_core/suggest?suggest=true&suggest.dictionary=mySuggester&suggest.count=5&suggest.q=${title}`;
     const res = await axios.get(solrUrl);
-    // console.log(res);
-    const documents = res.data.response.docs;
-    // console.log(res.data.stats.stats_fields);
-    // console.log(res.data.facet_counts.facet_fields);
-    console.log(documents);
+    const suggestions = Object.values(res.data.suggest.mySuggester)[0]
+      .suggestions;
 
-    // const uniqueBooks = new Set(documents.map((obj) => obj.book));
-    // const distinctBooks = Array.from(uniqueBooks);
-    // setBooks(distinctBooks);
-    // console.log(distinctBooks);
+    if (suggestions.length === 0) {
+      setShowDropdown(false);
+      setSuggestions([]);
+      return;
+    }
+    const terms = suggestions.map((item) => item.term);
+    const uniqueTerms = [...new Set(terms)];
+
+    setSuggestions(uniqueTerms);
   };
 
-  // for loading the page based on search params
-  // (when returning from book page)
+  const getMinMaxDates = async () => {
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=*:*&q.op=OR&fq=table:books&indent=true&rows=10000&stats=true&stats.field=publication_date`;
+
+    const res = await axios.get(solrUrl);
+    const earliest = res.data.stats.stats_fields.publication_date.min;
+    const latest = res.data.stats.stats_fields.publication_date.max;
+    setMinYear(parseInt(earliest.split(" ")[2]));
+    setMaxYear(parseInt(latest.split(" ")[2]));
+    setSelectedMinYear(parseInt(earliest.split(" ")[2]));
+    setSelectedMaxYear(parseInt(latest.split(" ")[2]));
+  };
+
+  // for loading the page based on search params (when returning from book page)
   useEffect(() => {
-    // testing area
-    //
-    //
-    test();
-    //
-    //
+    getMinMaxDates(); // get min and max publication year
+
     const params = new URLSearchParams(location.search);
     if (params.size === 0) {
       return;
     }
     const title = params.get("title");
     const genres = params.get("genres").split(",");
-    // const minYear = params.get("minYear");
-    // const maxYear = params.get("maxYear");
+    const minYear = params.get("minYear");
+    const maxYear = params.get("maxYear");
+
     setSearchInput(title);
     setSelectedGenres(genres);
-    // setSelectedMinYear(minYear);
-    // setSelectedMaxYear(maxYear);
+    setSelectedMinYear(minYear);
+    setSelectedMaxYear(maxYear);
     getResults(title, genres, minYear, maxYear);
   }, []);
 
@@ -110,7 +141,6 @@ const MainPage = () => {
     params.set("title", searchInput);
 
     let targetGenres;
-
     if (selectedGenres.length === 0) {
       targetGenres = genreList;
       setSelectedGenres(genreList);
@@ -118,9 +148,8 @@ const MainPage = () => {
       targetGenres = selectedGenres;
     }
     params.set("genres", targetGenres);
-
-    // params.set("minYear", selectedMinYear);
-    // params.set("maxYear", selectedMaxYear);
+    params.set("minYear", selectedMinYear);
+    params.set("maxYear", selectedMaxYear);
 
     window.history.replaceState(
       {},
@@ -130,7 +159,7 @@ const MainPage = () => {
     getResults(searchInput, targetGenres, selectedMinYear, selectedMaxYear);
   };
 
-  const getData = async (title, genres) => {
+  const getData = async (title, genres, minYear, maxYear) => {
     // filter by title input
     const words = title.split(" ");
     const formattedWords = words.map(
@@ -149,43 +178,23 @@ const MainPage = () => {
     );
     const categoryLiteral = formattedGenres.join("%7C|%7C");
 
-    // construct Solr query URL
-    // const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=TYPE:COMMENT&indent=true&rows=10000`;
-
-    // const solrUrl = `http://localhost:8983/solr/new_core/select?q=*:*&q.op=OR&fq=table:books&indent=true&rows=10000`;
-
-    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book_title:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=table:books&indent=true&rows=10000`;
-
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:(${titleLiteral})%0Abook_author:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=table:books&indent=true&rows=10000`;
     // console.log(solrUrl);
-
+    // &fq=created_utc:%5B${2021}-01-01T00:00:00Z%20TO%20{2021}-12-31T23:59:59Z%5D
     const res = await axios.get(solrUrl);
     const documents = res.data.response.docs;
-
     console.log(documents);
     setBooks(documents);
-
-    // const uniqueBooks = Array.from(
-    //   documents
-    //     .reduce((map, obj) => {
-    //       const key = `${obj.book}-${obj.category}`;
-    //       map.set(key, { title: obj.book, category: obj.category });
-    //       return map;
-    //     }, new Map())
-    //     .values()
-    // );
-    // setBooks(uniqueBooks);
   };
 
   const getResults = (title, genres, minYear, maxYear) => {
-    // WILL BE REPLACED BY API CALL TO SOLR (rmb add async above)
-
     // if (!title || title.length == 0) {
     //   setResults([]);
     //   return;
     // }
 
     const startTime = performance.now();
-    getData(title, genres);
+    getData(title, genres, minYear, maxYear);
 
     const endTime = performance.now();
     const speed = endTime - startTime; // query speed in milliseconds
@@ -195,14 +204,31 @@ const MainPage = () => {
   return (
     <div className="mainPage">
       <div className="searchSection">
-        <input
-          className="searchbar"
-          id="searchbar"
-          type="text"
-          placeholder="Search for a book"
-          onChange={handleText}
-          value={searchInput}
-        />
+        <div className="searchbarGroup">
+          <input
+            className="searchbar"
+            id="searchbar"
+            type="text"
+            placeholder="Search for a book or author"
+            onChange={handleText}
+            value={searchInput}
+            autoComplete="off"
+          />
+          {showDropdown && (
+            <ul className="suggestions" ref={dropdownRef}>
+              {suggestions.map((suggestion, index) => (
+                <li
+                  key={index}
+                  onClick={() => handleSuggestionClick(suggestion)}
+                  className="suggestion-item"
+                >
+                  {suggestion}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
         <div className="filterSection">
           <div className="genreSelection">
             <p>Genre:</p>
@@ -222,7 +248,7 @@ const MainPage = () => {
               ))}
             </div>
           </div>
-          {/* <div className="dateSelection">
+          <div className="dateSelection">
             <p>Year Range of Publication:</p>
             <div className="allDates">
               <select
@@ -249,7 +275,7 @@ const MainPage = () => {
                 ))}
               </select>
             </div>
-          </div> */}
+          </div>
         </div>
         <button onClick={search}>Search</button>
       </div>

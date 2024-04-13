@@ -956,15 +956,15 @@
     -->
   <searchComponent name="suggest" class="solr.SuggestComponent">
     <lst name="suggester">
-      <str name="name">mySuggester</str>
-      <str name="lookupImpl">FuzzyLookupFactory</str>
-      <str name="dictionaryImpl">DocumentDictionaryFactory</str>
-      <str name="field">book</str>
-      <!-- <str name="weightField">price</str> -->
-      <str name="suggestAnalyzerFieldType">string</str>
-      <str name="buildOnStartup">true</str>
-
-    </lst>
+  <str name="name">mySuggester</str>
+  <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
+  <str name="dictionaryImpl">DocumentDictionaryFactory</str>
+  <str name="field">book</str>
+  <str name="suggestAnalyzerFieldType">text_general</str>
+  <str name="buildOnStartup">true</str>
+  <str name="exactMatchFirst">true</str> <!-- Optionally prioritize exact matches -->
+  <str name="highlight">false</str> <!-- Disable highlighting -->
+</lst>
   </searchComponent>
 
   <requestHandler name="/suggest" class="solr.SearchHandler"
@@ -972,7 +972,6 @@
     <lst name="defaults">
       <str name="suggest">true</str>
       <str name="suggest.dictionary">mySuggester</str>
-      <str name="suggest.count">1</str>
     </lst>
     <arr name="components">
       <str>suggest</str>
