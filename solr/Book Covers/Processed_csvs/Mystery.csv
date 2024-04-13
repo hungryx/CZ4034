@@ -1,4 +1,4 @@
-id,cover_path,book_title,publication_date,book_author,description,table,category
+id,cover_path,book,publication_date,book_author,description,table,category
 155423,./Book_Covers/Gone Girl.jpg,Gone Girl,6 December 2012,Gillian Flynn,"Who are you?
 What have we done to each other?
 
