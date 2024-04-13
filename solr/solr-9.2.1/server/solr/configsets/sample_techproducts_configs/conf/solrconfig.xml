@@ -959,10 +959,11 @@
       <str name="name">mySuggester</str>
       <str name="lookupImpl">FuzzyLookupFactory</str>
       <str name="dictionaryImpl">DocumentDictionaryFactory</str>
-      <str name="field">cat</str>
-      <str name="weightField">price</str>
+      <str name="field">book_title</str>
+      <!-- <str name="weightField">price</str> -->
       <str name="suggestAnalyzerFieldType">string</str>
-      <str name="buildOnStartup">false</str>
+      <str name="buildOnStartup">true</str>
+
     </lst>
   </searchComponent>
 
@@ -970,7 +971,8 @@
                   startup="lazy" >
     <lst name="defaults">
       <str name="suggest">true</str>
-      <str name="suggest.count">10</str>
+      <str name="suggest.dictionary">mySuggester</str>
+      <str name="suggest.count">1</str>
     </lst>
     <arr name="components">
       <str>suggest</str>
