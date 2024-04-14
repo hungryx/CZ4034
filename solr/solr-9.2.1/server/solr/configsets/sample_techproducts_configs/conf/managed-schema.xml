@@ -7,7 +7,7 @@
       <tokenizer name="keyword"/>
       <filter name="lowercase"/>
       <filter name="trim"/>
-      <filter pattern="([^a-z])" replacement="" name="patternReplace" replace="all"/>
+      <filter replace="all" pattern="([^a-z])" replacement="" name="patternReplace"/>
     </analyzer>
   </fieldType>
   <fieldType name="ancestor_path" class="solr.TextField">
@@ -110,7 +110,7 @@
   <fieldType name="text_ca" class="solr.TextField" positionIncrementGap="100">
     <analyzer>
       <tokenizer name="standard"/>
-      <filter ignoreCase="true" name="elision" articles="lang/contractions_ca.txt"/>
+      <filter articles="lang/contractions_ca.txt" ignoreCase="true" name="elision"/>
       <filter name="lowercase"/>
       <filter words="lang/stopwords_ca.txt" ignoreCase="true" name="stop"/>
       <filter language="Catalan" name="snowballPorter"/>
@@ -145,7 +145,7 @@
     <analyzer>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
-      <filter ignoreCase="true" format="snowball" name="stop" words="lang/stopwords_da.txt"/>
+      <filter words="lang/stopwords_da.txt" ignoreCase="true" format="snowball" name="stop"/>
       <filter language="Danish" name="snowballPorter"/>
     </analyzer>
   </fieldType>
@@ -153,7 +153,7 @@
     <analyzer>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
-      <filter ignoreCase="true" format="snowball" name="stop" words="lang/stopwords_de.txt"/>
+      <filter words="lang/stopwords_de.txt" ignoreCase="true" format="snowball" name="stop"/>
       <filter name="germanNormalization"/>
       <filter name="germanLightStem"/>
     </analyzer>
@@ -189,7 +189,7 @@
     <analyzer type="index">
       <tokenizer name="whitespace"/>
       <filter words="lang/stopwords_en.txt" ignoreCase="true" name="stop"/>
-      <filter generateWordParts="1" generateNumberParts="1" catenateWords="1" catenateNumbers="1" splitOnCaseChange="1" name="wordDelimiterGraph" catenateAll="0"/>
+      <filter catenateAll="0" generateWordParts="1" generateNumberParts="1" catenateWords="1" catenateNumbers="1" splitOnCaseChange="1" name="wordDelimiterGraph"/>
       <filter name="lowercase"/>
       <filter name="keywordMarker" protected="protwords.txt"/>
       <filter name="porterStem"/>
@@ -199,7 +199,7 @@
       <tokenizer name="whitespace"/>
       <filter synonyms="synonyms.txt" ignoreCase="true" expand="true" name="synonymGraph"/>
       <filter words="lang/stopwords_en.txt" ignoreCase="true" name="stop"/>
-      <filter generateWordParts="1" generateNumberParts="1" catenateWords="0" catenateNumbers="0" splitOnCaseChange="1" name="wordDelimiterGraph" catenateAll="0"/>
+      <filter catenateAll="0" generateWordParts="1" generateNumberParts="1" catenateWords="0" catenateNumbers="0" splitOnCaseChange="1" name="wordDelimiterGraph"/>
       <filter name="lowercase"/>
       <filter name="keywordMarker" protected="protwords.txt"/>
       <filter name="porterStem"/>
@@ -210,7 +210,7 @@
       <tokenizer name="whitespace"/>
       <filter synonyms="synonyms.txt" ignoreCase="true" expand="false" name="synonymGraph"/>
       <filter words="lang/stopwords_en.txt" ignoreCase="true" name="stop"/>
-      <filter name="wordDelimiterGraph" catenateWords="1" catenateNumbers="1" generateWordParts="0" catenateAll="0" generateNumberParts="0"/>
+      <filter generateNumberParts="0" name="wordDelimiterGraph" catenateWords="1" catenateNumbers="1" generateWordParts="0" catenateAll="0"/>
       <filter name="lowercase"/>
       <filter name="keywordMarker" protected="protwords.txt"/>
       <filter name="englishMinimalStem"/>
@@ -221,7 +221,7 @@
       <tokenizer name="whitespace"/>
       <filter synonyms="synonyms.txt" ignoreCase="true" expand="false" name="synonymGraph"/>
       <filter words="lang/stopwords_en.txt" ignoreCase="true" name="stop"/>
-      <filter name="wordDelimiterGraph" catenateWords="1" catenateNumbers="1" generateWordParts="0" catenateAll="0" generateNumberParts="0"/>
+      <filter generateNumberParts="0" name="wordDelimiterGraph" catenateWords="1" catenateNumbers="1" generateWordParts="0" catenateAll="0"/>
       <filter name="lowercase"/>
       <filter name="keywordMarker" protected="protwords.txt"/>
       <filter name="englishMinimalStem"/>
@@ -232,7 +232,7 @@
     <analyzer>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
-      <filter ignoreCase="true" format="snowball" name="stop" words="lang/stopwords_es.txt"/>
+      <filter words="lang/stopwords_es.txt" ignoreCase="true" format="snowball" name="stop"/>
       <filter name="spanishLightStem"/>
     </analyzer>
   </fieldType>
@@ -266,23 +266,23 @@
     <analyzer>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
-      <filter ignoreCase="true" format="snowball" name="stop" words="lang/stopwords_fi.txt"/>
+      <filter words="lang/stopwords_fi.txt" ignoreCase="true" format="snowball" name="stop"/>
       <filter language="Finnish" name="snowballPorter"/>
     </analyzer>
   </fieldType>
   <fieldType name="text_fr" class="solr.TextField" positionIncrementGap="100">
     <analyzer>
       <tokenizer name="standard"/>
-      <filter ignoreCase="true" name="elision" articles="lang/contractions_fr.txt"/>
+      <filter articles="lang/contractions_fr.txt" ignoreCase="true" name="elision"/>
       <filter name="lowercase"/>
-      <filter ignoreCase="true" format="snowball" name="stop" words="lang/stopwords_fr.txt"/>
+      <filter words="lang/stopwords_fr.txt" ignoreCase="true" format="snowball" name="stop"/>
       <filter name="frenchLightStem"/>
     </analyzer>
   </fieldType>
   <fieldType name="text_ga" class="solr.TextField" positionIncrementGap="100">
     <analyzer>
       <tokenizer name="standard"/>
-      <filter ignoreCase="true" name="elision" articles="lang/contractions_ga.txt"/>
+      <filter articles="lang/contractions_ga.txt" ignoreCase="true" name="elision"/>
       <filter words="lang/hyphenations_ga.txt" ignoreCase="true" name="stop"/>
       <filter name="irishLowercase"/>
       <filter words="lang/stopwords_ga.txt" ignoreCase="true" name="stop"/>
@@ -351,7 +351,7 @@
     <analyzer>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
-      <filter ignoreCase="true" format="snowball" name="stop" words="lang/stopwords_hu.txt"/>
+      <filter words="lang/stopwords_hu.txt" ignoreCase="true" format="snowball" name="stop"/>
       <filter language="Hungarian" name="snowballPorter"/>
     </analyzer>
   </fieldType>
@@ -374,9 +374,9 @@
   <fieldType name="text_it" class="solr.TextField" positionIncrementGap="100">
     <analyzer>
       <tokenizer name="standard"/>
-      <filter ignoreCase="true" name="elision" articles="lang/contractions_it.txt"/>
+      <filter articles="lang/contractions_it.txt" ignoreCase="true" name="elision"/>
       <filter name="lowercase"/>
-      <filter ignoreCase="true" format="snowball" name="stop" words="lang/stopwords_it.txt"/>
+      <filter words="lang/stopwords_it.txt" ignoreCase="true" format="snowball" name="stop"/>
       <filter name="italianLightStem"/>
     </analyzer>
   </fieldType>
@@ -393,7 +393,7 @@
   </fieldType>
   <fieldType name="text_ko" class="solr.TextField" positionIncrementGap="100">
     <analyzer>
-      <tokenizer name="korean" outputUnknownUnigrams="false" decompoundMode="discard"/>
+      <tokenizer outputUnknownUnigrams="false" decompoundMode="discard" name="korean"/>
       <filter name="koreanPartOfSpeechStop"/>
       <filter name="koreanReadingForm"/>
       <filter name="lowercase"/>
@@ -411,8 +411,8 @@
     <analyzer>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
-      <filter ignoreCase="true" format="snowball" name="stop" words="lang/stopwords_nl.txt"/>
-      <filter ignoreCase="false" name="stemmerOverride" dictionary="lang/stemdict_nl.txt"/>
+      <filter words="lang/stopwords_nl.txt" ignoreCase="true" format="snowball" name="stop"/>
+      <filter dictionary="lang/stemdict_nl.txt" ignoreCase="false" name="stemmerOverride"/>
       <filter language="Dutch" name="snowballPorter"/>
     </analyzer>
   </fieldType>
@@ -420,7 +420,7 @@
     <analyzer>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
-      <filter ignoreCase="true" format="snowball" name="stop" words="lang/stopwords_no.txt"/>
+      <filter words="lang/stopwords_no.txt" ignoreCase="true" format="snowball" name="stop"/>
       <filter language="Norwegian" name="snowballPorter"/>
     </analyzer>
   </fieldType>
@@ -428,7 +428,7 @@
     <analyzer>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
-      <filter ignoreCase="true" format="snowball" name="stop" words="lang/stopwords_pt.txt"/>
+      <filter words="lang/stopwords_pt.txt" ignoreCase="true" format="snowball" name="stop"/>
       <filter name="portugueseLightStem"/>
     </analyzer>
   </fieldType>
@@ -444,7 +444,7 @@
     <analyzer>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
-      <filter ignoreCase="true" format="snowball" name="stop" words="lang/stopwords_ru.txt"/>
+      <filter words="lang/stopwords_ru.txt" ignoreCase="true" format="snowball" name="stop"/>
       <filter language="Russian" name="snowballPorter"/>
     </analyzer>
   </fieldType>
@@ -452,7 +452,7 @@
     <analyzer>
       <tokenizer name="standard"/>
       <filter name="lowercase"/>
-      <filter ignoreCase="true" format="snowball" name="stop" words="lang/stopwords_sv.txt"/>
+      <filter words="lang/stopwords_sv.txt" ignoreCase="true" format="snowball" name="stop"/>
       <filter language="Swedish" name="snowballPorter"/>
     </analyzer>
   </fieldType>
@@ -512,7 +512,7 @@
   <field name="post_id" type="string" indexed="true" uninvertible="true" stored="true"/>
   <field name="pre" type="preanalyzed" indexed="true" stored="true"/>
   <field name="price" type="pfloat" indexed="true" stored="true"/>
-  <field name="publication_date" type="string" indexed="true" uninvertible="true" stored="true"/>
+  <field name="publication_date" type="pdate" indexed="true" uninvertible="true" stored="true"/>
   <field name="resourcename" type="text_general" indexed="true" stored="true"/>
   <field name="selftext" type="text_general" indexed="true" uninvertible="true" stored="true"/>
   <field name="sentiment" type="pint" indexed="true" uninvertible="true" stored="true"/>
