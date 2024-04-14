@@ -118,25 +118,8 @@ const Book = () => {
     const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:"${id}"&q.op=OR&fq=TYPE:COMMENT&fq=sentiment:(-3)&indent=true&rows=10000`;
     getData(solrUrl);
 
-    const bookUrl = `http://localhost:8983/solr/new_core/select?q=book_title:"${id}"&q.op=OR&fq=table:books&indent=true&rows=10000`;
+    const bookUrl = `http://localhost:8983/solr/new_core/select?q=book:"${id}"&q.op=OR&fq=table:books&indent=true&rows=10000`;
     getBookData(bookUrl);
-
-    // const book = data.filter((item) => item.id == id)[0];
-    // setBookInfo(book);
-
-    // let comments = [];
-    // let sentimentSum = 0;
-    // book.comments.map((item) => {
-    //   sentimentSum += item.sentiment;
-    //   comments.push(item);
-    // });
-    // setComments(comments);
-
-    // setSentimentInfo({
-    //   length: comments.length,
-    //   sum: sentimentSum.toFixed(2),
-    //   average: (sentimentSum / comments.length).toFixed(2),
-    // });
   }, []);
 
   const goBack = () => {
@@ -159,11 +142,7 @@ const Book = () => {
         back
       </button>
       <div className="bookInfo">
-        <img
-          src={"." + book.cover_path + ".jpg"}
-          alt="Book Image"
-          className="image"
-        />
+        <img src={"." + book.cover_path} alt="Book Image" className="image" />
         <div className="details">
           <h1 className="bookTitle">{id}</h1>
 
