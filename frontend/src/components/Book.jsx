@@ -97,11 +97,6 @@ const Book = () => {
     setSolrComments(sortedComments);
   };
 
-  // const sortDate = (field, sortBy) => {
-  //   const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:"${id}"&q.op=OR&fq=TYPE:COMMENT&sort=${field}%20${sortBy}&indent=true&rows=10000`;
-  //   getData(solrUrl);
-  // };
-
   const getData = async (solrUrl) => {
     const res = await axios.get(solrUrl);
     const documents = res.data.response.docs;
@@ -146,10 +141,13 @@ const Book = () => {
         <div className="details">
           <h1 className="bookTitle">{id}</h1>
 
-          <p>Category: {book.category}</p>
-          <p>Author: {book.book_author}</p>
-          <p>Publication Date: {book.publication_date}</p>
-          <p>
+          <p className="bookOthers">Genre: {book.category}</p>
+          <p className="bookOthers">Author: {book.book_author}</p>
+          <p className="bookOthers">
+            Publication Date:{" "}
+            {book.publication_date ? book.publication_date.split("T")[0] : ""}
+          </p>
+          <p className="bookOthers">
             Description:<br></br>
             {book.description}
           </p>
@@ -183,6 +181,9 @@ const Book = () => {
                 .fill()
                 .map((_, i) => {
                   const pageNumber = i + startPage;
+                  if (pageNumber > totalPages) {
+                    return;
+                  }
                   return (
                     <button
                       key={pageNumber}

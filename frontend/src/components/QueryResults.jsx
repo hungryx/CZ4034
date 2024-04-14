@@ -38,7 +38,7 @@ const QueryResults = (props) => {
             />
             <div className="detailscard">
               <p className="titlecard">{result.book}</p>
-              <p className="othercard">Category: {result.category}</p>
+              <p className="othercard">Genre: {result.category}</p>
               <p className="othercard">Author: {result.book_author}</p>
               <p className="othercard">
                 Publication Date: {result.publication_date.split("T")[0]}

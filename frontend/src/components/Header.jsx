@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <div className="header">
-      <a href="/">App Name</a>
+      <a href="/">BookLens</a>
     </div>
   );
 };

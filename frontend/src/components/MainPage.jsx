@@ -109,18 +109,18 @@ const MainPage = () => {
     const res = await axios.get(solrUrl);
     const earliest = res.data.stats.stats_fields.publication_date.min;
     const latest = res.data.stats.stats_fields.publication_date.max;
-    setMinYear(parseInt(earliest.split(" ")[2]));
-    setMaxYear(parseInt(latest.split(" ")[2]));
-    setSelectedMinYear(parseInt(earliest.split(" ")[2]));
-    setSelectedMaxYear(parseInt(latest.split(" ")[2]));
+
+    setMinYear(parseInt(earliest.split("-")[0]));
+    setMaxYear(parseInt(latest.split("-")[0]));
+    setSelectedMinYear(parseInt(earliest.split("-")[0]));
+    setSelectedMaxYear(parseInt(latest.split("-")[0]));
   };
 
   // for loading the page based on search params (when returning from book page)
   useEffect(() => {
-    getMinMaxDates(); // get min and max publication year
-
     const params = new URLSearchParams(location.search);
     if (params.size === 0) {
+      getMinMaxDates();
       return;
     }
     const title = params.get("title");
@@ -128,6 +128,7 @@ const MainPage = () => {
     const minYear = params.get("minYear");
     const maxYear = params.get("maxYear");
 
+    console.log(minYear);
     setSearchInput(title);
     setSelectedGenres(genres);
     setSelectedMinYear(minYear);
@@ -178,9 +179,8 @@ const MainPage = () => {
     );
     const categoryLiteral = formattedGenres.join("%7C|%7C");
 
-    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:(${titleLiteral})%0Abook_author:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=table:books&indent=true&rows=10000`;
+    const solrUrl = `http://localhost:8983/solr/new_core/select?q=book:(${titleLiteral})%0Abook_author:(${titleLiteral})&q.op=OR&fq=category:(${categoryLiteral})&fq=publication_date:%5B${minYear}-01-01T00:00:00Z%20TO%20${maxYear}-12-31T23:59:59Z%5D&fq=table:books&indent=true&rows=10000`;
     // console.log(solrUrl);
-    // &fq=created_utc:%5B${2021}-01-01T00:00:00Z%20TO%20{2021}-12-31T23:59:59Z%5D
     const res = await axios.get(solrUrl);
     const documents = res.data.response.docs;
     console.log(documents);
