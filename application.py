@@ -11,6 +11,8 @@ def main():
     os.system(solr_directory + "\solr.cmd start -p 8983")
     # start solr
 
+    os.system(current_directory + "\frontend\npm run dev")
+
     # cd to frontend folder
     # start website
 
